@@ -53,17 +53,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="InicioAppForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="hom1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="hom1.Designer.cs">
-      <DependentUpon>hom1.cs</DependentUpon>
+    <Compile Include="InicioAppForm.Designer.cs">
+      <DependentUpon>InicioAppForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -71,34 +65,34 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="inicioSesion.cs">
+    <Compile Include="InicioSesionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inicioSesion.Designer.cs">
-      <DependentUpon>inicioSesion.cs</DependentUpon>
+    <Compile Include="InicioSesionForm.Designer.cs">
+      <DependentUpon>InicioSesionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registro.cs">
+    <Compile Include="RegistroDeUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro.Designer.cs">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <Compile Include="RegistroDeUsuarioForm.Designer.cs">
+      <DependentUpon>RegistroDeUsuarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro2.cs">
+    <Compile Include="RegistroDeUsuarioAdicionalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro2.Designer.cs">
-      <DependentUpon>Registro2.cs</DependentUpon>
+    <Compile Include="RegistroDeUsuarioAdicionalForm.Designer.cs">
+      <DependentUpon>RegistroDeUsuarioAdicionalForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="hom1.resx">
-      <DependentUpon>hom1.cs</DependentUpon>
+    <EmbeddedResource Include="InicioAppForm.resx">
+      <DependentUpon>InicioAppForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="inicioSesion.resx">
-      <DependentUpon>inicioSesion.cs</DependentUpon>
+    <EmbeddedResource Include="InicioSesionForm.resx">
+      <DependentUpon>InicioSesionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,11 +103,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registro.resx">
-      <DependentUpon>Registro.cs</DependentUpon>
+    <EmbeddedResource Include="RegistroDeUsuarioForm.resx">
+      <DependentUpon>RegistroDeUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro2.resx">
-      <DependentUpon>Registro2.cs</DependentUpon>
+    <EmbeddedResource Include="RegistroDeUsuarioAdicionalForm.resx">
+      <DependentUpon>RegistroDeUsuarioAdicionalForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
