@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace AppPedidos
 {
-    public partial class Usuario : Form
+    public partial class formularioHome : Form
     {
         bool sideBarExpand;
-        public Usuario()
+        public formularioHome()
         {
             InitializeComponent();
         }

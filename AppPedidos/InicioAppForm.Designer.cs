@@ -1,7 +1,7 @@
 ﻿
 namespace AppPedidos
 {
-    partial class Usuario
+    partial class formularioHome
     {
         /// <summary>
         /// Required designer variable.
@@ -203,7 +203,7 @@ namespace AppPedidos
             this.sidebartop1.MaximumSize = new System.Drawing.Size(116, 313);
             this.sidebartop1.MinimumSize = new System.Drawing.Size(116, 79);
             this.sidebartop1.Name = "sidebartop1";
-            this.sidebartop1.Size = new System.Drawing.Size(116, 313);
+            this.sidebartop1.Size = new System.Drawing.Size(116, 79);
             this.sidebartop1.TabIndex = 5;
             // 
             // panel7
@@ -1333,13 +1333,13 @@ namespace AppPedidos
             this.timer4.Interval = 10;
             this.timer4.Tick += new System.EventHandler(this.sideBarTimer_Tick5);
             // 
-            // Usuario
+            // formularioHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "Usuario";
+            this.Name = "formularioHome";
             this.Text = "Usuario";
             this.panel2.ResumeLayout(false);
             this.sidebartop1.ResumeLayout(false);

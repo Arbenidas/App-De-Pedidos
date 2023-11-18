@@ -19,8 +19,6 @@ C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\bin\Debug\AppPedidos.exe
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\bin\Debug\AppPedidos.pdb
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.AssemblyReference.cache
-C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.Usuario.resources
-C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.Home.resources
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.Properties.Resources.resources
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.GenerateResource.cache
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.CoreCompileInputs.cache
@@ -30,3 +28,4 @@ C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.pdb
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.InicioSesionForm.resources
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RegistroDeUsuarioForm.resources
 C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RegistroDeUsuarioAdicionalForm.resources
+C:\Users\diego\Desktop\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.formularioHome.resources
