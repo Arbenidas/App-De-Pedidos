@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProyectoTest.Logica
+namespace AppPedidos
 {
-    public class Conexion
+    internal class Conexion
     {
-        public static string CN = "Data Source=.;Initial Catalog=DB_CARRITO;Integrated Security=True";
+        public static string CN = "Data Source=DESKTOP-3K4E2TQ\\SQLEXPRESS;Initial Catalog=DB_CARRITO;Integrated Security=True; User Id=sa;Password=123456;";
     }
 }

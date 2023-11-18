@@ -1,14 +1,14 @@
-﻿using ProyectoTest.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProyectoTest.Logica
+namespace AppPedidos
 {
-    public class MarcaLogica
+    internal class MarcaLogica
     {
         private static MarcaLogica _instancia = null;
 

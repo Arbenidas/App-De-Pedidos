@@ -4,11 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace ProyectoTest.Logica
+namespace AppPedidos
 {
-    public class utilidades
+    internal class utilidades
     {
-        public static string convertirBase64(string ruta) {
+        public static string convertirBase64(string ruta)
+        {
             byte[] bytes = File.ReadAllBytes(ruta);
             string file = Convert.ToBase64String(bytes);
             return file;

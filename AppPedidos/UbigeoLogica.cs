@@ -1,16 +1,15 @@
-﻿using ProyectoTest.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProyectoTest.Logica
+namespace AppPedidos
 {
-    public class UbigeoLogica
+    internal class UbigeoLogica
     {
-        
         private static UbigeoLogica _instancia = null;
 
         public UbigeoLogica()
@@ -20,8 +19,10 @@ namespace ProyectoTest.Logica
 
         public static UbigeoLogica Instancia
         {
-            get {
-                if (_instancia == null) {
+            get
+            {
+                if (_instancia == null)
+                {
                     _instancia = new UbigeoLogica();
                 }
                 return _instancia;
@@ -30,7 +31,8 @@ namespace ProyectoTest.Logica
 
 
 
-        public List<Departamento> ObtenerDepartamento() {
+        public List<Departamento> ObtenerDepartamento()
+        {
             List<Departamento> lst = new List<Departamento>();
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {

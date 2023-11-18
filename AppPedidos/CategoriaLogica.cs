@@ -1,25 +1,26 @@
-﻿using ProyectoTest.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProyectoTest.Logica
+namespace AppPedidos
 {
-    public class CategoriaLogica
+    internal class CategoriaLogica
     {
-
         private static CategoriaLogica _instancia = null;
 
-        public CategoriaLogica() {
+        public CategoriaLogica()
+        {
 
         }
 
         public static CategoriaLogica Instancia
         {
-            get {
+            get
+            {
                 if (_instancia == null)
                 {
                     _instancia = new CategoriaLogica();
@@ -29,7 +30,8 @@ namespace ProyectoTest.Logica
             }
         }
 
-        public List<Categoria> Listar() {
+        public List<Categoria> Listar()
+        {
 
             List<Categoria> rptListaCategoria = new List<Categoria>();
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -153,6 +155,5 @@ namespace ProyectoTest.Logica
             return respuesta;
 
         }
-
     }
 }

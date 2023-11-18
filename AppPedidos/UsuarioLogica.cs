@@ -1,14 +1,14 @@
-﻿using ProyectoTest.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ProyectoTest.Logica
+namespace AppPedidos
 {
-    public class UsuarioLogica
+    internal class UsuarioLogica
     {
         private static UsuarioLogica _instancia = null;
 
@@ -44,8 +44,10 @@ namespace ProyectoTest.Logica
 
                     oConexion.Open();
 
-                    using (SqlDataReader dr = cmd.ExecuteReader()) {
-                        while (dr.Read()) {
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
                             objeto = new Usuario()
                             {
                                 IdUsuario = Convert.ToInt32(dr["IdUsuario"].ToString()),
@@ -100,3 +102,4 @@ namespace ProyectoTest.Logica
         }
     }
 }
+
