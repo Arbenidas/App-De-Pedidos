@@ -1,7 +1,7 @@
 ﻿
 namespace AppPedidos
 {
-    partial class monitoresDeSegundaForm
+    partial class RatonesStandars
     {
         /// <summary>
         /// Required designer variable.
@@ -35,23 +35,21 @@ namespace AppPedidos
             // PanelDeProdcutos
             // 
             this.PanelDeProdcutos.AutoScroll = true;
-            this.PanelDeProdcutos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PanelDeProdcutos.BackColor = System.Drawing.Color.HotPink;
             this.PanelDeProdcutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDeProdcutos.Location = new System.Drawing.Point(0, 0);
             this.PanelDeProdcutos.Name = "PanelDeProdcutos";
             this.PanelDeProdcutos.Size = new System.Drawing.Size(800, 450);
-            this.PanelDeProdcutos.TabIndex = 1;
-            this.PanelDeProdcutos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDeProdcutos_Paint);
+            this.PanelDeProdcutos.TabIndex = 5;
             // 
-            // monitoresDeSegundaForm
+            // RatonesStandars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PanelDeProdcutos);
-            this.Name = "monitoresDeSegundaForm";
-            this.Text = "monitoresDeSegunda";
-            this.Load += new System.EventHandler(this.monitoresDeSegundaForm_Load);
+            this.Name = "RatonesStandars";
+            this.Text = "RatonesStandars";
             this.ResumeLayout(false);
 
         }

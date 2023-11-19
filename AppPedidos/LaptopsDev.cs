@@ -11,9 +11,9 @@ using System.IO;
 
 namespace AppPedidos
 {
-    public partial class AuricularesStandarsForm : Form
+    public partial class LaptopsDev : Form
     {
-        public AuricularesStandarsForm()
+        public LaptopsDev()
         {
             InitializeComponent();
             CargarImagenes();
@@ -28,7 +28,7 @@ namespace AppPedidos
 
 
             // Verifica que el FlowLayoutPanel existente no sea nulo
-            if (AuricularesPanel != null)
+            if (PanelDeProdcutos != null)
             {
 
                 // Recorre la lista de archivos y agrega un Panel para cada imagen con un nombre de producto
@@ -61,9 +61,8 @@ namespace AppPedidos
                     panel.Controls.Add(labelNombreProducto);
 
                     // Agrega el Panel al FlowLayoutPanel existente
-                    AuricularesPanel.Controls.Add(panel);
+                    PanelDeProdcutos.Controls.Add(panel);
                     pictureBox.Click += (sender, e) => MostrarFormularioImagen(archivoImagen);
-
 
 
 
@@ -90,8 +89,7 @@ namespace AppPedidos
             return nombreArchivo;
         }
 
-
-        private void AuricularesStandars_Load(object sender, EventArgs e)
+        private void LaptopsDev_Load(object sender, EventArgs e)
         {
 
         }

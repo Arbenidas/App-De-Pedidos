@@ -65,3 +65,8 @@ C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MonitoresGa
 C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MonitoresStandarsForm.resources
 C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.AuricularesGamersForm.resources
 C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.ComponenteDeImagenesDeProductosForm.resources
+C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.LaptopsDev.resources
+C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.LaptopsGamers.resources
+C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.LaptopsEconomicas.resources
+C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RatonesStandars.resources
+C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RatonesGamers.resources

@@ -93,6 +93,24 @@
     <Compile Include="InicioSesionForm.Designer.cs">
       <DependentUpon>InicioSesionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LaptopsDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaptopsDev.Designer.cs">
+      <DependentUpon>LaptopsDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaptopsEconomicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaptopsEconomicas.Designer.cs">
+      <DependentUpon>LaptopsEconomicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaptopsGamers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaptopsGamers.Designer.cs">
+      <DependentUpon>LaptopsGamers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaLogica.cs" />
     <Compile Include="monitoresDeSegundaForm.cs">
@@ -118,6 +136,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
+    <Compile Include="RatonesGamers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RatonesGamers.Designer.cs">
+      <DependentUpon>RatonesGamers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RatonesStandars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RatonesStandars.Designer.cs">
+      <DependentUpon>RatonesStandars.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroDeUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +179,15 @@
     <EmbeddedResource Include="InicioSesionForm.resx">
       <DependentUpon>InicioSesionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LaptopsDev.resx">
+      <DependentUpon>LaptopsDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaptopsEconomicas.resx">
+      <DependentUpon>LaptopsEconomicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaptopsGamers.resx">
+      <DependentUpon>LaptopsGamers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="monitoresDeSegundaForm.resx">
       <DependentUpon>monitoresDeSegundaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +206,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RatonesGamers.resx">
+      <DependentUpon>RatonesGamers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RatonesStandars.resx">
+      <DependentUpon>RatonesStandars.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeUsuarioForm.resx">
       <DependentUpon>RegistroDeUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>

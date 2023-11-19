@@ -53,49 +53,49 @@ namespace AppPedidos
             this.panel2 = new System.Windows.Forms.Panel();
             this.sidebartop4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.iconButton44 = new FontAwesome.Sharp.IconButton();
+            this.btnExpandBarRatones = new FontAwesome.Sharp.IconButton();
             this.panel36 = new System.Windows.Forms.Panel();
             this.iconButton32 = new FontAwesome.Sharp.IconButton();
             this.iconButton31 = new FontAwesome.Sharp.IconButton();
             this.panel37 = new System.Windows.Forms.Panel();
-            this.iconButton33 = new FontAwesome.Sharp.IconButton();
+            this.btnRatonesStandar = new FontAwesome.Sharp.IconButton();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.iconButton34 = new FontAwesome.Sharp.IconButton();
+            this.btnRatonesGamers = new FontAwesome.Sharp.IconButton();
             this.sidebartop3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.iconButton23 = new FontAwesome.Sharp.IconButton();
-            this.iconButton24 = new FontAwesome.Sharp.IconButton();
+            this.btnExpandBarLaptops = new FontAwesome.Sharp.IconButton();
             this.panel29 = new System.Windows.Forms.Panel();
-            this.iconButton25 = new FontAwesome.Sharp.IconButton();
+            this.btnLaptopsDev = new FontAwesome.Sharp.IconButton();
             this.panel30 = new System.Windows.Forms.Panel();
-            this.iconButton26 = new FontAwesome.Sharp.IconButton();
+            this.btnLaptopsGamers = new FontAwesome.Sharp.IconButton();
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.iconButton27 = new FontAwesome.Sharp.IconButton();
-            this.iconButton28 = new FontAwesome.Sharp.IconButton();
+            this.btnLaptopsEconomicas = new FontAwesome.Sharp.IconButton();
             this.sidebartop2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.iconButton16 = new FontAwesome.Sharp.IconButton();
+            this.btnExpandBarAuriculares = new FontAwesome.Sharp.IconButton();
             this.panel20 = new System.Windows.Forms.Panel();
             this.iconButton15 = new FontAwesome.Sharp.IconButton();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.iconButton17 = new FontAwesome.Sharp.IconButton();
+            this.btnAuricularesStandars = new FontAwesome.Sharp.IconButton();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.iconButton18 = new FontAwesome.Sharp.IconButton();
+            this.btnAuricularesGamers = new FontAwesome.Sharp.IconButton();
             this.sidebartop1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnMenubar = new FontAwesome.Sharp.IconButton();
+            this.btnExpandBarMonitores = new FontAwesome.Sharp.IconButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.btnMonitorStandar = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.btnMonitorGamer = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnOptions = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnMonitorSegundaMano = new FontAwesome.Sharp.IconButton();
             this.PanelDesktop = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnHome = new FontAwesome.Sharp.IconButton();
@@ -427,7 +427,7 @@ namespace AppPedidos
             // 
             // panel35
             // 
-            this.panel35.Controls.Add(this.iconButton44);
+            this.panel35.Controls.Add(this.btnExpandBarRatones);
             this.panel35.Controls.Add(this.panel36);
             this.panel35.Location = new System.Drawing.Point(3, 3);
             this.panel35.Name = "panel35";
@@ -435,25 +435,25 @@ namespace AppPedidos
             this.panel35.TabIndex = 3;
             this.panel35.Paint += new System.Windows.Forms.PaintEventHandler(this.panel35_Paint);
             // 
-            // iconButton44
+            // btnExpandBarRatones
             // 
-            this.iconButton44.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton44.FlatAppearance.BorderSize = 0;
-            this.iconButton44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton44.IconChar = FontAwesome.Sharp.IconChar.ComputerMouse;
-            this.iconButton44.IconColor = System.Drawing.Color.Black;
-            this.iconButton44.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton44.IconSize = 30;
-            this.iconButton44.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton44.Location = new System.Drawing.Point(6, 11);
-            this.iconButton44.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.iconButton44.Name = "iconButton44";
-            this.iconButton44.Size = new System.Drawing.Size(110, 49);
-            this.iconButton44.TabIndex = 5;
-            this.iconButton44.Text = "Ratones";
-            this.iconButton44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton44.UseVisualStyleBackColor = true;
-            this.iconButton44.Click += new System.EventHandler(this.iconButton44_Click);
+            this.btnExpandBarRatones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpandBarRatones.FlatAppearance.BorderSize = 0;
+            this.btnExpandBarRatones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpandBarRatones.IconChar = FontAwesome.Sharp.IconChar.ComputerMouse;
+            this.btnExpandBarRatones.IconColor = System.Drawing.Color.Black;
+            this.btnExpandBarRatones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExpandBarRatones.IconSize = 30;
+            this.btnExpandBarRatones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpandBarRatones.Location = new System.Drawing.Point(6, 11);
+            this.btnExpandBarRatones.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.btnExpandBarRatones.Name = "btnExpandBarRatones";
+            this.btnExpandBarRatones.Size = new System.Drawing.Size(110, 49);
+            this.btnExpandBarRatones.TabIndex = 5;
+            this.btnExpandBarRatones.Text = "Ratones";
+            this.btnExpandBarRatones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExpandBarRatones.UseVisualStyleBackColor = true;
+            this.btnExpandBarRatones.Click += new System.EventHandler(this.iconButton44_Click);
             // 
             // panel36
             // 
@@ -502,54 +502,56 @@ namespace AppPedidos
             // 
             // panel37
             // 
-            this.panel37.Controls.Add(this.iconButton33);
+            this.panel37.Controls.Add(this.btnRatonesStandar);
             this.panel37.Location = new System.Drawing.Point(3, 85);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(184, 72);
             this.panel37.TabIndex = 2;
             // 
-            // iconButton33
+            // btnRatonesStandar
             // 
-            this.iconButton33.FlatAppearance.BorderSize = 0;
-            this.iconButton33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton33.IconChar = FontAwesome.Sharp.IconChar.ArrowPointer;
-            this.iconButton33.IconColor = System.Drawing.Color.Black;
-            this.iconButton33.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton33.IconSize = 30;
-            this.iconButton33.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton33.Location = new System.Drawing.Point(6, 3);
-            this.iconButton33.Name = "iconButton33";
-            this.iconButton33.Size = new System.Drawing.Size(110, 66);
-            this.iconButton33.TabIndex = 1;
-            this.iconButton33.Text = "Ratones Standars";
-            this.iconButton33.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton33.UseVisualStyleBackColor = true;
+            this.btnRatonesStandar.FlatAppearance.BorderSize = 0;
+            this.btnRatonesStandar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRatonesStandar.IconChar = FontAwesome.Sharp.IconChar.ArrowPointer;
+            this.btnRatonesStandar.IconColor = System.Drawing.Color.Black;
+            this.btnRatonesStandar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRatonesStandar.IconSize = 30;
+            this.btnRatonesStandar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRatonesStandar.Location = new System.Drawing.Point(6, 3);
+            this.btnRatonesStandar.Name = "btnRatonesStandar";
+            this.btnRatonesStandar.Size = new System.Drawing.Size(110, 66);
+            this.btnRatonesStandar.TabIndex = 1;
+            this.btnRatonesStandar.Text = "Ratones Standars";
+            this.btnRatonesStandar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRatonesStandar.UseVisualStyleBackColor = true;
+            this.btnRatonesStandar.Click += new System.EventHandler(this.iconButton33_Click);
             // 
             // panel38
             // 
-            this.panel38.Controls.Add(this.iconButton34);
+            this.panel38.Controls.Add(this.btnRatonesGamers);
             this.panel38.Location = new System.Drawing.Point(3, 163);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(113, 72);
             this.panel38.TabIndex = 3;
             // 
-            // iconButton34
+            // btnRatonesGamers
             // 
-            this.iconButton34.FlatAppearance.BorderSize = 0;
-            this.iconButton34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton34.IconChar = FontAwesome.Sharp.IconChar.ComputerMouse;
-            this.iconButton34.IconColor = System.Drawing.Color.Black;
-            this.iconButton34.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton34.IconSize = 30;
-            this.iconButton34.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton34.Location = new System.Drawing.Point(7, 3);
-            this.iconButton34.Name = "iconButton34";
-            this.iconButton34.Size = new System.Drawing.Size(109, 66);
-            this.iconButton34.TabIndex = 1;
-            this.iconButton34.Text = "Ratones Gamers";
-            this.iconButton34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton34.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton34.UseVisualStyleBackColor = true;
+            this.btnRatonesGamers.FlatAppearance.BorderSize = 0;
+            this.btnRatonesGamers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRatonesGamers.IconChar = FontAwesome.Sharp.IconChar.ComputerMouse;
+            this.btnRatonesGamers.IconColor = System.Drawing.Color.Black;
+            this.btnRatonesGamers.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRatonesGamers.IconSize = 30;
+            this.btnRatonesGamers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRatonesGamers.Location = new System.Drawing.Point(7, 3);
+            this.btnRatonesGamers.Name = "btnRatonesGamers";
+            this.btnRatonesGamers.Size = new System.Drawing.Size(109, 66);
+            this.btnRatonesGamers.TabIndex = 1;
+            this.btnRatonesGamers.Text = "Ratones Gamers";
+            this.btnRatonesGamers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRatonesGamers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRatonesGamers.UseVisualStyleBackColor = true;
+            this.btnRatonesGamers.Click += new System.EventHandler(this.iconButton34_Click);
             // 
             // sidebartop3
             // 
@@ -569,7 +571,7 @@ namespace AppPedidos
             // panel27
             // 
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Controls.Add(this.iconButton24);
+            this.panel27.Controls.Add(this.btnExpandBarLaptops);
             this.panel27.Location = new System.Drawing.Point(3, 3);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(184, 72);
@@ -601,82 +603,84 @@ namespace AppPedidos
             this.iconButton23.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton23.UseVisualStyleBackColor = true;
             // 
-            // iconButton24
+            // btnExpandBarLaptops
             // 
-            this.iconButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton24.FlatAppearance.BorderSize = 0;
-            this.iconButton24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton24.IconChar = FontAwesome.Sharp.IconChar.Laptop;
-            this.iconButton24.IconColor = System.Drawing.Color.Black;
-            this.iconButton24.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton24.IconSize = 30;
-            this.iconButton24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton24.Location = new System.Drawing.Point(3, 3);
-            this.iconButton24.Name = "iconButton24";
-            this.iconButton24.Size = new System.Drawing.Size(109, 63);
-            this.iconButton24.TabIndex = 2;
-            this.iconButton24.Text = "Laptops";
-            this.iconButton24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton24.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton24.UseVisualStyleBackColor = true;
-            this.iconButton24.Click += new System.EventHandler(this.iconButton24_Click);
+            this.btnExpandBarLaptops.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpandBarLaptops.FlatAppearance.BorderSize = 0;
+            this.btnExpandBarLaptops.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpandBarLaptops.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnExpandBarLaptops.IconColor = System.Drawing.Color.Black;
+            this.btnExpandBarLaptops.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExpandBarLaptops.IconSize = 30;
+            this.btnExpandBarLaptops.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpandBarLaptops.Location = new System.Drawing.Point(3, 3);
+            this.btnExpandBarLaptops.Name = "btnExpandBarLaptops";
+            this.btnExpandBarLaptops.Size = new System.Drawing.Size(109, 63);
+            this.btnExpandBarLaptops.TabIndex = 2;
+            this.btnExpandBarLaptops.Text = "Laptops";
+            this.btnExpandBarLaptops.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExpandBarLaptops.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExpandBarLaptops.UseVisualStyleBackColor = true;
+            this.btnExpandBarLaptops.Click += new System.EventHandler(this.iconButton24_Click);
             // 
             // panel29
             // 
-            this.panel29.Controls.Add(this.iconButton25);
+            this.panel29.Controls.Add(this.btnLaptopsDev);
             this.panel29.Location = new System.Drawing.Point(3, 81);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(184, 72);
             this.panel29.TabIndex = 2;
             // 
-            // iconButton25
+            // btnLaptopsDev
             // 
-            this.iconButton25.FlatAppearance.BorderSize = 0;
-            this.iconButton25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton25.IconChar = FontAwesome.Sharp.IconChar.LaptopCode;
-            this.iconButton25.IconColor = System.Drawing.Color.Black;
-            this.iconButton25.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton25.IconSize = 30;
-            this.iconButton25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton25.Location = new System.Drawing.Point(6, 3);
-            this.iconButton25.Name = "iconButton25";
-            this.iconButton25.Size = new System.Drawing.Size(106, 66);
-            this.iconButton25.TabIndex = 1;
-            this.iconButton25.Text = "Laptos para Devs";
-            this.iconButton25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton25.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton25.UseVisualStyleBackColor = true;
+            this.btnLaptopsDev.FlatAppearance.BorderSize = 0;
+            this.btnLaptopsDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaptopsDev.IconChar = FontAwesome.Sharp.IconChar.LaptopCode;
+            this.btnLaptopsDev.IconColor = System.Drawing.Color.Black;
+            this.btnLaptopsDev.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLaptopsDev.IconSize = 30;
+            this.btnLaptopsDev.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLaptopsDev.Location = new System.Drawing.Point(6, 3);
+            this.btnLaptopsDev.Name = "btnLaptopsDev";
+            this.btnLaptopsDev.Size = new System.Drawing.Size(106, 66);
+            this.btnLaptopsDev.TabIndex = 1;
+            this.btnLaptopsDev.Text = "Laptos para Devs";
+            this.btnLaptopsDev.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLaptopsDev.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLaptopsDev.UseVisualStyleBackColor = true;
+            this.btnLaptopsDev.Click += new System.EventHandler(this.iconButton25_Click);
             // 
             // panel30
             // 
-            this.panel30.Controls.Add(this.iconButton26);
+            this.panel30.Controls.Add(this.btnLaptopsGamers);
             this.panel30.Location = new System.Drawing.Point(3, 159);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(184, 72);
             this.panel30.TabIndex = 3;
             // 
-            // iconButton26
+            // btnLaptopsGamers
             // 
-            this.iconButton26.FlatAppearance.BorderSize = 0;
-            this.iconButton26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton26.IconChar = FontAwesome.Sharp.IconChar.Computer;
-            this.iconButton26.IconColor = System.Drawing.Color.Black;
-            this.iconButton26.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton26.IconSize = 30;
-            this.iconButton26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton26.Location = new System.Drawing.Point(7, 3);
-            this.iconButton26.Name = "iconButton26";
-            this.iconButton26.Size = new System.Drawing.Size(105, 66);
-            this.iconButton26.TabIndex = 1;
-            this.iconButton26.Text = "Laptos Gamers";
-            this.iconButton26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton26.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton26.UseVisualStyleBackColor = true;
+            this.btnLaptopsGamers.FlatAppearance.BorderSize = 0;
+            this.btnLaptopsGamers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaptopsGamers.IconChar = FontAwesome.Sharp.IconChar.Computer;
+            this.btnLaptopsGamers.IconColor = System.Drawing.Color.Black;
+            this.btnLaptopsGamers.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLaptopsGamers.IconSize = 30;
+            this.btnLaptopsGamers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLaptopsGamers.Location = new System.Drawing.Point(7, 3);
+            this.btnLaptopsGamers.Name = "btnLaptopsGamers";
+            this.btnLaptopsGamers.Size = new System.Drawing.Size(105, 66);
+            this.btnLaptopsGamers.TabIndex = 2;
+            this.btnLaptopsGamers.Text = "Laptos Gamers";
+            this.btnLaptopsGamers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLaptopsGamers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLaptopsGamers.UseVisualStyleBackColor = true;
+            this.btnLaptopsGamers.Click += new System.EventHandler(this.iconButton26_Click);
             // 
             // panel31
             // 
             this.panel31.Controls.Add(this.panel32);
-            this.panel31.Controls.Add(this.iconButton28);
+            this.panel31.Controls.Add(this.btnLaptopsEconomicas);
             this.panel31.Location = new System.Drawing.Point(3, 237);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(184, 72);
@@ -708,23 +712,24 @@ namespace AppPedidos
             this.iconButton27.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton27.UseVisualStyleBackColor = true;
             // 
-            // iconButton28
+            // btnLaptopsEconomicas
             // 
-            this.iconButton28.FlatAppearance.BorderSize = 0;
-            this.iconButton28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton28.IconChar = FontAwesome.Sharp.IconChar.Laptop;
-            this.iconButton28.IconColor = System.Drawing.Color.Black;
-            this.iconButton28.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton28.IconSize = 30;
-            this.iconButton28.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton28.Location = new System.Drawing.Point(7, 3);
-            this.iconButton28.Name = "iconButton28";
-            this.iconButton28.Size = new System.Drawing.Size(106, 63);
-            this.iconButton28.TabIndex = 2;
-            this.iconButton28.Text = "Laptops Economicas";
-            this.iconButton28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton28.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton28.UseVisualStyleBackColor = true;
+            this.btnLaptopsEconomicas.FlatAppearance.BorderSize = 0;
+            this.btnLaptopsEconomicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLaptopsEconomicas.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnLaptopsEconomicas.IconColor = System.Drawing.Color.Black;
+            this.btnLaptopsEconomicas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLaptopsEconomicas.IconSize = 30;
+            this.btnLaptopsEconomicas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLaptopsEconomicas.Location = new System.Drawing.Point(7, 3);
+            this.btnLaptopsEconomicas.Name = "btnLaptopsEconomicas";
+            this.btnLaptopsEconomicas.Size = new System.Drawing.Size(106, 63);
+            this.btnLaptopsEconomicas.TabIndex = 3;
+            this.btnLaptopsEconomicas.Text = "Laptops Economicas";
+            this.btnLaptopsEconomicas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLaptopsEconomicas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLaptopsEconomicas.UseVisualStyleBackColor = true;
+            this.btnLaptopsEconomicas.Click += new System.EventHandler(this.iconButton28_Click);
             // 
             // sidebartop2
             // 
@@ -742,32 +747,32 @@ namespace AppPedidos
             // 
             // panel19
             // 
-            this.panel19.Controls.Add(this.iconButton16);
+            this.panel19.Controls.Add(this.btnExpandBarAuriculares);
             this.panel19.Controls.Add(this.panel20);
             this.panel19.Location = new System.Drawing.Point(3, 3);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(113, 72);
             this.panel19.TabIndex = 3;
             // 
-            // iconButton16
+            // btnExpandBarAuriculares
             // 
-            this.iconButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton16.FlatAppearance.BorderSize = 0;
-            this.iconButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton16.IconChar = FontAwesome.Sharp.IconChar.Headphones;
-            this.iconButton16.IconColor = System.Drawing.Color.Black;
-            this.iconButton16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton16.IconSize = 30;
-            this.iconButton16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton16.Location = new System.Drawing.Point(3, 3);
-            this.iconButton16.Name = "iconButton16";
-            this.iconButton16.Size = new System.Drawing.Size(109, 63);
-            this.iconButton16.TabIndex = 2;
-            this.iconButton16.Text = "Auriculares";
-            this.iconButton16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton16.UseVisualStyleBackColor = true;
-            this.iconButton16.Click += new System.EventHandler(this.iconButton16_Click);
+            this.btnExpandBarAuriculares.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpandBarAuriculares.FlatAppearance.BorderSize = 0;
+            this.btnExpandBarAuriculares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpandBarAuriculares.IconChar = FontAwesome.Sharp.IconChar.Headphones;
+            this.btnExpandBarAuriculares.IconColor = System.Drawing.Color.Black;
+            this.btnExpandBarAuriculares.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExpandBarAuriculares.IconSize = 30;
+            this.btnExpandBarAuriculares.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpandBarAuriculares.Location = new System.Drawing.Point(3, 3);
+            this.btnExpandBarAuriculares.Name = "btnExpandBarAuriculares";
+            this.btnExpandBarAuriculares.Size = new System.Drawing.Size(109, 63);
+            this.btnExpandBarAuriculares.TabIndex = 2;
+            this.btnExpandBarAuriculares.Text = "Auriculares";
+            this.btnExpandBarAuriculares.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExpandBarAuriculares.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExpandBarAuriculares.UseVisualStyleBackColor = true;
+            this.btnExpandBarAuriculares.Click += new System.EventHandler(this.iconButton16_Click);
             // 
             // panel20
             // 
@@ -797,57 +802,57 @@ namespace AppPedidos
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.iconButton17);
+            this.panel21.Controls.Add(this.btnAuricularesStandars);
             this.panel21.Location = new System.Drawing.Point(3, 81);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(184, 72);
             this.panel21.TabIndex = 2;
             // 
-            // iconButton17
+            // btnAuricularesStandars
             // 
-            this.iconButton17.FlatAppearance.BorderSize = 0;
-            this.iconButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton17.IconChar = FontAwesome.Sharp.IconChar.HeadphonesAlt;
-            this.iconButton17.IconColor = System.Drawing.Color.Black;
-            this.iconButton17.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton17.IconSize = 30;
-            this.iconButton17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton17.Location = new System.Drawing.Point(6, 3);
-            this.iconButton17.Name = "iconButton17";
-            this.iconButton17.Size = new System.Drawing.Size(110, 66);
-            this.iconButton17.TabIndex = 1;
-            this.iconButton17.Text = "Auriculares Standars";
-            this.iconButton17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton17.UseVisualStyleBackColor = true;
-            this.iconButton17.Click += new System.EventHandler(this.iconButton17_Click);
+            this.btnAuricularesStandars.FlatAppearance.BorderSize = 0;
+            this.btnAuricularesStandars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuricularesStandars.IconChar = FontAwesome.Sharp.IconChar.HeadphonesAlt;
+            this.btnAuricularesStandars.IconColor = System.Drawing.Color.Black;
+            this.btnAuricularesStandars.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAuricularesStandars.IconSize = 30;
+            this.btnAuricularesStandars.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuricularesStandars.Location = new System.Drawing.Point(6, 3);
+            this.btnAuricularesStandars.Name = "btnAuricularesStandars";
+            this.btnAuricularesStandars.Size = new System.Drawing.Size(110, 66);
+            this.btnAuricularesStandars.TabIndex = 1;
+            this.btnAuricularesStandars.Text = "Auriculares Standars";
+            this.btnAuricularesStandars.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAuricularesStandars.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAuricularesStandars.UseVisualStyleBackColor = true;
+            this.btnAuricularesStandars.Click += new System.EventHandler(this.iconButton17_Click);
             // 
             // panel22
             // 
-            this.panel22.Controls.Add(this.iconButton18);
+            this.panel22.Controls.Add(this.btnAuricularesGamers);
             this.panel22.Location = new System.Drawing.Point(3, 159);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(184, 72);
             this.panel22.TabIndex = 3;
             // 
-            // iconButton18
+            // btnAuricularesGamers
             // 
-            this.iconButton18.FlatAppearance.BorderSize = 0;
-            this.iconButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton18.IconChar = FontAwesome.Sharp.IconChar.Headset;
-            this.iconButton18.IconColor = System.Drawing.Color.Black;
-            this.iconButton18.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton18.IconSize = 30;
-            this.iconButton18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton18.Location = new System.Drawing.Point(3, 3);
-            this.iconButton18.Name = "iconButton18";
-            this.iconButton18.Size = new System.Drawing.Size(106, 66);
-            this.iconButton18.TabIndex = 1;
-            this.iconButton18.Text = "Auriculares Gamers";
-            this.iconButton18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton18.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton18.UseVisualStyleBackColor = true;
-            this.iconButton18.Click += new System.EventHandler(this.iconButton18_Click);
+            this.btnAuricularesGamers.FlatAppearance.BorderSize = 0;
+            this.btnAuricularesGamers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAuricularesGamers.IconChar = FontAwesome.Sharp.IconChar.Headset;
+            this.btnAuricularesGamers.IconColor = System.Drawing.Color.Black;
+            this.btnAuricularesGamers.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAuricularesGamers.IconSize = 30;
+            this.btnAuricularesGamers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAuricularesGamers.Location = new System.Drawing.Point(3, 3);
+            this.btnAuricularesGamers.Name = "btnAuricularesGamers";
+            this.btnAuricularesGamers.Size = new System.Drawing.Size(106, 66);
+            this.btnAuricularesGamers.TabIndex = 1;
+            this.btnAuricularesGamers.Text = "Auriculares Gamers";
+            this.btnAuricularesGamers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAuricularesGamers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAuricularesGamers.UseVisualStyleBackColor = true;
+            this.btnAuricularesGamers.Click += new System.EventHandler(this.iconButton18_Click);
             // 
             // sidebartop1
             // 
@@ -866,7 +871,7 @@ namespace AppPedidos
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btnMenubar);
+            this.panel7.Controls.Add(this.btnExpandBarMonitores);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
@@ -874,26 +879,26 @@ namespace AppPedidos
             this.panel7.TabIndex = 3;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
-            // btnMenubar
+            // btnExpandBarMonitores
             // 
-            this.btnMenubar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenubar.FlatAppearance.BorderSize = 0;
-            this.btnMenubar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenubar.IconChar = FontAwesome.Sharp.IconChar.DesktopAlt;
-            this.btnMenubar.IconColor = System.Drawing.Color.Black;
-            this.btnMenubar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMenubar.IconSize = 30;
-            this.btnMenubar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenubar.Location = new System.Drawing.Point(3, 3);
-            this.btnMenubar.Name = "btnMenubar";
-            this.btnMenubar.Size = new System.Drawing.Size(109, 63);
-            this.btnMenubar.TabIndex = 2;
-            this.btnMenubar.Text = "Monitores";
-            this.btnMenubar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMenubar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenubar.UseVisualStyleBackColor = true;
-            this.btnMenubar.Click += new System.EventHandler(this.btnMenubar_Click);
-            this.btnMenubar.MouseHover += new System.EventHandler(this.btnMenubar_MouseHover);
+            this.btnExpandBarMonitores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpandBarMonitores.FlatAppearance.BorderSize = 0;
+            this.btnExpandBarMonitores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpandBarMonitores.IconChar = FontAwesome.Sharp.IconChar.DesktopAlt;
+            this.btnExpandBarMonitores.IconColor = System.Drawing.Color.Black;
+            this.btnExpandBarMonitores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExpandBarMonitores.IconSize = 30;
+            this.btnExpandBarMonitores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpandBarMonitores.Location = new System.Drawing.Point(3, 3);
+            this.btnExpandBarMonitores.Name = "btnExpandBarMonitores";
+            this.btnExpandBarMonitores.Size = new System.Drawing.Size(109, 63);
+            this.btnExpandBarMonitores.TabIndex = 2;
+            this.btnExpandBarMonitores.Text = "Monitores";
+            this.btnExpandBarMonitores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExpandBarMonitores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExpandBarMonitores.UseVisualStyleBackColor = true;
+            this.btnExpandBarMonitores.Click += new System.EventHandler(this.btnMenubar_Click);
+            this.btnExpandBarMonitores.MouseHover += new System.EventHandler(this.btnMenubar_MouseHover);
             // 
             // panel8
             // 
@@ -923,63 +928,63 @@ namespace AppPedidos
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.iconButton7);
+            this.panel5.Controls.Add(this.btnMonitorStandar);
             this.panel5.Location = new System.Drawing.Point(3, 81);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(184, 72);
             this.panel5.TabIndex = 2;
             // 
-            // iconButton7
+            // btnMonitorStandar
             // 
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Television;
-            this.iconButton7.IconColor = System.Drawing.Color.Black;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 30;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(6, 3);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(110, 66);
-            this.iconButton7.TabIndex = 1;
-            this.iconButton7.Text = "Monitor standar";
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = true;
-            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            this.btnMonitorStandar.FlatAppearance.BorderSize = 0;
+            this.btnMonitorStandar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonitorStandar.IconChar = FontAwesome.Sharp.IconChar.Television;
+            this.btnMonitorStandar.IconColor = System.Drawing.Color.Black;
+            this.btnMonitorStandar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMonitorStandar.IconSize = 30;
+            this.btnMonitorStandar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMonitorStandar.Location = new System.Drawing.Point(6, 3);
+            this.btnMonitorStandar.Name = "btnMonitorStandar";
+            this.btnMonitorStandar.Size = new System.Drawing.Size(110, 66);
+            this.btnMonitorStandar.TabIndex = 1;
+            this.btnMonitorStandar.Text = "Monitor standar";
+            this.btnMonitorStandar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMonitorStandar.UseVisualStyleBackColor = true;
+            this.btnMonitorStandar.Click += new System.EventHandler(this.iconButton7_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.iconButton8);
+            this.panel4.Controls.Add(this.btnMonitorGamer);
             this.panel4.Location = new System.Drawing.Point(3, 159);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(184, 72);
             this.panel4.TabIndex = 3;
             // 
-            // iconButton8
+            // btnMonitorGamer
             // 
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Computer;
-            this.iconButton8.IconColor = System.Drawing.Color.Black;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 30;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(7, 3);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(109, 66);
-            this.iconButton8.TabIndex = 1;
-            this.iconButton8.Text = "Monitor Gamer";
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = true;
-            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+            this.btnMonitorGamer.FlatAppearance.BorderSize = 0;
+            this.btnMonitorGamer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonitorGamer.IconChar = FontAwesome.Sharp.IconChar.Computer;
+            this.btnMonitorGamer.IconColor = System.Drawing.Color.Black;
+            this.btnMonitorGamer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMonitorGamer.IconSize = 30;
+            this.btnMonitorGamer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMonitorGamer.Location = new System.Drawing.Point(7, 3);
+            this.btnMonitorGamer.Name = "btnMonitorGamer";
+            this.btnMonitorGamer.Size = new System.Drawing.Size(109, 66);
+            this.btnMonitorGamer.TabIndex = 1;
+            this.btnMonitorGamer.Text = "Monitor Gamer";
+            this.btnMonitorGamer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMonitorGamer.UseVisualStyleBackColor = true;
+            this.btnMonitorGamer.Click += new System.EventHandler(this.iconButton8_Click);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.panel3);
-            this.panel6.Controls.Add(this.iconButton5);
+            this.panel6.Controls.Add(this.btnMonitorSegundaMano);
             this.panel6.Location = new System.Drawing.Point(3, 237);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(184, 72);
+            this.panel6.Size = new System.Drawing.Size(116, 72);
             this.panel6.TabIndex = 2;
             // 
             // panel3
@@ -1008,24 +1013,24 @@ namespace AppPedidos
             this.btnOptions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOptions.UseVisualStyleBackColor = true;
             // 
-            // iconButton5
+            // btnMonitorSegundaMano
             // 
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.HandHoldingHand;
-            this.iconButton5.IconColor = System.Drawing.Color.Black;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 30;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(7, 3);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(109, 63);
-            this.iconButton5.TabIndex = 2;
-            this.iconButton5.Text = "Monitores de segunda mano";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            this.btnMonitorSegundaMano.FlatAppearance.BorderSize = 0;
+            this.btnMonitorSegundaMano.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonitorSegundaMano.IconChar = FontAwesome.Sharp.IconChar.HandHoldingHand;
+            this.btnMonitorSegundaMano.IconColor = System.Drawing.Color.Black;
+            this.btnMonitorSegundaMano.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMonitorSegundaMano.IconSize = 30;
+            this.btnMonitorSegundaMano.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMonitorSegundaMano.Location = new System.Drawing.Point(7, 3);
+            this.btnMonitorSegundaMano.Name = "btnMonitorSegundaMano";
+            this.btnMonitorSegundaMano.Size = new System.Drawing.Size(109, 63);
+            this.btnMonitorSegundaMano.TabIndex = 2;
+            this.btnMonitorSegundaMano.Text = "Monitores de segunda mano";
+            this.btnMonitorSegundaMano.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMonitorSegundaMano.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMonitorSegundaMano.UseVisualStyleBackColor = true;
+            this.btnMonitorSegundaMano.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // PanelDesktop
             // 
@@ -1045,6 +1050,7 @@ namespace AppPedidos
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(831, 94);
             this.panel10.TabIndex = 10;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint_1);
             // 
             // btnHome
             // 
@@ -1156,49 +1162,49 @@ namespace AppPedidos
         private FontAwesome.Sharp.IconButton iconButton14;
         private System.Windows.Forms.FlowLayoutPanel sidebartop4;
         private System.Windows.Forms.Panel panel35;
-        private FontAwesome.Sharp.IconButton iconButton44;
+        private FontAwesome.Sharp.IconButton btnExpandBarRatones;
         private System.Windows.Forms.Panel panel36;
         private FontAwesome.Sharp.IconButton iconButton32;
         private FontAwesome.Sharp.IconButton iconButton31;
         private System.Windows.Forms.Panel panel37;
-        private FontAwesome.Sharp.IconButton iconButton33;
+        private FontAwesome.Sharp.IconButton btnRatonesStandar;
         private System.Windows.Forms.Panel panel38;
-        private FontAwesome.Sharp.IconButton iconButton34;
+        private FontAwesome.Sharp.IconButton btnRatonesGamers;
         private System.Windows.Forms.FlowLayoutPanel sidebartop2;
         private System.Windows.Forms.Panel panel19;
-        private FontAwesome.Sharp.IconButton iconButton16;
+        private FontAwesome.Sharp.IconButton btnExpandBarAuriculares;
         private System.Windows.Forms.Panel panel20;
         private FontAwesome.Sharp.IconButton iconButton15;
         private System.Windows.Forms.Panel panel21;
-        private FontAwesome.Sharp.IconButton iconButton17;
+        private FontAwesome.Sharp.IconButton btnAuricularesStandars;
         private System.Windows.Forms.Panel panel22;
-        private FontAwesome.Sharp.IconButton iconButton18;
+        private FontAwesome.Sharp.IconButton btnAuricularesGamers;
         private System.Windows.Forms.FlowLayoutPanel sidebartop3;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel28;
         private FontAwesome.Sharp.IconButton iconButton23;
-        private FontAwesome.Sharp.IconButton iconButton24;
+        private FontAwesome.Sharp.IconButton btnExpandBarLaptops;
         private System.Windows.Forms.Panel panel29;
-        private FontAwesome.Sharp.IconButton iconButton25;
+        private FontAwesome.Sharp.IconButton btnLaptopsDev;
         private System.Windows.Forms.Panel panel30;
-        private FontAwesome.Sharp.IconButton iconButton26;
+        private FontAwesome.Sharp.IconButton btnLaptopsGamers;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel32;
         private FontAwesome.Sharp.IconButton iconButton27;
-        private FontAwesome.Sharp.IconButton iconButton28;
+        private FontAwesome.Sharp.IconButton btnLaptopsEconomicas;
         private System.Windows.Forms.FlowLayoutPanel sidebartop1;
         private System.Windows.Forms.Panel panel7;
-        private FontAwesome.Sharp.IconButton btnMenubar;
+        private FontAwesome.Sharp.IconButton btnExpandBarMonitores;
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton iconButton9;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton iconButton7;
+        private FontAwesome.Sharp.IconButton btnMonitorStandar;
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton btnMonitorGamer;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnOptions;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton btnMonitorSegundaMano;
         private System.Windows.Forms.Panel panel2;
     }
 }

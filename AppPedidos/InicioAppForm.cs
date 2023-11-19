@@ -14,10 +14,11 @@ namespace AppPedidos
 {
     public partial class formularioHome : Form
     {
+        //Atributo para expandir las barras laterales y de la parte superior
         bool sideBarExpand;
+
+        //Atributo que resive un formulario hijo.
         private Form currentChildForm;
-
-
 
 
 
@@ -27,23 +28,34 @@ namespace AppPedidos
 
            
         }
+
+        /// <summary>
+        /// Se envia un formulario Hijo que se asigna al panel principal del inicio y que se muestra al frente para poder mostrar los productos que corresponden.
+        /// </summary>
+        /// <param name="childForm"></param>
         private void AbrirFormulariosHijo(Form childForm)
         {
+            //Validamos si el formulario esta vacio, si no hay un formulario se cierra y se deja en blanco.
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
+            //se Asigna al atributo el formulario que se pasa como parametro
             currentChildForm = childForm;
+
+            //Se estiliza y se pone en un lugar correspondiente.
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+            
+            //Se agregan al panelHome el formulario hijo y se muestra
             PanelDesktop.Controls.Add(childForm);
-            PanelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             
         }
 
+        #region
         //Al dar click en cada uno de los botones de la barra superior empezara un contador que abrira una barra desplegable
         private void btnMenubar_Click(object sender, EventArgs e)
         {
@@ -66,8 +78,11 @@ namespace AppPedidos
         {
             timer3.Start();
         }
-        
+        #endregion
+
+
         //Estos son los timers que regulan el tamaño de cada una de las barras que se van a desplegar tomando como referencia los valores minimos y maximos de cada una de las barras desplegables
+        #region
         private void sideBarTimer_Tick2(object sender, EventArgs e)
         {
             //Coloquemos el maximo y el minimo de la animacion de la barra
@@ -121,7 +136,6 @@ namespace AppPedidos
         {
             if (sideBarExpand)
             {
-                //si la sidebar esta expandida, se minimiza.
                 sidebartop2.Height -= 10;
                 if (sidebartop2.Height == sidebartop2.MinimumSize.Height)
                 {
@@ -140,12 +154,10 @@ namespace AppPedidos
                 }
             }
         }
-
         private void sideBarTimer_Tick4(object sender, EventArgs e)
         {
             if (sideBarExpand)
             {
-                //si la sidebar esta expandida, se minimiza.
                 sidebartop3.Height -= 10;
                 if (sidebartop3.Height == sidebartop3.MinimumSize.Height)
                 {
@@ -164,12 +176,11 @@ namespace AppPedidos
                 }
             }
         }
-
         private void sideBarTimer_Tick5(object sender, EventArgs e)
         {
             if (sideBarExpand)
             {
-                //si la sidebar esta expandida, se minimiza.
+               
                 sidebartop4.Height -= 10;
                 if (sidebartop4.Height == sidebartop4.MinimumSize.Height)
                 {
@@ -188,48 +199,11 @@ namespace AppPedidos
                 }
             }
         }
-        
-        private void sidebarLateral_Paint(object sender, PaintEventArgs e)
-        {
+        #endregion
 
-        }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-       
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
-
-        
-
-        private void panel35_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnMenubar_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-            AbrirFormulariosHijo(new MonitoresGamersForm());
-        }
-       
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -239,6 +213,56 @@ namespace AppPedidos
         private void formularioHome_Load(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        //Al darle Click al logo se cierran los formularios que esten en el panelDesktop
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
+
+        }
+
+
+
+
+
+        #region
+        //Se abren los formularios correspondientes a cada uno de los botones de la barra superios desplegable
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new MonitoresGamersForm());
+        }
+
+        private void iconButton18_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new AuricularesGamersForm());
+        }
+
+        private void iconButton25_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new LaptopsDev());
+        }
+
+        private void iconButton26_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new LaptopsGamers());
+        }
+
+        private void iconButton28_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new LaptopsEconomicas());
+        }
+
+        private void iconButton33_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new RatonesStandars());
+        }
+
+        private void iconButton34_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new RatonesGamers());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -255,42 +279,52 @@ namespace AppPedidos
         {
             AbrirFormulariosHijo(new AuricularesStandarsForm());
         }
+        #endregion
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void sidebarLateral_Paint(object sender, PaintEventArgs e)
         {
-            currentChildForm.Close();
 
         }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-        
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+        private void panel35_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void btnMenubar_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void PanelDesktop_Resize(object sender, EventArgs e)
         {
-            // Ajusta el tamaño de los formularios hijos cuando el formulario principal se redimensiona
-            if (currentChildForm != null)
-            {
-                currentChildForm.Size = PanelDesktop.Size;
-            }
-        }
 
+        }
         private void panel10_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void panel25_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void iconButton18_Click(object sender, EventArgs e)
+        private void panel10_Paint_1(object sender, PaintEventArgs e)
         {
-            AbrirFormulariosHijo(new AuricularesGamersForm());
+
         }
     }
 }

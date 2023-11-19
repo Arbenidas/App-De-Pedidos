@@ -1,7 +1,7 @@
 ﻿
 namespace AppPedidos
 {
-    partial class monitoresDeSegundaForm
+    partial class LaptopsDev
     {
         /// <summary>
         /// Required designer variable.
@@ -40,18 +40,17 @@ namespace AppPedidos
             this.PanelDeProdcutos.Location = new System.Drawing.Point(0, 0);
             this.PanelDeProdcutos.Name = "PanelDeProdcutos";
             this.PanelDeProdcutos.Size = new System.Drawing.Size(800, 450);
-            this.PanelDeProdcutos.TabIndex = 1;
-            this.PanelDeProdcutos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDeProdcutos_Paint);
+            this.PanelDeProdcutos.TabIndex = 2;
             // 
-            // monitoresDeSegundaForm
+            // LaptopsDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PanelDeProdcutos);
-            this.Name = "monitoresDeSegundaForm";
-            this.Text = "monitoresDeSegunda";
-            this.Load += new System.EventHandler(this.monitoresDeSegundaForm_Load);
+            this.Name = "LaptopsDev";
+            this.Text = "LaptopsDev";
+            this.Load += new System.EventHandler(this.LaptopsDev_Load);
             this.ResumeLayout(false);
 
         }

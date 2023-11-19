@@ -67,7 +67,7 @@ namespace AppPedidos
 
                     // Agrega el Panel al FlowLayoutPanel existente
                     PanelDeProdcutos.Controls.Add(panel);
-
+                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(archivoImagen);
 
 
 
@@ -77,6 +77,14 @@ namespace AppPedidos
 
             }
         }
+        private void MostrarFormularioImagen(string rutaImagen)
+        {
+            // Crea un nuevo formulario hijo para mostrar la imagen y el botón
+            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen);
+
+            // Abre el formulario hijo
+            formularioImagen.Show();
+        }
         private string ObtenerNombreProductoDesdeArchivo(string rutaArchivo)
         {
             // Puedes implementar lógica para obtener el nombre del producto desde el nombre del archivo
@@ -84,6 +92,11 @@ namespace AppPedidos
             string nombreArchivo = Path.GetFileNameWithoutExtension(rutaArchivo);
             // Retorna el nombre del producto (puedes ajustar esto según tu lógica específica)
             return nombreArchivo;
+        }
+
+        private void monitoresDeSegundaForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

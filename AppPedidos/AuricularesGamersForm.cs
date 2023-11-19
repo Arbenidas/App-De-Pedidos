@@ -72,6 +72,7 @@ namespace AppPedidos
 
                     // Agrega el Panel al FlowLayoutPanel existente
                     flowLayoutPanel1.Controls.Add(panel);
+                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(archivoImagen);
 
 
 
@@ -81,6 +82,14 @@ namespace AppPedidos
 
 
             }
+        }
+        private void MostrarFormularioImagen(string rutaImagen)
+        {
+            // Crea un nuevo formulario hijo para mostrar la imagen y el botón
+            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen);
+
+            // Abre el formulario hijo
+            formularioImagen.Show();
         }
         private string ObtenerNombreProductoDesdeArchivo(string rutaArchivo)
         {
