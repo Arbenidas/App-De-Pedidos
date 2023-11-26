@@ -20,7 +20,7 @@ namespace AppPedidos
         }
         private void CargarImagenes()
         {   // Directorio donde se encuentran las imágenes
-            String directorioImagenes = @"C:\Users\diego\Desktop\imagenes";
+            String directorioImagenes = @".\imagenes";
 
 
             // Obtiene la lista de archivos de imagen en el directorio
@@ -88,6 +88,11 @@ namespace AppPedidos
             string nombreArchivo = Path.GetFileNameWithoutExtension(rutaArchivo);
             // Retorna el nombre del producto (puedes ajustar esto según tu lógica específica)
             return nombreArchivo;
+        }
+
+        private void RatonesGamers_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

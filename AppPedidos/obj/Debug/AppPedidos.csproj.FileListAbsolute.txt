@@ -70,3 +70,5 @@ C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.LaptopsGame
 C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.LaptopsEconomicas.resources
 C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RatonesStandars.resources
 C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RatonesGamers.resources
+C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.HomeVentasForm.resources
+C:\Users\diego\Dev\C#\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MisProductosVentas.resources

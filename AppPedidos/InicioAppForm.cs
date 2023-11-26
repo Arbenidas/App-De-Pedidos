@@ -220,7 +220,13 @@ namespace AppPedidos
         //Al darle Click al logo se cierran los formularios que esten en el panelDesktop
         private void btnHome_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+
+            
+
 
         }
 
@@ -323,6 +329,11 @@ namespace AppPedidos
         }
 
         private void panel10_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
         {
 
         }

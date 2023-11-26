@@ -81,6 +81,12 @@
     <Compile Include="Departamento.cs" />
     <Compile Include="DetalleCompra.cs" />
     <Compile Include="Distrito.cs" />
+    <Compile Include="HomeVentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeVentasForm.Designer.cs">
+      <DependentUpon>HomeVentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioAppForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaLogica.cs" />
+    <Compile Include="MisProductosVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MisProductosVentas.Designer.cs">
+      <DependentUpon>MisProductosVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="monitoresDeSegundaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,9 @@
     <EmbeddedResource Include="ComponenteDeImagenesDeProductosForm.resx">
       <DependentUpon>ComponenteDeImagenesDeProductosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HomeVentasForm.resx">
+      <DependentUpon>HomeVentasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioAppForm.resx">
       <DependentUpon>InicioAppForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LaptopsGamers.resx">
       <DependentUpon>LaptopsGamers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MisProductosVentas.resx">
+      <DependentUpon>MisProductosVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="monitoresDeSegundaForm.resx">
       <DependentUpon>monitoresDeSegundaForm.cs</DependentUpon>

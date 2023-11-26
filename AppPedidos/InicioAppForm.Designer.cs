@@ -34,21 +34,10 @@ namespace AppPedidos
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidebarLateral = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.iconButton14 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.sidebartop4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -102,16 +91,9 @@ namespace AppPedidos
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.sidebarLateral.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
             this.panel2.SuspendLayout();
             this.sidebartop4.SuspendLayout();
             this.panel35.SuspendLayout();
@@ -137,6 +119,7 @@ namespace AppPedidos
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.PanelDesktop.SuspendLayout();
             this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,57 +146,22 @@ namespace AppPedidos
             // 
             // sidebarLateral
             // 
+            this.sidebarLateral.AutoScroll = true;
             this.sidebarLateral.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.sidebarLateral.BackColor = System.Drawing.Color.Transparent;
-            this.sidebarLateral.Controls.Add(this.panel11);
-            this.sidebarLateral.Controls.Add(this.panel13);
-            this.sidebarLateral.Controls.Add(this.panel14);
-            this.sidebarLateral.Controls.Add(this.panel15);
-            this.sidebarLateral.Controls.Add(this.panel17);
+            this.sidebarLateral.Controls.Add(this.iconButton2);
+            this.sidebarLateral.Controls.Add(this.sidebartop1);
+            this.sidebarLateral.Controls.Add(this.sidebartop2);
+            this.sidebarLateral.Controls.Add(this.sidebartop3);
+            this.sidebarLateral.Controls.Add(this.sidebartop4);
             this.sidebarLateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sidebarLateral.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.sidebarLateral.Location = new System.Drawing.Point(786, 0);
+            this.sidebarLateral.Location = new System.Drawing.Point(771, 0);
             this.sidebarLateral.MaximumSize = new System.Drawing.Size(116, 413);
-            this.sidebarLateral.MinimumSize = new System.Drawing.Size(45, 413);
+            this.sidebarLateral.MinimumSize = new System.Drawing.Size(60, 413);
             this.sidebarLateral.Name = "sidebarLateral";
-            this.sidebarLateral.Size = new System.Drawing.Size(45, 413);
+            this.sidebarLateral.Size = new System.Drawing.Size(60, 413);
             this.sidebarLateral.TabIndex = 7;
             this.sidebarLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebarLateral_Paint);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Controls.Add(this.iconButton2);
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(184, 72);
-            this.panel11.TabIndex = 3;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.iconButton1);
-            this.panel12.Location = new System.Drawing.Point(3, 72);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(184, 72);
-            this.panel12.TabIndex = 0;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(4, 4);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(154, 66);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "Usuario";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // iconButton2
             // 
@@ -234,14 +182,6 @@ namespace AppPedidos
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.iconButton3);
-            this.panel13.Location = new System.Drawing.Point(3, 81);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(184, 72);
-            this.panel13.TabIndex = 2;
-            // 
             // iconButton3
             // 
             this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -252,7 +192,7 @@ namespace AppPedidos
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 30;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(6, 3);
+            this.iconButton3.Location = new System.Drawing.Point(143, 16);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(154, 66);
             this.iconButton3.TabIndex = 1;
@@ -260,14 +200,6 @@ namespace AppPedidos
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.iconButton4);
-            this.panel14.Location = new System.Drawing.Point(3, 159);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(184, 72);
-            this.panel14.TabIndex = 3;
             // 
             // iconButton4
             // 
@@ -279,7 +211,7 @@ namespace AppPedidos
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 30;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(7, 3);
+            this.iconButton4.Location = new System.Drawing.Point(303, 15);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(154, 66);
             this.iconButton4.TabIndex = 1;
@@ -287,41 +219,6 @@ namespace AppPedidos
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Controls.Add(this.iconButton10);
-            this.panel15.Location = new System.Drawing.Point(3, 237);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(184, 72);
-            this.panel15.TabIndex = 2;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.iconButton6);
-            this.panel16.Location = new System.Drawing.Point(3, 72);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(184, 72);
-            this.panel16.TabIndex = 0;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconButton6.IconColor = System.Drawing.Color.Black;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 30;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(4, 4);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(154, 66);
-            this.iconButton6.TabIndex = 1;
-            this.iconButton6.Text = "Usuario";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
             // 
             // iconButton10
             // 
@@ -333,7 +230,7 @@ namespace AppPedidos
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.IconSize = 30;
             this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.Location = new System.Drawing.Point(7, 3);
+            this.iconButton10.Location = new System.Drawing.Point(463, 18);
             this.iconButton10.Name = "iconButton10";
             this.iconButton10.Size = new System.Drawing.Size(109, 63);
             this.iconButton10.TabIndex = 2;
@@ -341,41 +238,6 @@ namespace AppPedidos
             this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton10.UseVisualStyleBackColor = true;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.panel18);
-            this.panel17.Controls.Add(this.iconButton14);
-            this.panel17.Location = new System.Drawing.Point(3, 315);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(184, 72);
-            this.panel17.TabIndex = 4;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.iconButton13);
-            this.panel18.Location = new System.Drawing.Point(3, 72);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(184, 72);
-            this.panel18.TabIndex = 0;
-            // 
-            // iconButton13
-            // 
-            this.iconButton13.FlatAppearance.BorderSize = 0;
-            this.iconButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton13.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconButton13.IconColor = System.Drawing.Color.Black;
-            this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton13.IconSize = 30;
-            this.iconButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton13.Location = new System.Drawing.Point(4, 4);
-            this.iconButton13.Name = "iconButton13";
-            this.iconButton13.Size = new System.Drawing.Size(154, 66);
-            this.iconButton13.TabIndex = 1;
-            this.iconButton13.Text = "Usuario";
-            this.iconButton13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton13.UseVisualStyleBackColor = true;
             // 
             // iconButton14
             // 
@@ -387,7 +249,7 @@ namespace AppPedidos
             this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton14.IconSize = 30;
             this.iconButton14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton14.Location = new System.Drawing.Point(7, 3);
+            this.iconButton14.Location = new System.Drawing.Point(619, 18);
             this.iconButton14.Name = "iconButton14";
             this.iconButton14.Size = new System.Drawing.Size(109, 63);
             this.iconButton14.TabIndex = 2;
@@ -398,10 +260,6 @@ namespace AppPedidos
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.sidebartop4);
-            this.panel2.Controls.Add(this.sidebartop3);
-            this.panel2.Controls.Add(this.sidebartop2);
-            this.panel2.Controls.Add(this.sidebartop1);
             this.panel2.Controls.Add(this.PanelDesktop);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -418,7 +276,7 @@ namespace AppPedidos
             this.sidebartop4.Controls.Add(this.panel35);
             this.sidebartop4.Controls.Add(this.panel37);
             this.sidebartop4.Controls.Add(this.panel38);
-            this.sidebartop4.Location = new System.Drawing.Point(625, 12);
+            this.sidebartop4.Location = new System.Drawing.Point(3, 327);
             this.sidebartop4.MaximumSize = new System.Drawing.Size(116, 231);
             this.sidebartop4.MinimumSize = new System.Drawing.Size(116, 79);
             this.sidebartop4.Name = "sidebartop4";
@@ -561,7 +419,7 @@ namespace AppPedidos
             this.sidebartop3.Controls.Add(this.panel29);
             this.sidebartop3.Controls.Add(this.panel30);
             this.sidebartop3.Controls.Add(this.panel31);
-            this.sidebartop3.Location = new System.Drawing.Point(455, 12);
+            this.sidebartop3.Location = new System.Drawing.Point(3, 242);
             this.sidebartop3.MaximumSize = new System.Drawing.Size(116, 313);
             this.sidebartop3.MinimumSize = new System.Drawing.Size(116, 79);
             this.sidebartop3.Name = "sidebartop3";
@@ -738,7 +596,7 @@ namespace AppPedidos
             this.sidebartop2.Controls.Add(this.panel19);
             this.sidebartop2.Controls.Add(this.panel21);
             this.sidebartop2.Controls.Add(this.panel22);
-            this.sidebartop2.Location = new System.Drawing.Point(298, 12);
+            this.sidebartop2.Location = new System.Drawing.Point(3, 157);
             this.sidebartop2.MaximumSize = new System.Drawing.Size(116, 235);
             this.sidebartop2.MinimumSize = new System.Drawing.Size(116, 79);
             this.sidebartop2.Name = "sidebartop2";
@@ -862,7 +720,7 @@ namespace AppPedidos
             this.sidebartop1.Controls.Add(this.panel5);
             this.sidebartop1.Controls.Add(this.panel4);
             this.sidebartop1.Controls.Add(this.panel6);
-            this.sidebartop1.Location = new System.Drawing.Point(145, 12);
+            this.sidebartop1.Location = new System.Drawing.Point(3, 72);
             this.sidebartop1.MaximumSize = new System.Drawing.Size(116, 313);
             this.sidebartop1.MinimumSize = new System.Drawing.Size(116, 79);
             this.sidebartop1.Name = "sidebartop1";
@@ -1034,6 +892,7 @@ namespace AppPedidos
             // 
             // PanelDesktop
             // 
+            this.PanelDesktop.Controls.Add(this.label1);
             this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDesktop.Location = new System.Drawing.Point(0, 94);
             this.PanelDesktop.Name = "PanelDesktop";
@@ -1044,6 +903,10 @@ namespace AppPedidos
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.iconButton4);
+            this.panel10.Controls.Add(this.iconButton14);
+            this.panel10.Controls.Add(this.iconButton10);
+            this.panel10.Controls.Add(this.iconButton3);
             this.panel10.Controls.Add(this.btnHome);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
@@ -1084,6 +947,22 @@ namespace AppPedidos
             this.timer4.Interval = 10;
             this.timer4.Tick += new System.EventHandler(this.sideBarTimer_Tick5);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(203, 40);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(425, 77);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bienvenidos";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.UseMnemonic = false;
+            // 
             // formularioHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1095,14 +974,6 @@ namespace AppPedidos
             this.Load += new System.EventHandler(this.formularioHome_Load);
             this.panel1.ResumeLayout(false);
             this.sidebarLateral.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.sidebartop4.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
@@ -1128,6 +999,8 @@ namespace AppPedidos
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.PanelDesktop.ResumeLayout(false);
+            this.PanelDesktop.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1143,22 +1016,10 @@ namespace AppPedidos
         private System.Windows.Forms.Panel panel10;
         private FontAwesome.Sharp.IconButton btnHome;
         private System.Windows.Forms.Panel PanelDesktop;
-        private System.Windows.Forms.FlowLayoutPanel sidebarLateral;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.Panel panel13;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.Panel panel14;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel16;
-        private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton10;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panel18;
-        private FontAwesome.Sharp.IconButton iconButton13;
         private FontAwesome.Sharp.IconButton iconButton14;
         private System.Windows.Forms.FlowLayoutPanel sidebartop4;
         private System.Windows.Forms.Panel panel35;
@@ -1206,5 +1067,7 @@ namespace AppPedidos
         private FontAwesome.Sharp.IconButton btnOptions;
         private FontAwesome.Sharp.IconButton btnMonitorSegundaMano;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.FlowLayoutPanel sidebarLateral;
+        private System.Windows.Forms.Label label1;
     }
 }

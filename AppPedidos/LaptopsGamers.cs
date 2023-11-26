@@ -21,7 +21,7 @@ namespace AppPedidos
         }
         private void CargarImagenes()
         {   // Directorio donde se encuentran las imágenes
-            String directorioImagenes = @"C:\Users\diego\Desktop\imagenes";
+            String directorioImagenes = @".\imagenes";
 
 
             // Obtiene la lista de archivos de imagen en el directorio

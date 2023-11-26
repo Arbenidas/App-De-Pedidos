@@ -50,6 +50,7 @@ namespace AppPedidos
             this.Controls.Add(this.PanelDeProdcutos);
             this.Name = "RatonesStandars";
             this.Text = "RatonesStandars";
+            this.Load += new System.EventHandler(this.RatonesStandars_Load);
             this.ResumeLayout(false);
 
         }
