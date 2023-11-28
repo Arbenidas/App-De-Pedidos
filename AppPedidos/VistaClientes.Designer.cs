@@ -40,11 +40,12 @@
             this.monitoresEstandarToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.ratonesGamerToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.ratonesEstandarToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.PanelDesktop = new System.Windows.Forms.Panel();
             this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.carritoToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.PanelDesktop = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.menuInicio,
             this.comprasToolStripMenuItem,
             this.usuarioToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.carritoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -88,7 +90,7 @@
             this.misComprasToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.misComprasToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.misComprasToolStripMenuItem.Name = "misComprasToolStripMenuItem";
-            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.misComprasToolStripMenuItem.Text = "Mis compras";
             // 
             // nuevoToolStripMenuItem
@@ -105,7 +107,7 @@
             this.nuevoToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.nuevoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             // 
             // auricularesToolStripMenuItem
@@ -172,14 +174,6 @@
             this.ratonesEstandarToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.ratonesEstandarToolStripMenuItem.Text = "Ratones Estandar";
             // 
-            // PanelDesktop
-            // 
-            this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelDesktop.Location = new System.Drawing.Point(0, 24);
-            this.PanelDesktop.Name = "PanelDesktop";
-            this.PanelDesktop.Size = new System.Drawing.Size(800, 426);
-            this.PanelDesktop.TabIndex = 1;
-            // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -198,7 +192,7 @@
             this.editarPerfilToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.editarPerfilToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
             this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
             // 
@@ -208,7 +202,7 @@
             this.cerrarSesionToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.cerrarSesionToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
@@ -222,6 +216,24 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // carritoToolStripMenuItem
+            // 
+            this.carritoToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
+            this.carritoToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.carritoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
+            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.carritoToolStripMenuItem.Text = "Carrito";
+            // 
+            // PanelDesktop
+            // 
+            this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelDesktop.Location = new System.Drawing.Point(0, 24);
+            this.PanelDesktop.Name = "PanelDesktop";
+            this.PanelDesktop.Size = new System.Drawing.Size(800, 426);
+            this.PanelDesktop.TabIndex = 1;
+            this.PanelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDesktop_Paint);
+            // 
             // VistaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +244,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "VistaClientes";
             this.Text = "VistaClientes";
+            this.Load += new System.EventHandler(this.VistaClientes_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -258,5 +271,6 @@
         private FontAwesome.Sharp.IconMenuItem editarPerfilToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem cerrarSesionToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem salirToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem carritoToolStripMenuItem;
     }
 }

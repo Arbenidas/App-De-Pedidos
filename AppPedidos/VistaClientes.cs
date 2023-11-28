@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace AppPedidos
 {
+   
     public partial class VistaClientes : Form
     {
+        
         private Form currentChildForm;
         private Usuario usuario;
         public VistaClientes(string correo, string constraseña)
@@ -48,7 +50,7 @@ namespace AppPedidos
 
         private void monitoresEstandarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new MonitoresStandarsForm());
+            //AbrirFormulariosHijo(new MonitoresStandarsForm());
 
         }
 
@@ -69,6 +71,38 @@ namespace AppPedidos
         {
             //
             this.Close();
+
+        }
+
+        private void PanelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VistaClientes_Load(object sender, EventArgs e)
+        {
+            List<Categoria> categorias = CategoriaLogica.Listar();
+            List<string> idcategorias = new List<string>();
+            for (int i = 0; i < categorias.Count; i++)
+            {
+                //idcategorias.Add(categorias[i].Descripcion);
+                ToolStripMenuItem itemCategoria = new ToolStripMenuItem();
+                itemCategoria.Text = categorias[i].Descripcion;
+                itemCategoria.Name = categorias[i].IdCategoria.ToString();
+                itemCategoria.Click += itemsCategorias_Click;
+
+                nuevoToolStripMenuItem.DropDownItems.Add(itemCategoria);
+            }
+
+
+            
+        }
+
+        private void itemsCategorias_Click(object sender, EventArgs e)
+        {
+            string categoria = sender.ToString();
+            
+            AbrirFormulariosHijo(new MonitoresStandarsForm(categoria));
 
         }
     }

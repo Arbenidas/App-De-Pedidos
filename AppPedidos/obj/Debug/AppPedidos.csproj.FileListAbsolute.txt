@@ -164,3 +164,26 @@ C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedido
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.exe
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.pdb
 >>>>>>> 6c999c9d56f74ccdfc3a8f5e7abe4ddc11caa99d
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\AppPedidos.exe.config
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\AppPedidos.exe
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\AppPedidos.pdb
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.AssemblyReference.cache
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.ComponenteDeImagenesDeProductosForm.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.HomeVentasForm.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.formularioHome.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.InicioSesionForm.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.Miembros.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MisProductosVentas.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MonitoresStandarsForm.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MostrarPerfil.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.ProductosCRUD.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.Properties.Resources.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RegistroDeUsuarioForm.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RegistroDeUsuarioAdicionalForm.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.VistaClientes.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.GenerateResource.cache
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.CoreCompileInputs.cache
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.CopyComplete
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.exe
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.pdb

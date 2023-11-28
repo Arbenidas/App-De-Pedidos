@@ -18,7 +18,7 @@ namespace AppPedidos
             label2.Text=Convert.ToString(precio);
             precioGlobal = precio;
             pictureBoxImage.Image = Image.FromFile(rutaImg);
-            iconButton1.Click += (sender, e) => MostrarNotificacion();
+            botonCarrito.Click += (sender, e) => MostrarNotificacion();
 
             #region 
             //se crea una notificaicon
@@ -54,7 +54,8 @@ namespace AppPedidos
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            
+
+            this.Close();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

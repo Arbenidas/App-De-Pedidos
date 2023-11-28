@@ -41,14 +41,15 @@ namespace AppPedidos
             this.PanelDeProdcutos.Name = "PanelDeProdcutos";
             this.PanelDeProdcutos.Size = new System.Drawing.Size(800, 450);
             this.PanelDeProdcutos.TabIndex = 1;
+            this.PanelDeProdcutos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDeProdcutos_Paint);
             // 
-            // MonitoresStandars
+            // MonitoresStandarsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PanelDeProdcutos);
-            this.Name = "MonitoresStandars";
+            this.Name = "MonitoresStandarsForm";
             this.Text = "MonitoresStandars";
             this.Load += new System.EventHandler(this.MonitoresStandars_Load);
             this.ResumeLayout(false);

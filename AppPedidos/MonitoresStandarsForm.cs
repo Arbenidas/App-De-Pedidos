@@ -13,24 +13,24 @@ namespace AppPedidos
 {
     public partial class MonitoresStandarsForm : Form
     {
-        public MonitoresStandarsForm()
+        public MonitoresStandarsForm(string categoria)
         {
             InitializeComponent();
-            CargarProductos();
+            CargarProductos(categoria);
         }
 
-        private void CargarProductos()
+        private void CargarProductos(string categoria)
         {
             // Obtiene la lista de productos desde la base de datos
             List<Producto> listaProductos = ObtenerListaDeProductosDesdeBD();
-
+            MessageBox.Show(categoria);
             // Verifica que el FlowLayoutPanel existente no sea nulo
             if (PanelDeProdcutos != null)
             {
                 // Recorre la lista de productos y agrega un Panel para cada producto
                 foreach (Producto producto in listaProductos)
                 {
-                    if (producto.IdCategoria == 7) { 
+                    if (producto.IdCategoria == ) { 
                     Panel panel = new Panel();
                     panel.Padding = new Padding(3, 30, 3, 10);
                     panel.Width = 180;
@@ -75,7 +75,7 @@ namespace AppPedidos
         {
             // Crea un nuevo formulario hijo para mostrar la imagen y el botón
             ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen, nombre, precio );
-
+            AddOwnedForm(formularioImagen);
             // Abre el formulario hijo
             formularioImagen.Show();
         }
@@ -90,6 +90,11 @@ namespace AppPedidos
         private void MonitoresStandars_Load(object sender, EventArgs e)
         {
             // Tu lógica aquí...
+        }
+
+        private void PanelDeProdcutos_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
