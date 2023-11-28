@@ -85,119 +85,24 @@ namespace AppPedidos
         #region
         private void sideBarTimer_Tick2(object sender, EventArgs e)
         {
-            //Coloquemos el maximo y el minimo de la animacion de la barra
-            if (sideBarExpand)
-            {
-                //si la sidebar esta expandida, se minimiza.
-                sidebarLateral.Width -= 10;
-                if (sidebarLateral.Width == sidebarLateral.MinimumSize.Width)
-                {
-                    sideBarExpand = false;
-                    timer1.Stop();
-                }
-            }
-            else
-            {
-                sidebarLateral.Width += 10;
-                if (sidebarLateral.Width == sidebarLateral.MaximumSize.Width)
-                {
-                    sideBarExpand = true;
-                    timer1.Stop();
-
-                }
-            }
+            
         }
         private void sideBarTimer_Tick(object sender, EventArgs e)
         {
 
-            //Coloquemos el maximo y el minimo de la animacion de la barra
-            if (sideBarExpand)
-            {
-                //si la sidebar esta expandida, se minimiza.
-                sidebartop1.Height -= 10;
-                if (sidebartop1.Height == sidebartop1.MinimumSize.Height)
-                {
-                    sideBarExpand = false;
-                    sidebarTimer.Stop();
-                }
-            }
-            else
-            {
-                sidebartop1.Height += 10;
-                if (sidebartop1.Height == sidebartop1.MaximumSize.Height)
-                {
-                    sideBarExpand = true;
-                    sidebarTimer.Stop();
-
-                }
-            }
+            
         }
         private void sideBarTimer_Tick3(object sender, EventArgs e)
         {
-            if (sideBarExpand)
-            {
-                sidebartop2.Height -= 10;
-                if (sidebartop2.Height == sidebartop2.MinimumSize.Height)
-                {
-                    sideBarExpand = false;
-                    timer2.Stop();
-                }
-            }
-            else
-            {
-                sidebartop2.Height += 10;
-                if (sidebartop2.Height == sidebartop2.MaximumSize.Height)
-                {
-                    sideBarExpand = true;
-                    timer2.Stop();
-
-                }
-            }
+            
         }
         private void sideBarTimer_Tick4(object sender, EventArgs e)
         {
-            if (sideBarExpand)
-            {
-                sidebartop3.Height -= 10;
-                if (sidebartop3.Height == sidebartop3.MinimumSize.Height)
-                {
-                    sideBarExpand = false;
-                    timer3.Stop();
-                }
-            }
-            else
-            {
-                sidebartop3.Height += 10;
-                if (sidebartop3.Height == sidebartop3.MaximumSize.Height)
-                {
-                    sideBarExpand = true;
-                    timer3.Stop();
-
-                }
-            }
+            
         }
         private void sideBarTimer_Tick5(object sender, EventArgs e)
         {
-            if (sideBarExpand)
-            {
-               
-                sidebartop4.Height -= 10;
-                if (sidebartop4.Height == sidebartop4.MinimumSize.Height)
-                {
-                    sideBarExpand = false;
-                    timer4.Stop();
-                }
-            }
-            else
-            {
-                sidebartop4.Height += 10;
-                if (sidebartop4.Height == sidebartop4.MaximumSize.Height)
-                {
-                    sideBarExpand = true;
-                    timer4.Stop();
-
-                }
-            }
+            
         }
         #endregion
 
@@ -336,6 +241,63 @@ namespace AppPedidos
         private void panel11_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new ProductosCRUD());
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerProduc_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void iconButton3_MouseHover(object sender, EventArgs e)
+        {
+            //MessageBox.Show("0002dsadas0000");
+            timer5.Start();
+        }
+
+        private void iconButton5_Click_1(object sender, EventArgs e)
+        {
+            
+            timerProduc.Start();
+        }
+
+        private void iconButton14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void iconMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void misProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new ProductosCRUD());
         }
     }
 }

@@ -30,7 +30,7 @@ namespace AppPedidos
             }
         }
 
-        public List<Marca> Listar()
+        public static List<Marca> Listar()
         {
 
             List<Marca> rptListaMarca = new List<Marca>();

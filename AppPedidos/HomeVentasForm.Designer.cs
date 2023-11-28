@@ -42,11 +42,6 @@ namespace AppPedidos
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel13 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.PanelDesktop = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
@@ -55,6 +50,11 @@ namespace AppPedidos
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelDesktop = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.sidebartop1.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -62,12 +62,12 @@ namespace AppPedidos
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -232,55 +232,6 @@ namespace AppPedidos
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.PanelDesktop);
-            this.panel2.Controls.Add(this.panel10);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 450);
-            this.panel2.TabIndex = 6;
-            // 
-            // PanelDesktop
-            // 
-            this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelDesktop.Location = new System.Drawing.Point(0, 94);
-            this.PanelDesktop.Name = "PanelDesktop";
-            this.PanelDesktop.Size = new System.Drawing.Size(800, 356);
-            this.PanelDesktop.TabIndex = 9;
-            this.PanelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDesktop_Paint);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btnHome);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(800, 94);
-            this.panel10.TabIndex = 10;
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Cube;
-            this.btnHome.IconColor = System.Drawing.Color.Black;
-            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 94);
-            this.btnHome.TabIndex = 8;
-            this.btnHome.UseVisualStyleBackColor = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // panel15
             // 
             this.panel15.Controls.Add(this.panel16);
@@ -389,6 +340,55 @@ namespace AppPedidos
             this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton7.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.PanelDesktop);
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 450);
+            this.panel2.TabIndex = 6;
+            // 
+            // PanelDesktop
+            // 
+            this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelDesktop.Location = new System.Drawing.Point(0, 94);
+            this.PanelDesktop.Name = "PanelDesktop";
+            this.PanelDesktop.Size = new System.Drawing.Size(800, 356);
+            this.PanelDesktop.TabIndex = 9;
+            this.PanelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDesktop_Paint);
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btnHome);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(800, 94);
+            this.panel10.TabIndex = 10;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnHome.IconColor = System.Drawing.Color.Black;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 94);
+            this.btnHome.TabIndex = 8;
+            this.btnHome.UseVisualStyleBackColor = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // HomeVentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,12 +404,12 @@ namespace AppPedidos
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

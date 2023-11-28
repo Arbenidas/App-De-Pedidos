@@ -30,7 +30,7 @@ namespace AppPedidos
             }
         }
 
-        public List<Categoria> Listar()
+        public static List<Categoria> Listar()
         {
 
             List<Categoria> rptListaCategoria = new List<Categoria>();

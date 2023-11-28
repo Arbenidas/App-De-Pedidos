@@ -33,7 +33,7 @@ namespace AppPedidos
             }
         }
 
-        public List<Producto> Listar()
+        public static List<Producto> Listar()
         {
 
             List<Producto> rptListaProducto = new List<Producto>();
@@ -54,12 +54,16 @@ namespace AppPedidos
                             IdProducto = Convert.ToInt32(dr["IdProducto"].ToString()),
                             Nombre = dr["Nombre"].ToString(),
                             Descripcion = dr["Descripcion"].ToString(),
-                            oMarca = new Marca() { IdMarca = Convert.ToInt32(dr["IdMarca"].ToString()), Descripcion = dr["DescripcionMarca"].ToString() },
-                            oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(dr["IdCategoria"].ToString()), Descripcion = dr["DescripcionCategoria"].ToString() },
-                            Precio = Convert.ToDecimal(dr["Precio"].ToString(), new CultureInfo("es-PE")),
+                            //oMarca = new Marca() { IdMarca = Convert.ToInt32(dr["IdMarca"].ToString()), Descripcion = dr["DescripcionMarca"].ToString() },
+                            //oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(dr["IdCategoria"].ToString()), Descripcion = dr["DescripcionCategoria"].ToString() },
+                            IdMarca = Convert.ToInt32(dr["IdMarca"].ToString()),
+                            IdCategoria = Convert.ToInt32(dr["IdCategoria"].ToString()),
+                            Precio = Convert.ToDecimal(dr["Precio"].ToString()),
+                            //el Todecimal tenia otro parametro extra-> , new CultureInfo("es-PE")
                             Stock = Convert.ToInt32(dr["Stock"].ToString()),
                             RutaImagen = dr["RutaImagen"].ToString(),
-                            Activo = Convert.ToBoolean(dr["Activo"].ToString())
+                            Activo = Convert.ToBoolean(dr["Activo"].ToString()),
+                            FechaRegistro = dr["FechaRegistro"].ToString()
                         });
                     }
                     dr.Close();
@@ -77,7 +81,7 @@ namespace AppPedidos
 
 
 
-        public int Registrar(Producto oProducto)
+        public static int Registrar(Producto oProducto)
         {
             int respuesta = 0;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -87,8 +91,8 @@ namespace AppPedidos
                     SqlCommand cmd = new SqlCommand("sp_registrarProducto", oConexion);
                     cmd.Parameters.AddWithValue("Nombre", oProducto.Nombre);
                     cmd.Parameters.AddWithValue("Descripcion", oProducto.Descripcion);
-                    cmd.Parameters.AddWithValue("IdMarca", oProducto.oMarca.IdMarca);
-                    cmd.Parameters.AddWithValue("IdCategoria", oProducto.oCategoria.IdCategoria);
+                    cmd.Parameters.AddWithValue("IdMarca", oProducto.IdMarca);
+                    cmd.Parameters.AddWithValue("IdCategoria", oProducto.IdCategoria);
                     cmd.Parameters.AddWithValue("Precio", oProducto.Precio);
                     cmd.Parameters.AddWithValue("Stock", oProducto.Stock);
                     cmd.Parameters.AddWithValue("RutaImagen", oProducto.RutaImagen);
@@ -110,7 +114,7 @@ namespace AppPedidos
             return respuesta;
         }
 
-        public bool Modificar(Producto oProducto)
+        public static bool Modificar(Producto oProducto)
         {
             bool respuesta = false;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -121,8 +125,8 @@ namespace AppPedidos
                     cmd.Parameters.AddWithValue("IdProducto", oProducto.IdProducto);
                     cmd.Parameters.AddWithValue("Nombre", oProducto.Nombre);
                     cmd.Parameters.AddWithValue("Descripcion", oProducto.Descripcion);
-                    cmd.Parameters.AddWithValue("IdMarca", oProducto.oMarca.IdMarca);
-                    cmd.Parameters.AddWithValue("IdCategoria", oProducto.oCategoria.IdCategoria);
+                    cmd.Parameters.AddWithValue("IdMarca", oProducto.IdMarca);
+                    cmd.Parameters.AddWithValue("IdCategoria", oProducto.IdCategoria);
                     cmd.Parameters.AddWithValue("Precio", oProducto.Precio);
                     cmd.Parameters.AddWithValue("Stock", oProducto.Stock);
                     cmd.Parameters.AddWithValue("Activo", oProducto.Activo);
@@ -145,7 +149,7 @@ namespace AppPedidos
         }
 
 
-        public bool ActualizarRutaImagen(Producto oProducto)
+        public static bool ActualizarRutaImagen(Producto oProducto)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -167,7 +171,7 @@ namespace AppPedidos
             return respuesta;
         }
 
-        public bool Eliminar(int id)
+        public static bool Eliminar(int id)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))

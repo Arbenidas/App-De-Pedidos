@@ -41,8 +41,8 @@ namespace AppPedidos
                 try
                 {
                     SqlCommand cmd = new SqlCommand("sp_InsertarCarrito", oConexion);
-                    cmd.Parameters.AddWithValue("IdUsuario", oCarrito.oUsuario.IdUsuario);
-                    cmd.Parameters.AddWithValue("IdProducto", oCarrito.oProducto.IdProducto);
+                    cmd.Parameters.AddWithValue("IdUsuario", oCarrito.IdUsuario);
+                    cmd.Parameters.AddWithValue("IdProducto", oCarrito.IdProducto);
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -104,14 +104,17 @@ namespace AppPedidos
                             {
 
                                 IdCarrito = Convert.ToInt32(dr["IdCarrito"].ToString()),
-                                oProducto = new Producto()
+                                IdProducto = Convert.ToInt32(dr["Idproducto"].ToString()),
+                                IdUsuario  = Convert.ToInt32(dr["IdUsuario"].ToString()),
+
+                                /*oProducto = new Producto()
                                 {
                                     IdProducto = Convert.ToInt32(dr["IdProducto"].ToString()),
                                     Nombre = dr["Nombre"].ToString(),
                                     oMarca = new Marca() { Descripcion = dr["Descripcion"].ToString() },
                                     Precio = Convert.ToDecimal(dr["Precio"].ToString(), new CultureInfo("es-PE")),
                                     RutaImagen = dr["RutaImagen"].ToString()
-                                },
+                                },*/
 
                             });
                         }
@@ -185,7 +188,7 @@ namespace AppPedidos
                                                                           {
                                                                               oProducto = new Producto()
                                                                               {
-                                                                                  oMarca = new Marca() { Descripcion = d.Element("Descripcion").Value },
+                                                                                  //oMarca = new Marca() { Descripcion = d.Element("Descripcion").Value },
                                                                                   Nombre = d.Element("Nombre").Value,
                                                                                   RutaImagen = d.Element("RutaImagen").Value
                                                                               },

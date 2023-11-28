@@ -16,7 +16,7 @@ namespace AppPedidos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formularioHome());
+            Application.Run(new InicioSesionForm());
         }
     }
 }

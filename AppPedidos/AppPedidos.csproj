@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,6 +96,10 @@
     <Compile Include="Departamento.cs" />
     <Compile Include="DetalleCompra.cs" />
     <Compile Include="Distrito.cs" />
+    <Compile Include="EditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPerfil.Designer.cs" />
     <Compile Include="HomeVentasForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +138,10 @@
     </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaLogica.cs" />
+    <Compile Include="Miembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Miembros.Designer.cs" />
     <Compile Include="MisProductosVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,8 +166,18 @@
     <Compile Include="MonitoresStandarsForm.Designer.cs">
       <DependentUpon>MonitoresStandarsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarPerfil.Designer.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoLogica.cs" />
+    <Compile Include="ProductosCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosCRUD.Designer.cs">
+      <DependentUpon>ProductosCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
@@ -185,6 +218,7 @@
     <EmbeddedResource Include="ComponenteDeImagenesDeProductosForm.resx">
       <DependentUpon>ComponenteDeImagenesDeProductosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarPerfil.resx" />
     <EmbeddedResource Include="HomeVentasForm.resx">
       <DependentUpon>HomeVentasForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +237,7 @@
     <EmbeddedResource Include="LaptopsGamers.resx">
       <DependentUpon>LaptopsGamers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Miembros.resx" />
     <EmbeddedResource Include="MisProductosVentas.resx">
       <DependentUpon>MisProductosVentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +249,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonitoresStandarsForm.resx">
       <DependentUpon>MonitoresStandarsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarPerfil.resx" />
+    <EmbeddedResource Include="ProductosCRUD.resx">
+      <DependentUpon>ProductosCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -249,6 +288,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
