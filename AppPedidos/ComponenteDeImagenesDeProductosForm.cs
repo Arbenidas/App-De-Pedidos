@@ -6,13 +6,17 @@ namespace AppPedidos
 {
     public partial class ComponenteDeImagenesDeProductosForm : Form
     {
+
+        decimal precioGlobal;
         //Atributo de notificacion
         private NotifyIcon notifyIcon;
-        public ComponenteDeImagenesDeProductosForm(String rutaImg)
+        public ComponenteDeImagenesDeProductosForm(String rutaImg, string nombre, decimal precio)
         {
             InitializeComponent();
             // Configura el PictureBox con la imagen seleccionada
-
+            label3.Text = nombre;
+            label2.Text=Convert.ToString(precio);
+            precioGlobal = precio;
             pictureBoxImage.Image = Image.FromFile(rutaImg);
             iconButton1.Click += (sender, e) => MostrarNotificacion();
 
@@ -55,7 +59,12 @@ namespace AppPedidos
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
+           
+          decimal precio=precioGlobal;
+         
+            precio = precio * numericUpDown1.Value;
 
+        label2.Text=Convert.ToString(precio);
         }
 
         private void label2_Click(object sender, EventArgs e)

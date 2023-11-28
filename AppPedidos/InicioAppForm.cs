@@ -144,37 +144,37 @@ namespace AppPedidos
         //Se abren los formularios correspondientes a cada uno de los botones de la barra superios desplegable
         private void iconButton8_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new MonitoresGamersForm());
+          //  AbrirFormulariosHijo(new MonitoresGamersForm());
         }
 
         private void iconButton18_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new AuricularesGamersForm());
+          //  AbrirFormulariosHijo(new AuricularesGamersForm());
         }
 
         private void iconButton25_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new LaptopsDev());
+           // AbrirFormulariosHijo(new LaptopsDev());
         }
 
         private void iconButton26_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new LaptopsGamers());
+           // AbrirFormulariosHijo(new LaptopsGamers());
         }
 
         private void iconButton28_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new LaptopsEconomicas());
+            //AbrirFormulariosHijo(new LaptopsEconomicas());
         }
 
         private void iconButton33_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new RatonesStandars());
+          //  AbrirFormulariosHijo(new RatonesStandars());
         }
 
         private void iconButton34_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new RatonesGamers());
+            //AbrirFormulariosHijo(new RatonesGamers());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -184,12 +184,12 @@ namespace AppPedidos
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new monitoresDeSegundaForm());
+           // AbrirFormulariosHijo(new monitoresDeSegundaForm());
         }
 
         private void iconButton17_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new AuricularesStandarsForm());
+          //  AbrirFormulariosHijo(new AuricularesStandarsForm());
         }
         #endregion
 

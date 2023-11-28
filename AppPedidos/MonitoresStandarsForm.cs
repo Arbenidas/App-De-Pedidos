@@ -16,46 +16,40 @@ namespace AppPedidos
         public MonitoresStandarsForm()
         {
             InitializeComponent();
-            CargarImagenes();
+            CargarProductos();
         }
-        private void CargarImagenes()
-        {   // Directorio donde se encuentran las imágenes
-            String directorioImagenes = @".\imagenes";
 
-
-            // Obtiene la lista de archivos de imagen en el directorio
-            string[] archivosImagen = Directory.GetFiles(directorioImagenes, "*.JPG");// o la extensión de tus imágenes esto dependera del tipo de formato
-
+        private void CargarProductos()
+        {
+            // Obtiene la lista de productos desde la base de datos
+            List<Producto> listaProductos = ObtenerListaDeProductosDesdeBD();
 
             // Verifica que el FlowLayoutPanel existente no sea nulo
             if (PanelDeProdcutos != null)
             {
-
-                // Recorre la lista de archivos y agrega un Panel para cada imagen con un nombre de producto
-                foreach (string archivoImagen in archivosImagen)
+                // Recorre la lista de productos y agrega un Panel para cada producto
+                foreach (Producto producto in listaProductos)
                 {
+                    if (producto.IdCategoria == 7) { 
                     Panel panel = new Panel();
                     panel.Padding = new Padding(3, 30, 3, 10);
-                    panel.Width = 180; //ajustamos el size
+                    panel.Width = 180;
                     panel.Height = 197;
                     panel.BorderStyle = BorderStyle.FixedSingle;
-                    
 
-
-                    //Creamos un picture box dentro del panel
+                    // Creamos un picture box dentro del panel
                     PictureBox pictureBox = new PictureBox();
-
                     pictureBox.Dock = DockStyle.Top;
                     pictureBox.Height = 120;
-                    pictureBox.Image = Image.FromFile(archivoImagen);
-
-                    //Ajusta la imagen al size de la picture box
+                    string rutaCompleta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Imagenes", "Productos", producto.RutaImagen);
+                    // Asumiendo que la propiedad RutaImagen de Producto contiene la ruta de la imagen
+                    pictureBox.Image = Image.FromFile(rutaCompleta);
                     pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
                     // Crea un Label con el nombre del producto
                     Label labelNombreProducto = new Label();
-                    labelNombreProducto.Text = ObtenerNombreProductoDesdeArchivo(archivoImagen);
-                    labelNombreProducto.Dock = DockStyle.Bottom; // El Label ocupa la parte inferior del Panel
+                    labelNombreProducto.Text = producto.Nombre;
+                    labelNombreProducto.Dock = DockStyle.Bottom;
 
                     // Agrega la PictureBox y el Label al Panel
                     panel.Controls.Add(pictureBox);
@@ -64,41 +58,38 @@ namespace AppPedidos
                     // Agrega el Panel al FlowLayoutPanel existente
                     PanelDeProdcutos.Controls.Add(panel);
 
-                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(archivoImagen);
-
-
+                    // Asigna el evento Click para mostrar el formulario de la imagen (puedes ajustar esto según tus necesidades)
+                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(rutaCompleta, producto.Nombre, producto.Precio);
                 }
-
-
-
+                }
             }
         }
-        private string ObtenerNombreProductoDesdeArchivo(string rutaArchivo)
+
+        private List<Producto> ObtenerListaDeProductosDesdeBD()
         {
-            // Puedes implementar lógica para obtener el nombre del producto desde el nombre del archivo
-            // Por ejemplo, podrías extraer el nombre del archivo sin la extensión
-            string nombreArchivo = Path.GetFileNameWithoutExtension(rutaArchivo);
-            // Retorna el nombre del producto (puedes ajustar esto según tu lógica específica)
-            return nombreArchivo;
+            // Llama a la función Listar de ProductoLogica para obtener la lista de productos desde la base de datos
+            return ProductoLogica.Listar();
         }
 
-        private void MostrarFormularioImagen(string rutaImagen)
+        private void MostrarFormularioImagen(string rutaImagen, string nombre, decimal precio)
         {
             // Crea un nuevo formulario hijo para mostrar la imagen y el botón
-            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen);
+            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen, nombre, precio );
 
             // Abre el formulario hijo
             formularioImagen.Show();
         }
+
+        // Resto del código...
+
         private void iconButton7_Click(object sender, EventArgs e)
         {
-
+            // Tu lógica aquí...
         }
-
 
         private void MonitoresStandars_Load(object sender, EventArgs e)
         {
-
+            // Tu lógica aquí...
         }
     }
 }
