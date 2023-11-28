@@ -46,6 +46,10 @@ namespace AppPedidos
             this.iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem9 = new FontAwesome.Sharp.IconMenuItem();
             this.InicioButton = new FontAwesome.Sharp.IconMenuItem();
+            this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.PanelDesktop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -55,10 +59,6 @@ namespace AppPedidos
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
-            this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -193,6 +193,7 @@ namespace AppPedidos
             this.menuMarcas.Name = "menuMarcas";
             this.menuMarcas.Size = new System.Drawing.Size(180, 22);
             this.menuMarcas.Text = "Marcas";
+            this.menuMarcas.Click += new System.EventHandler(this.menuMarcas_Click);
             // 
             // iconMenuItem3
             // 
@@ -220,6 +221,48 @@ namespace AppPedidos
             this.InicioButton.Name = "InicioButton";
             this.InicioButton.Size = new System.Drawing.Size(64, 20);
             this.InicioButton.Text = "Inicio";
+            // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarPerfilToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
+            this.usuarioToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.usuarioToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.usuarioToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.usuarioToolStripMenuItem.Text = "usuario";
+            // 
+            // editarPerfilToolStripMenuItem
+            // 
+            this.editarPerfilToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.editarPerfilToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.editarPerfilToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
+            this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.cerrarSesionToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.cerrarSesionToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.salirToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.salirToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // PanelDesktop
             // 
@@ -290,48 +333,6 @@ namespace AppPedidos
             this.iconMenuItem4.Size = new System.Drawing.Size(32, 19);
             this.iconMenuItem4.Text = "iconMenuItem4";
             this.iconMenuItem4.Click += new System.EventHandler(this.iconMenuItem4_Click);
-            // 
-            // usuarioToolStripMenuItem
-            // 
-            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarPerfilToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem});
-            this.usuarioToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.usuarioToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.usuarioToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.usuarioToolStripMenuItem.Text = "usuario";
-            // 
-            // editarPerfilToolStripMenuItem
-            // 
-            this.editarPerfilToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            this.editarPerfilToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.editarPerfilToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
-            this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
-            // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
-            this.cerrarSesionToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.cerrarSesionToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
-            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.salirToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.salirToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // formularioHome
             // 
