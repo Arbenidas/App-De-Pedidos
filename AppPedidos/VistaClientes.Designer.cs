@@ -33,13 +33,6 @@
             this.comprasToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.misComprasToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.nuevoToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.auricularesToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.laptopsToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.monitoresDeSegundaToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.monitoresGamerToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.monitoresEstandarToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.ratonesGamerToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.ratonesEstandarToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
@@ -95,84 +88,12 @@
             // 
             // nuevoToolStripMenuItem
             // 
-            this.nuevoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.auricularesToolStripMenuItem,
-            this.laptopsToolStripMenuItem,
-            this.monitoresDeSegundaToolStripMenuItem,
-            this.monitoresGamerToolStripMenuItem,
-            this.monitoresEstandarToolStripMenuItem,
-            this.ratonesGamerToolStripMenuItem,
-            this.ratonesEstandarToolStripMenuItem});
             this.nuevoToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
             this.nuevoToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.nuevoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // auricularesToolStripMenuItem
-            // 
-            this.auricularesToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.auricularesToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.auricularesToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.auricularesToolStripMenuItem.Name = "auricularesToolStripMenuItem";
-            this.auricularesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.auricularesToolStripMenuItem.Text = "Auriculares";
-            // 
-            // laptopsToolStripMenuItem
-            // 
-            this.laptopsToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.laptopsToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.laptopsToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.laptopsToolStripMenuItem.Name = "laptopsToolStripMenuItem";
-            this.laptopsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.laptopsToolStripMenuItem.Text = "Laptops";
-            // 
-            // monitoresDeSegundaToolStripMenuItem
-            // 
-            this.monitoresDeSegundaToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.monitoresDeSegundaToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.monitoresDeSegundaToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.monitoresDeSegundaToolStripMenuItem.Name = "monitoresDeSegundaToolStripMenuItem";
-            this.monitoresDeSegundaToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.monitoresDeSegundaToolStripMenuItem.Text = "Monitores de segunda";
-            // 
-            // monitoresGamerToolStripMenuItem
-            // 
-            this.monitoresGamerToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.monitoresGamerToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.monitoresGamerToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.monitoresGamerToolStripMenuItem.Name = "monitoresGamerToolStripMenuItem";
-            this.monitoresGamerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.monitoresGamerToolStripMenuItem.Text = "Monitores Gamer";
-            // 
-            // monitoresEstandarToolStripMenuItem
-            // 
-            this.monitoresEstandarToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.monitoresEstandarToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.monitoresEstandarToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.monitoresEstandarToolStripMenuItem.Name = "monitoresEstandarToolStripMenuItem";
-            this.monitoresEstandarToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.monitoresEstandarToolStripMenuItem.Text = "Monitores Estandar";
-            this.monitoresEstandarToolStripMenuItem.Click += new System.EventHandler(this.monitoresEstandarToolStripMenuItem_Click);
-            // 
-            // ratonesGamerToolStripMenuItem
-            // 
-            this.ratonesGamerToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ratonesGamerToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.ratonesGamerToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ratonesGamerToolStripMenuItem.Name = "ratonesGamerToolStripMenuItem";
-            this.ratonesGamerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.ratonesGamerToolStripMenuItem.Text = "Ratones Gamer";
-            // 
-            // ratonesEstandarToolStripMenuItem
-            // 
-            this.ratonesEstandarToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ratonesEstandarToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.ratonesEstandarToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ratonesEstandarToolStripMenuItem.Name = "ratonesEstandarToolStripMenuItem";
-            this.ratonesEstandarToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.ratonesEstandarToolStripMenuItem.Text = "Ratones Estandar";
             // 
             // usuarioToolStripMenuItem
             // 
@@ -259,13 +180,6 @@
         private FontAwesome.Sharp.IconMenuItem comprasToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem misComprasToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem nuevoToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem auricularesToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem laptopsToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem monitoresDeSegundaToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem monitoresGamerToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem monitoresEstandarToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem ratonesGamerToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem ratonesEstandarToolStripMenuItem;
         private System.Windows.Forms.Panel PanelDesktop;
         private FontAwesome.Sharp.IconMenuItem usuarioToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem editarPerfilToolStripMenuItem;
