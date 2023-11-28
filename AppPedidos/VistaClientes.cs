@@ -67,8 +67,8 @@ namespace AppPedidos
 
         private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditarPerfil editarPerfil = new EditarPerfil();
-            editarPerfil.Show();
+            //
+            this.Close();
 
         }
     }

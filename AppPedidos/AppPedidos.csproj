@@ -96,10 +96,6 @@
     <Compile Include="Departamento.cs" />
     <Compile Include="DetalleCompra.cs" />
     <Compile Include="Distrito.cs" />
-    <Compile Include="EditarPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditarPerfil.Designer.cs" />
     <Compile Include="HomeVentasForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,7 +220,6 @@
     <EmbeddedResource Include="ComponenteDeImagenesDeProductosForm.resx">
       <DependentUpon>ComponenteDeImagenesDeProductosForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarPerfil.resx" />
     <EmbeddedResource Include="HomeVentasForm.resx">
       <DependentUpon>HomeVentasForm.cs</DependentUpon>
     </EmbeddedResource>

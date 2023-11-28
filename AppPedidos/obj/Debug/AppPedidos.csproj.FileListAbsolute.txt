@@ -113,7 +113,6 @@ C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedido
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.AuricularesGamersForm.resources
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.AuricularesStandarsForm.resources
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.ComponenteDeImagenesDeProductosForm.resources
-C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.EditarPerfil.resources
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.HomeVentasForm.resources
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.formularioHome.resources
 C:\Users\usuar\OneDrive\Escritorio\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.InicioSesionForm.resources

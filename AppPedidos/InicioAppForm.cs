@@ -313,5 +313,10 @@ namespace AppPedidos
             this.Close();
             Application.Exit();
         }
+
+        private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
