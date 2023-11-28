@@ -30,19 +30,19 @@ namespace AppPedidos
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.buttonRegistro = new System.Windows.Forms.Button();
+            this.inputNombres = new System.Windows.Forms.TextBox();
+            this.inputCorreo = new System.Windows.Forms.TextBox();
+            this.inputContrasena = new System.Windows.Forms.TextBox();
+            this.inputApellidos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.checkBoxAdministrador = new System.Windows.Forms.CheckBox();
+            this.checkBoxActivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,66 +55,50 @@ namespace AppPedidos
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 9;
             // 
-            // button1
+            // buttonRegistro
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(178)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(399, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 43);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Completar Registro";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonRegistro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(178)))));
+            this.buttonRegistro.ForeColor = System.Drawing.Color.White;
+            this.buttonRegistro.Location = new System.Drawing.Point(380, 317);
+            this.buttonRegistro.Name = "buttonRegistro";
+            this.buttonRegistro.Size = new System.Drawing.Size(251, 43);
+            this.buttonRegistro.TabIndex = 10;
+            this.buttonRegistro.Text = "Completar Registro";
+            this.buttonRegistro.UseVisualStyleBackColor = false;
+            this.buttonRegistro.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // inputNombres
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(281, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 11;
+            this.inputNombres.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputNombres.Location = new System.Drawing.Point(281, 74);
+            this.inputNombres.Name = "inputNombres";
+            this.inputNombres.Size = new System.Drawing.Size(163, 20);
+            this.inputNombres.TabIndex = 11;
             // 
-            // textBox2
+            // inputCorreo
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(281, 148);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 12;
+            this.inputCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputCorreo.Location = new System.Drawing.Point(281, 148);
+            this.inputCorreo.Name = "inputCorreo";
+            this.inputCorreo.Size = new System.Drawing.Size(163, 20);
+            this.inputCorreo.TabIndex = 12;
             // 
-            // textBox3
+            // inputContrasena
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(281, 219);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 20);
-            this.textBox3.TabIndex = 13;
+            this.inputContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputContrasena.Location = new System.Drawing.Point(281, 219);
+            this.inputContrasena.Name = "inputContrasena";
+            this.inputContrasena.Size = new System.Drawing.Size(163, 20);
+            this.inputContrasena.TabIndex = 13;
             // 
-            // textBox4
+            // inputApellidos
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(586, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 20);
-            this.textBox4.TabIndex = 14;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(586, 148);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 20);
-            this.textBox5.TabIndex = 15;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(586, 219);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 20);
-            this.textBox6.TabIndex = 16;
+            this.inputApellidos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputApellidos.Location = new System.Drawing.Point(586, 74);
+            this.inputApellidos.Name = "inputApellidos";
+            this.inputApellidos.Size = new System.Drawing.Size(163, 20);
+            this.inputApellidos.TabIndex = 14;
             // 
             // label1
             // 
@@ -136,9 +120,9 @@ namespace AppPedidos
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(278, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 18);
+            this.label2.Size = new System.Drawing.Size(55, 18);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Telefono";
+            this.label2.Text = "Correo";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -149,9 +133,9 @@ namespace AppPedidos
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(278, 198);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 18);
+            this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Ciudad";
+            this.label3.Text = "Contraseña";
             // 
             // label4
             // 
@@ -173,9 +157,9 @@ namespace AppPedidos
             this.label5.ForeColor = System.Drawing.Color.DimGray;
             this.label5.Location = new System.Drawing.Point(583, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 18);
+            this.label5.Size = new System.Drawing.Size(99, 18);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Departamento";
+            this.label5.Text = "Administrador";
             // 
             // label6
             // 
@@ -185,30 +169,50 @@ namespace AppPedidos
             this.label6.ForeColor = System.Drawing.Color.DimGray;
             this.label6.Location = new System.Drawing.Point(583, 198);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 18);
+            this.label6.Size = new System.Drawing.Size(48, 18);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Direccion";
+            this.label6.Text = "Activo";
             // 
-            // Registro2
+            // checkBoxAdministrador
+            // 
+            this.checkBoxAdministrador.AutoSize = true;
+            this.checkBoxAdministrador.Location = new System.Drawing.Point(596, 151);
+            this.checkBoxAdministrador.Name = "checkBoxAdministrador";
+            this.checkBoxAdministrador.Size = new System.Drawing.Size(35, 17);
+            this.checkBoxAdministrador.TabIndex = 23;
+            this.checkBoxAdministrador.Text = "Si";
+            this.checkBoxAdministrador.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxActivo
+            // 
+            this.checkBoxActivo.AutoSize = true;
+            this.checkBoxActivo.Location = new System.Drawing.Point(596, 222);
+            this.checkBoxActivo.Name = "checkBoxActivo";
+            this.checkBoxActivo.Size = new System.Drawing.Size(35, 17);
+            this.checkBoxActivo.TabIndex = 24;
+            this.checkBoxActivo.Text = "Si";
+            this.checkBoxActivo.UseVisualStyleBackColor = true;
+            // 
+            // RegistroDeUsuarioAdicionalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 450);
+            this.Controls.Add(this.checkBoxActivo);
+            this.Controls.Add(this.checkBoxAdministrador);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.inputApellidos);
+            this.Controls.Add(this.inputContrasena);
+            this.Controls.Add(this.inputCorreo);
+            this.Controls.Add(this.inputNombres);
+            this.Controls.Add(this.buttonRegistro);
             this.Controls.Add(this.panel1);
-            this.Name = "Registro2";
+            this.Name = "RegistroDeUsuarioAdicionalForm";
             this.Text = "Registro2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -218,18 +222,18 @@ namespace AppPedidos
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button buttonRegistro;
+        private System.Windows.Forms.TextBox inputNombres;
+        private System.Windows.Forms.TextBox inputCorreo;
+        private System.Windows.Forms.TextBox inputContrasena;
+        private System.Windows.Forms.TextBox inputApellidos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkBoxAdministrador;
+        private System.Windows.Forms.CheckBox checkBoxActivo;
     }
 }

@@ -60,27 +60,56 @@ namespace AppPedidos
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (Textbox1.Text == "")
+            if (textBox2.Text == "")
             {
-                Textbox1.Text = "Contraseña";
-                Textbox1.ForeColor = Color.Black;
+                textBox2.Text = "Contraseña";
+                textBox2.ForeColor = Color.Black;
             }
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (Textbox1.Text == "Contraseña")
+            if (textBox2.Text == "Contraseña")
             {
-                Textbox1.Text = "";
-                Textbox1.ForeColor = Color.LightGray;
+                textBox2.Text = "";
+                textBox2.ForeColor = Color.LightGray;
             }
         }
 
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-           
+            Usuario myUsuario = UsuarioLogica.Obtener(Textbox1.Text, textBox2.Text);
+            if (myUsuario != null)
+            {
+                
+                if (myUsuario.EsAdministrador)
+                {
+                    formularioHome home = new formularioHome();
+                    home.Show();
+                    
 
+                }
+                else
+                {
+                    VistaClientes homeCliente = new VistaClientes();
+                    homeCliente.Show();
+                    
+                }
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Credenciales incorrectas, intente nuevamente");
+            }
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            RegistroDeUsuarioAdicionalForm registro = new RegistroDeUsuarioAdicionalForm();
+            registro.Show();
+            this.Close();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace AppPedidos
 {
     public partial class RegistroDeUsuarioAdicionalForm : Form
     {
+        private Usuario usuario = new Usuario();
         public RegistroDeUsuarioAdicionalForm()
         {
             InitializeComponent();
@@ -24,6 +25,25 @@ namespace AppPedidos
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            usuario.Nombres = inputNombres.Text.Trim();
+            usuario.Apellidos = inputApellidos.Text.Trim();
+            usuario.Contrasena = inputContrasena.Text.Trim();
+            usuario.Correo = inputCorreo.Text.Trim();
+            usuario.EsAdministrador = checkBoxAdministrador.Checked;
+            usuario.Activo = checkBoxActivo.Checked;
+            int registro = UsuarioLogica.Registrar(usuario);
+            if(registro != 0)
+            {
+                MessageBox.Show("usuario registrado con exito");
+                InicioSesionForm inicioSesionForm = new InicioSesionForm();
+                inicioSesionForm.Show();
+                this.Close();
+            }
 
         }
     }

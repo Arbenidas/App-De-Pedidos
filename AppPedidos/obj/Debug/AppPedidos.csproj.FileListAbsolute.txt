@@ -104,3 +104,4 @@ C:\Users\usuar\OneDrive\Documentos\AppPedidos\App-De-Pedidos\AppPedidos\obj\Debu
 C:\Users\usuar\OneDrive\Documentos\AppPedidos\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MostrarPerfil.resources
 C:\Users\usuar\OneDrive\Documentos\AppPedidos\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.EditarPerfil.resources
 C:\Users\usuar\OneDrive\Documentos\AppPedidos\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.Miembros.resources
+C:\Users\usuar\OneDrive\Documentos\AppPedidos\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.VistaClientes.resources

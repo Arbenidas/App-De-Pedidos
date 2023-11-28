@@ -209,6 +209,12 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioLogica.cs" />
     <Compile Include="utilidades.cs" />
+    <Compile Include="VistaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaClientes.Designer.cs">
+      <DependentUpon>VistaClientes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AuricularesGamersForm.resx">
       <DependentUpon>AuricularesGamersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeUsuarioAdicionalForm.resx">
       <DependentUpon>RegistroDeUsuarioAdicionalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaClientes.resx">
+      <DependentUpon>VistaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

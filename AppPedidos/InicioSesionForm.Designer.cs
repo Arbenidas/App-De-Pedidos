@@ -122,6 +122,7 @@ namespace AppPedidos
             this.label2.Size = new System.Drawing.Size(88, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Registrarse";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
@@ -135,7 +136,7 @@ namespace AppPedidos
             this.label3.TabIndex = 6;
             this.label3.Text = "Privacidad";
             // 
-            // inicioSesion
+            // InicioSesionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -148,7 +149,7 @@ namespace AppPedidos
             this.Controls.Add(this.Textbox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "inicioSesion";
+            this.Name = "InicioSesionForm";
             this.Text = "inicioSesion";
             this.Load += new System.EventHandler(this.inicioSesion_Load);
             this.ResumeLayout(false);

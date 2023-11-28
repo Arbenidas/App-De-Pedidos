@@ -30,7 +30,7 @@ namespace AppPedidos
             }
         }
 
-        public Usuario Obtener(string _correo, string _contrasena)
+        public static Usuario Obtener(string _correo, string _contrasena)
         {
             Usuario objeto = null;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -70,7 +70,7 @@ namespace AppPedidos
             return objeto;
         }
 
-        public int Registrar(Usuario oUsuario)
+        public static int Registrar(Usuario oUsuario)
         {
             int respuesta = 0;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))

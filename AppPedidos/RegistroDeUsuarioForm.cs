@@ -14,7 +14,12 @@ namespace AppPedidos
     {
         public RegistroDeUsuarioForm()
         {
+
             InitializeComponent();
+            textBoxCorreo.GotFocus += new EventHandler(this.RemoveText);
+            textBoxCorreo.LostFocus += new EventHandler(this.AddText);
+            textBoxContrasena.GotFocus += new EventHandler(this.RemoveText);
+            textBoxContrasena.LostFocus += new EventHandler(this.AddText);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,6 +55,36 @@ namespace AppPedidos
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void RemoveText(object sender, EventArgs e)
+        {
+            //MessageBox.Show(sender.ToString());
+            if (textBoxCorreo.Text == "Ingrese su correo")
+            {
+                textBoxCorreo.Text = "";
+            }
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxCorreo.Text))
+                textBoxCorreo.Text = "Ingrese su correo";
+        }
+
+        public void RemoveText2(object sender, EventArgs e)
+        {
+            //MessageBox.Show(sender.ToString());
+            if (textBoxCorreo.Text == "Ingrese su contraseña")
+            {
+                textBoxCorreo.Text = "";
+            }
+        }
+
+        public void AddText2(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxCorreo.Text))
+                textBoxCorreo.Text = "Ingrese su contraseña";
         }
     }
 }

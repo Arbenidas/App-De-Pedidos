@@ -142,7 +142,7 @@ namespace AppPedidos
             this.iconMenuItem8.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem8.Name = "iconMenuItem8";
-            this.iconMenuItem8.Size = new System.Drawing.Size(136, 22);
+            this.iconMenuItem8.Size = new System.Drawing.Size(180, 22);
             this.iconMenuItem8.Text = "Monitores";
             // 
             // iconMenuItem12
@@ -151,7 +151,7 @@ namespace AppPedidos
             this.iconMenuItem12.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem12.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem12.Name = "iconMenuItem12";
-            this.iconMenuItem12.Size = new System.Drawing.Size(136, 22);
+            this.iconMenuItem12.Size = new System.Drawing.Size(180, 22);
             this.iconMenuItem12.Text = "Laptop";
             // 
             // iconMenuItem13
@@ -160,7 +160,7 @@ namespace AppPedidos
             this.iconMenuItem13.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem13.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem13.Name = "iconMenuItem13";
-            this.iconMenuItem13.Size = new System.Drawing.Size(136, 22);
+            this.iconMenuItem13.Size = new System.Drawing.Size(180, 22);
             this.iconMenuItem13.Text = "Audiculares";
             // 
             // iconMenuItem14
@@ -169,7 +169,7 @@ namespace AppPedidos
             this.iconMenuItem14.IconColor = System.Drawing.Color.Black;
             this.iconMenuItem14.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconMenuItem14.Name = "iconMenuItem14";
-            this.iconMenuItem14.Size = new System.Drawing.Size(136, 22);
+            this.iconMenuItem14.Size = new System.Drawing.Size(180, 22);
             this.iconMenuItem14.Text = "Ratones";
             // 
             // menuCategorias
@@ -229,9 +229,10 @@ namespace AppPedidos
             // PanelDesktop
             // 
             this.PanelDesktop.Controls.Add(this.label1);
-            this.PanelDesktop.Location = new System.Drawing.Point(0, 94);
+            this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelDesktop.Location = new System.Drawing.Point(0, 0);
             this.PanelDesktop.Name = "PanelDesktop";
-            this.PanelDesktop.Size = new System.Drawing.Size(831, 356);
+            this.PanelDesktop.Size = new System.Drawing.Size(831, 450);
             this.PanelDesktop.TabIndex = 9;
             this.PanelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             this.PanelDesktop.Resize += new System.EventHandler(this.PanelDesktop_Resize);

@@ -31,9 +31,9 @@ namespace AppPedidos
         {
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Textbox1 = new System.Windows.Forms.TextBox();
+            this.botonEntrar = new FontAwesome.Sharp.IconButton();
+            this.textBoxContrasena = new System.Windows.Forms.TextBox();
+            this.textBoxCorreo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -66,50 +66,50 @@ namespace AppPedidos
             this.label2.Text = "Iniciar Sesion";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // iconButton1
+            // botonEntrar
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(178)))));
-            this.iconButton1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(362, 322);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(280, 60);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "Registar";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.botonEntrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.botonEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(178)))));
+            this.botonEntrar.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonEntrar.ForeColor = System.Drawing.Color.White;
+            this.botonEntrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.botonEntrar.IconColor = System.Drawing.Color.Black;
+            this.botonEntrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.botonEntrar.Location = new System.Drawing.Point(362, 322);
+            this.botonEntrar.Name = "botonEntrar";
+            this.botonEntrar.Size = new System.Drawing.Size(280, 60);
+            this.botonEntrar.TabIndex = 7;
+            this.botonEntrar.Text = "Registar";
+            this.botonEntrar.UseVisualStyleBackColor = false;
+            this.botonEntrar.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // textBox2
+            // textBoxContrasena
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(362, 230);
-            this.textBox2.MaximumSize = new System.Drawing.Size(100, 2);
-            this.textBox2.MinimumSize = new System.Drawing.Size(280, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 30);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBoxContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxContrasena.Location = new System.Drawing.Point(362, 230);
+            this.textBoxContrasena.MaximumSize = new System.Drawing.Size(100, 2);
+            this.textBoxContrasena.MinimumSize = new System.Drawing.Size(280, 30);
+            this.textBoxContrasena.Name = "textBoxContrasena";
+            this.textBoxContrasena.Size = new System.Drawing.Size(280, 30);
+            this.textBoxContrasena.TabIndex = 11;
+            this.textBoxContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxContrasena.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // Textbox1
+            // textBoxCorreo
             // 
-            this.Textbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Textbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(20)));
-            this.Textbox1.Location = new System.Drawing.Point(362, 160);
-            this.Textbox1.Margin = new System.Windows.Forms.Padding(10);
-            this.Textbox1.MaximumSize = new System.Drawing.Size(60, 2);
-            this.Textbox1.MinimumSize = new System.Drawing.Size(280, 30);
-            this.Textbox1.Name = "Textbox1";
-            this.Textbox1.Size = new System.Drawing.Size(280, 30);
-            this.Textbox1.TabIndex = 10;
-            this.Textbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Textbox1.TextChanged += new System.EventHandler(this.Textbox1_TextChanged);
+            this.textBoxCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(20)));
+            this.textBoxCorreo.Location = new System.Drawing.Point(362, 160);
+            this.textBoxCorreo.Margin = new System.Windows.Forms.Padding(10);
+            this.textBoxCorreo.MaximumSize = new System.Drawing.Size(60, 2);
+            this.textBoxCorreo.MinimumSize = new System.Drawing.Size(280, 30);
+            this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.Size = new System.Drawing.Size(280, 30);
+            this.textBoxCorreo.TabIndex = 10;
+            this.textBoxCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxCorreo.TextChanged += new System.EventHandler(this.Textbox1_TextChanged);
             // 
             // label1
             // 
@@ -158,7 +158,7 @@ namespace AppPedidos
             this.checkBox2.Text = "Vendedor";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // Registro
+            // RegistroDeUsuarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,12 +167,12 @@ namespace AppPedidos
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.Textbox1);
+            this.Controls.Add(this.botonEntrar);
+            this.Controls.Add(this.textBoxContrasena);
+            this.Controls.Add(this.textBoxCorreo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "Registro";
+            this.Name = "RegistroDeUsuarioForm";
             this.Text = "Registro";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,9 +183,9 @@ namespace AppPedidos
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox Textbox1;
+        private FontAwesome.Sharp.IconButton botonEntrar;
+        public System.Windows.Forms.TextBox textBoxContrasena;
+        public System.Windows.Forms.TextBox textBoxCorreo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox1;
