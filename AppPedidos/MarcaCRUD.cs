@@ -55,15 +55,7 @@ namespace AppPedidos
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            List<Marca> marcas = MarcaLogica.Listar();
-
-            Dictionary<string, int> idmarcas = new Dictionary<string, int>();
-
-            for (int i = 0; i < marcas.Count; i++)
-            {
-                idmarcas.Add(marcas[i].Descripcion, marcas[i].IdMarca);
-            }
-
+          
             marca.Activo = checkBoxEstado.Checked;
             marca.Descripcion = inputNombre.Text.Trim();
 
@@ -82,21 +74,13 @@ namespace AppPedidos
 
                 if (!string.IsNullOrEmpty(id))
                 {
-
-                    List<Marca> marcas = MarcaLogica.Listar();
-
-                    Dictionary<string, int> idmarcas = new Dictionary<string, int>();
-                    for (int i = 0; i < marcas.Count; i++)
-                    {
-                        idmarcas.Add(marcas[i].Descripcion, marcas[i].IdMarca);
-                    }
-
-                    
+                    marca.IdMarca = Convert.ToInt32(inputID.Text);
                     marca.Descripcion = inputNombre.Text.Trim();
                     marca.Activo = checkBoxEstado.Checked;
- 
+                    
+
                     MarcaLogica.Modificar(marca);
-                    MessageBox.Show("registro actualizado");
+                    MessageBox.Show(marca.ToString());
                     Refrescar();
                 }
 
