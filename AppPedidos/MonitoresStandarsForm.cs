@@ -23,14 +23,25 @@ namespace AppPedidos
         {
             // Obtiene la lista de productos desde la base de datos
             List<Producto> listaProductos = ObtenerListaDeProductosDesdeBD();
-            MessageBox.Show(categoria);
+
+            List<Categoria> categorias = CategoriaLogica.Listar();
+            int categoriaID=0;
+            for (int i = 0; i < categorias.Count; i++)
+            {
+                if (categoria == categorias[i].Descripcion)
+                {
+                    categoriaID = categorias[i].IdCategoria;
+                }
+            }
+
+               
             // Verifica que el FlowLayoutPanel existente no sea nulo
             if (PanelDeProdcutos != null)
             {
                 // Recorre la lista de productos y agrega un Panel para cada producto
                 foreach (Producto producto in listaProductos)
                 {
-                    if (producto.IdCategoria == ) { 
+                    if (producto.IdCategoria == categoriaID) { 
                     Panel panel = new Panel();
                     panel.Padding = new Padding(3, 30, 3, 10);
                     panel.Width = 180;

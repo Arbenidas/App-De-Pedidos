@@ -179,7 +179,7 @@ namespace AppPedidos
 
         private void iconButton7_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new MonitoresStandarsForm());
+            //AbrirFormulariosHijo(new MonitoresStandarsForm());
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
@@ -317,6 +317,10 @@ namespace AppPedidos
         private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuMarcas_Click(object sender, EventArgs e)
+        {
         }
     }
 }
