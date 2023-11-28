@@ -13,10 +13,16 @@ namespace AppPedidos
     public partial class VistaClientes : Form
     {
         private Form currentChildForm;
-        public VistaClientes()
+        private Usuario usuario;
+        public VistaClientes(string correo, string constraseña)
         {
             InitializeComponent();
+            this.usuario = UsuarioLogica.Obtener(correo, constraseña);
+            usuarioToolStripMenuItem.Text = usuario.Nombres;
+
         }
+
+        
 
         private void AbrirFormulariosHijo(Form childForm)
         {
@@ -43,6 +49,26 @@ namespace AppPedidos
         private void monitoresEstandarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijo(new MonitoresStandarsForm());
+
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InicioSesionForm formInicio = new InicioSesionForm();
+            formInicio.Show();
+            this.Close();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
+
+        private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarPerfil editarPerfil = new EditarPerfil();
+            editarPerfil.Show();
 
         }
     }

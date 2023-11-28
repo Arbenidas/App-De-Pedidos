@@ -40,5 +40,17 @@ namespace AppPedidos
             dato.Enabled = true;
             this.Hide();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // EditarPerfil
+            // 
+            this.ClientSize = new System.Drawing.Size(503, 259);
+            this.Name = "EditarPerfil";
+            this.ResumeLayout(false);
+
+        }
     }
 }

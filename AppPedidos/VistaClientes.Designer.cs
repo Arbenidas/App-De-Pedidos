@@ -41,6 +41,10 @@
             this.ratonesGamerToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.ratonesEstandarToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.PanelDesktop = new System.Windows.Forms.Panel();
+            this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +52,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuInicio,
-            this.comprasToolStripMenuItem});
+            this.comprasToolStripMenuItem,
+            this.usuarioToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -82,7 +88,7 @@
             this.misComprasToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.misComprasToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.misComprasToolStripMenuItem.Name = "misComprasToolStripMenuItem";
-            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.misComprasToolStripMenuItem.Text = "Mis compras";
             // 
             // nuevoToolStripMenuItem
@@ -99,7 +105,7 @@
             this.nuevoToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.nuevoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             // 
             // auricularesToolStripMenuItem
@@ -174,6 +180,48 @@
             this.PanelDesktop.Size = new System.Drawing.Size(800, 426);
             this.PanelDesktop.TabIndex = 1;
             // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarPerfilToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
+            this.usuarioToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.usuarioToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.usuarioToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.usuarioToolStripMenuItem.Text = "Usuario";
+            // 
+            // editarPerfilToolStripMenuItem
+            // 
+            this.editarPerfilToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.editarPerfilToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.editarPerfilToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
+            this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
+            this.cerrarSesionToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.cerrarSesionToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.salirToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.salirToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // VistaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,5 +254,9 @@
         private FontAwesome.Sharp.IconMenuItem ratonesGamerToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem ratonesEstandarToolStripMenuItem;
         private System.Windows.Forms.Panel PanelDesktop;
+        private FontAwesome.Sharp.IconMenuItem usuarioToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem editarPerfilToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem cerrarSesionToolStripMenuItem;
+        private FontAwesome.Sharp.IconMenuItem salirToolStripMenuItem;
     }
 }

@@ -20,13 +20,14 @@ namespace AppPedidos
         //Atributo que resive un formulario hijo.
         private Form currentChildForm;
 
+        private Usuario usuario;
 
-
-        public formularioHome()
+        public formularioHome(string correo, string contraseña)
         {
             InitializeComponent();
+            this.usuario = UsuarioLogica.Obtener(correo, contraseña);
+            usuarioToolStripMenuItem.Text = usuario.Nombres;
 
-           
         }
 
         /// <summary>
@@ -298,6 +299,19 @@ namespace AppPedidos
         private void misProductos_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijo(new ProductosCRUD());
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InicioSesionForm formInicio = new InicioSesionForm();
+            formInicio.Show();
+            this.Close();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -85,14 +85,14 @@ namespace AppPedidos
                 
                 if (myUsuario.EsAdministrador)
                 {
-                    formularioHome home = new formularioHome();
+                    formularioHome home = new formularioHome(myUsuario.Correo, myUsuario.Contrasena);
                     home.Show();
                     
 
                 }
                 else
                 {
-                    VistaClientes homeCliente = new VistaClientes();
+                    VistaClientes homeCliente = new VistaClientes(myUsuario.Correo, myUsuario.Contrasena);
                     homeCliente.Show();
                     
                 }
