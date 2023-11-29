@@ -58,12 +58,12 @@ namespace AppPedidos
                 }
             }
 
-            
+            /*
             foreach (var item in compra.oDetalleCompra)
             {
                 MessageBox.Show("detalle "+item.oProducto.Nombre+" cantidad "+item.Cantidad+" idProducto "+item.IdProducto);
-            }
-            MessageBox.Show("ultima compra "+ultimaCompra.ToString());
+            }*/
+            //MessageBox.Show("ultima compra "+ultimaCompra.ToString());
             //bool registro = false;
             bool registro = CompraLogica.Registrar(compra);
 
@@ -95,7 +95,7 @@ namespace AppPedidos
                 {
                     listaCarrito.Add(producto);
                     total += producto.Precio * listaDeCompra[producto.IdProducto];
-                    MessageBox.Show(producto.Precio.ToString() + " X " + listaDeCompra[producto.IdProducto].ToString());
+                    //MessageBox.Show(producto.Precio.ToString() + " X " + listaDeCompra[producto.IdProducto].ToString());
                 }
             }
 

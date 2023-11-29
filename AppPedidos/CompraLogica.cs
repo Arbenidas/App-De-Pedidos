@@ -76,11 +76,11 @@ namespace AppPedidos
         public static int RegistrarDetalle(List<DetalleCompra> detallesDeCompra)
         {
             int resultado =0;
-            System.Windows.MessageBox.Show("Entro al metodo");
+            //System.Windows.MessageBox.Show("Entro al metodo");
             SqlConnection conexion = new SqlConnection(Conexion.CN);
             foreach (DetalleCompra dc in detallesDeCompra)
             {
-                System.Windows.MessageBox.Show("Se insertara producto"+dc.IdProducto.ToString());
+                //System.Windows.MessageBox.Show("Se insertara producto"+dc.IdProducto.ToString());
 
                 try
                 {
@@ -90,7 +90,7 @@ namespace AppPedidos
 
                     SqlCommand comando = new SqlCommand(insetarDetalle, conexion);
                     conexion.Open();
-                    System.Windows.MessageBox.Show(insetarDetalle.ToString());
+                    //System.Windows.MessageBox.Show(insetarDetalle.ToString());
                     comando.ExecuteNonQuery();
                     conexion.Close();
 
@@ -150,6 +150,41 @@ namespace AppPedidos
             }
 
             return dt;
+        }
+
+        public static void CambiarEstadoCompra(int idCompra, bool estado)
+        {
+            SqlConnection conn = new SqlConnection(Conexion.CN);
+
+
+            string sql = "UPDATE Compra SET Estado=@Estado WHERE IdCompra=@IdCompra";
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            
+            cmd.Parameters.AddWithValue("@Estado", !estado);
+
+            cmd.Parameters.AddWithValue("@IdCompra", idCompra);
+
+            try
+            {
+                long respuesta;
+                conn.Open();
+
+                respuesta = cmd.ExecuteNonQuery();
+                if (respuesta > 0)
+                {
+                    System.Windows.MessageBox.Show("El estado de la compra se actualizo");
+                }
+            }
+            finally
+            {
+
+                cmd.Dispose();
+                conn.Close();
+            }
+
+
         }
     }
 }

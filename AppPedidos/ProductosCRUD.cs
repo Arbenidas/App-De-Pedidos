@@ -171,5 +171,21 @@ namespace AppPedidos
 
             }
         }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            
+            inputID.Text = "";
+            inputNombre.Text = "";
+            inputDescripcion.Text = "";
+            //MessageBox.Show (row.Cells["IdCategoria"].Value.ToString());
+            comboCategorias.SelectedIndex = 1;
+            comboMarcas.SelectedIndex = 1;
+            inputPrecio.Text = "";
+            inputStock.Text = "";
+            inputImagen.Text = "";
+            checkBoxEstado.Checked = false;
+            inputFecha.Text = "";
+        }
     }
 }

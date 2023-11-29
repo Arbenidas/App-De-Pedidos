@@ -18,10 +18,10 @@ namespace AppPedidos
         private Usuario usuario;
         private Dictionary<int, int> listaID_Cantidad = new Dictionary<int, int>();
 
-        public VistaClientes(string correo, string constraseña)
+        public VistaClientes(string correo, string contraseña)
         {
             InitializeComponent();
-            this.usuario = UsuarioLogica.Obtener(correo, constraseña);
+            this.usuario = UsuarioLogica.Obtener(correo, contraseña);
             usuarioToolStripMenuItem.Text = usuario.Nombres;
 
         }
@@ -72,9 +72,16 @@ namespace AppPedidos
 
         private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //
-            this.Close();
+            EditarPerfil editarPerfil = new EditarPerfil(usuario.Correo, usuario.Contrasena, usuario.EsAdministrador);
+            AddOwnedForm(editarPerfil);
+            editarPerfil.Show();
 
+
+        }
+        public void RefrescarUsuario(string correo, string contraseña)
+        {
+            this.usuario = UsuarioLogica.Obtener(correo, contraseña);
+            usuarioToolStripMenuItem.Text = usuario.Nombres;
         }
 
         private void PanelDesktop_Paint(object sender, PaintEventArgs e)
@@ -130,7 +137,12 @@ namespace AppPedidos
 
         private void misComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormulariosHijo(new VistaPedidos(usuario.EsAdministrador));
+            AbrirFormulariosHijo(new VistaPedidos(usuario.EsAdministrador, usuario.IdUsuario));
+        }
+
+        private void menuInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new vista_Inicio());
         }
     }
 }

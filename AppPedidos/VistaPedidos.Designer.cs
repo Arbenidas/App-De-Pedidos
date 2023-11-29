@@ -34,6 +34,9 @@
             this.inputBusqueda = new System.Windows.Forms.TextBox();
             this.comboBuscarPor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.butonCambiarEstado = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,16 +45,17 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(96, 127);
+            this.dataGridView1.Location = new System.Drawing.Point(96, 85);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(633, 183);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(354, 36);
+            this.label1.Location = new System.Drawing.Point(352, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 1;
@@ -62,7 +66,7 @@
             this.botonBuscar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.botonBuscar.IconColor = System.Drawing.Color.Black;
             this.botonBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.botonBuscar.Location = new System.Drawing.Point(508, 75);
+            this.botonBuscar.Location = new System.Drawing.Point(509, 56);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(75, 23);
             this.botonBuscar.TabIndex = 2;
@@ -72,7 +76,7 @@
             // 
             // inputBusqueda
             // 
-            this.inputBusqueda.Location = new System.Drawing.Point(378, 75);
+            this.inputBusqueda.Location = new System.Drawing.Point(378, 54);
             this.inputBusqueda.Name = "inputBusqueda";
             this.inputBusqueda.Size = new System.Drawing.Size(100, 20);
             this.inputBusqueda.TabIndex = 3;
@@ -85,7 +89,7 @@
             "Contacto",
             "Telefono",
             "Direccion"});
-            this.comboBuscarPor.Location = new System.Drawing.Point(236, 75);
+            this.comboBuscarPor.Location = new System.Drawing.Point(236, 53);
             this.comboBuscarPor.Name = "comboBuscarPor";
             this.comboBuscarPor.Size = new System.Drawing.Size(121, 21);
             this.comboBuscarPor.TabIndex = 4;
@@ -93,17 +97,50 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 75);
+            this.label2.Location = new System.Drawing.Point(93, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Filtrar compra por";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Enabled = false;
+            this.textBoxID.Location = new System.Drawing.Point(170, 277);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(56, 20);
+            this.textBoxID.TabIndex = 6;
+            // 
+            // butonCambiarEstado
+            // 
+            this.butonCambiarEstado.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.butonCambiarEstado.IconColor = System.Drawing.Color.Black;
+            this.butonCambiarEstado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.butonCambiarEstado.Location = new System.Drawing.Point(232, 277);
+            this.butonCambiarEstado.Name = "butonCambiarEstado";
+            this.butonCambiarEstado.Size = new System.Drawing.Size(172, 23);
+            this.butonCambiarEstado.TabIndex = 7;
+            this.butonCambiarEstado.Text = "Cambiar estado de compra";
+            this.butonCambiarEstado.UseVisualStyleBackColor = true;
+            this.butonCambiarEstado.Click += new System.EventHandler(this.butonCambiarEstado_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(93, 280);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "ID de compra";
             // 
             // VistaPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.butonCambiarEstado);
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBuscarPor);
             this.Controls.Add(this.inputBusqueda);
@@ -127,5 +164,8 @@
         private System.Windows.Forms.TextBox inputBusqueda;
         private System.Windows.Forms.ComboBox comboBuscarPor;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxID;
+        private FontAwesome.Sharp.IconButton butonCambiarEstado;
+        private System.Windows.Forms.Label label3;
     }
 }

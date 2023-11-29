@@ -99,10 +99,10 @@ namespace AppPedidos
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InicioButton,
             this.seccionProductos,
             this.iconMenuItem3,
             this.iconMenuItem9,
-            this.InicioButton,
             this.usuarioToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -217,12 +217,13 @@ namespace AppPedidos
             // 
             // InicioButton
             // 
-            this.InicioButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.InicioButton.IconChar = FontAwesome.Sharp.IconChar.Cube;
             this.InicioButton.IconColor = System.Drawing.Color.Black;
             this.InicioButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.InicioButton.Name = "InicioButton";
             this.InicioButton.Size = new System.Drawing.Size(64, 20);
             this.InicioButton.Text = "Inicio";
+            this.InicioButton.Click += new System.EventHandler(this.InicioButton_Click);
             // 
             // usuarioToolStripMenuItem
             // 
@@ -242,7 +243,7 @@ namespace AppPedidos
             this.editarPerfilToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.editarPerfilToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
             this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
             // 
@@ -252,7 +253,7 @@ namespace AppPedidos
             this.cerrarSesionToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.cerrarSesionToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 

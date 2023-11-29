@@ -47,8 +47,11 @@
             this.botonLimpiar = new FontAwesome.Sharp.IconButton();
             this.botonActualizar = new FontAwesome.Sharp.IconButton();
             this.botonEliminar = new FontAwesome.Sharp.IconButton();
-            this.inputFecha = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.botonBuscar = new FontAwesome.Sharp.IconButton();
+            this.inputBusqueda = new System.Windows.Forms.TextBox();
+            this.comboBuscarPor = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,12 +208,13 @@
             this.botonLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.botonLimpiar.IconColor = System.Drawing.Color.Black;
             this.botonLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.botonLimpiar.Location = new System.Drawing.Point(63, 324);
+            this.botonLimpiar.Location = new System.Drawing.Point(493, 353);
             this.botonLimpiar.Name = "botonLimpiar";
             this.botonLimpiar.Size = new System.Drawing.Size(75, 23);
             this.botonLimpiar.TabIndex = 35;
             this.botonLimpiar.Text = "Limpiar";
             this.botonLimpiar.UseVisualStyleBackColor = true;
+            this.botonLimpiar.Click += new System.EventHandler(this.botonLimpiar_Click);
             // 
             // botonActualizar
             // 
@@ -238,13 +242,6 @@
             this.botonEliminar.UseVisualStyleBackColor = true;
             this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
-            // inputFecha
-            // 
-            this.inputFecha.Location = new System.Drawing.Point(604, 88);
-            this.inputFecha.Name = "inputFecha";
-            this.inputFecha.Size = new System.Drawing.Size(102, 20);
-            this.inputFecha.TabIndex = 38;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -254,13 +251,58 @@
             this.label8.TabIndex = 39;
             this.label8.Text = "Fecha";
             // 
+            // botonBuscar
+            // 
+            this.botonBuscar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.botonBuscar.IconColor = System.Drawing.Color.Black;
+            this.botonBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.botonBuscar.Location = new System.Drawing.Point(370, 326);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.botonBuscar.TabIndex = 40;
+            this.botonBuscar.Text = "Buscar";
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
+            // 
+            // inputBusqueda
+            // 
+            this.inputBusqueda.Location = new System.Drawing.Point(264, 329);
+            this.inputBusqueda.Name = "inputBusqueda";
+            this.inputBusqueda.Size = new System.Drawing.Size(100, 20);
+            this.inputBusqueda.TabIndex = 41;
+            // 
+            // comboBuscarPor
+            // 
+            this.comboBuscarPor.FormattingEnabled = true;
+            this.comboBuscarPor.Items.AddRange(new object[] {
+            "Nombres",
+            "Apellidos",
+            "Correo",
+            "Activo"});
+            this.comboBuscarPor.Location = new System.Drawing.Point(127, 328);
+            this.comboBuscarPor.Name = "comboBuscarPor";
+            this.comboBuscarPor.Size = new System.Drawing.Size(121, 21);
+            this.comboBuscarPor.TabIndex = 42;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(60, 332);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "Buscar por";
+            // 
             // ManejoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.comboBuscarPor);
+            this.Controls.Add(this.inputBusqueda);
+            this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.inputFecha);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonActualizar);
             this.Controls.Add(this.botonLimpiar);
@@ -309,7 +351,10 @@
         private FontAwesome.Sharp.IconButton botonLimpiar;
         private FontAwesome.Sharp.IconButton botonActualizar;
         private FontAwesome.Sharp.IconButton botonEliminar;
-        private System.Windows.Forms.DateTimePicker inputFecha;
         private System.Windows.Forms.Label label8;
+        private FontAwesome.Sharp.IconButton botonBuscar;
+        private System.Windows.Forms.TextBox inputBusqueda;
+        private System.Windows.Forms.ComboBox comboBuscarPor;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -88,6 +88,7 @@ namespace AppPedidos
             this.textBox2.MaximumSize = new System.Drawing.Size(100, 2);
             this.textBox2.MinimumSize = new System.Drawing.Size(280, 30);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(280, 30);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

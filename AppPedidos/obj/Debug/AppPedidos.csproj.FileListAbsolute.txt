@@ -191,3 +191,4 @@ C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\App
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RegistroCompra.resources
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.VistaPedidos.resources
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.ManejoClientes.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.EditarPerfil.resources

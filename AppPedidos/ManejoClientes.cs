@@ -54,7 +54,7 @@ namespace AppPedidos
                 checkBoxAdministrador.Checked = Convert.ToBoolean(row.Cells["EsAdministrador"].Value);
                 checkBoxActivo.Checked = Convert.ToBoolean(row.Cells["Activo"].Value);
                 //MessageBox.Show (row.Cells["IdCategoria"].Value.ToString());
-                inputFecha.Text = row.Cells["FechaRegistro"].Value.ToString();
+               
 
             }
         }
@@ -67,13 +67,15 @@ namespace AppPedidos
 
                 if (!string.IsNullOrEmpty(id))
                 {
+                    cliente.IdUsuario = Convert.ToInt32(id);
                     cliente.Nombres = inputNombres.Text.Trim();
                     cliente.Apellidos = inputApellidos.Text.Trim();
                     cliente.Contrasena = inputContrasena.Text.Trim();
                     cliente.Correo = inputCorreo.Text.Trim();
                     cliente.EsAdministrador = checkBoxAdministrador.Checked;
                     cliente.Activo = checkBoxActivo.Checked;
-                    MessageBox.Show("registro Actualizado" + id.ToString());
+                    UsuarioLogica.ActualizarUsuario(cliente);
+                    RefrescarGrid();
 
                 }
             }
@@ -96,6 +98,25 @@ namespace AppPedidos
 
             }
         }
-    
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            string condicion = "WHERE " + comboBuscarPor.Text + " like '%" + inputBusqueda.Text + "%'";
+            
+            dataGridView1.DataSource = UsuarioLogica.ObtenerClientes(condicion);
+        }
+
+        private void botonLimpiar_Click(object sender, EventArgs e)
+        {
+            textBoxID.Text = "";
+            inputNombres.Text = "";
+            inputApellidos.Text = "";
+            inputCorreo.Text = "";
+            inputContrasena.Text = "";
+            checkBoxAdministrador.Checked = false;
+            checkBoxActivo.Checked = false;
+
+            RefrescarGrid();
+        }
     }
 }
