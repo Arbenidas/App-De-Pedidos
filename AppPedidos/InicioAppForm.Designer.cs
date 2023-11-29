@@ -184,6 +184,7 @@ namespace AppPedidos
             this.menuCategorias.Name = "menuCategorias";
             this.menuCategorias.Size = new System.Drawing.Size(180, 22);
             this.menuCategorias.Text = "Categorias";
+            this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
             // 
             // menuMarcas
             // 

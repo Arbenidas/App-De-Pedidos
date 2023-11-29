@@ -323,5 +323,10 @@ namespace AppPedidos
         {
             AbrirFormulariosHijo(new MarcaCRUD());
         }
+
+        private void menuCategorias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new CategoriaCRUD());
+        }
     }
 }

@@ -211,3 +211,4 @@ C:\Users\diego\Dev\App-De-Pedidos\AppPedidos\bin\Debug\AppPedidos.exe
 C:\Users\diego\Dev\App-De-Pedidos\AppPedidos\bin\Debug\AppPedidos.pdb
 C:\Users\diego\Dev\App-De-Pedidos\AppPedidos\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\diego\Dev\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.CopyComplete
+C:\Users\diego\Dev\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.CategoriaCRUD.resources

@@ -71,6 +71,12 @@
     <Compile Include="Carrito.cs" />
     <Compile Include="CarritoLogica.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriaCRUD.Designer.cs">
+      <DependentUpon>CategoriaCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoriaLogica.cs" />
     <Compile Include="ComponenteDeImagenesDeProductosForm.cs">
       <SubType>Form</SubType>
@@ -163,6 +169,9 @@
     <Compile Include="VistaClientes.Designer.cs">
       <DependentUpon>VistaClientes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CategoriaCRUD.resx">
+      <DependentUpon>CategoriaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComponenteDeImagenesDeProductosForm.resx">
       <DependentUpon>ComponenteDeImagenesDeProductosForm.cs</DependentUpon>
     </EmbeddedResource>

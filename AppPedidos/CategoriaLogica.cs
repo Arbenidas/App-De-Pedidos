@@ -67,7 +67,7 @@ namespace AppPedidos
         }
 
 
-        public bool Registrar(Categoria oCategoria)
+        public static bool Registrar(Categoria oCategoria)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -94,7 +94,7 @@ namespace AppPedidos
             return respuesta;
         }
 
-        public bool Modificar(Categoria oCategoria)
+        public static bool Modificar(Categoria oCategoria)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -127,7 +127,7 @@ namespace AppPedidos
 
         }
 
-        public bool Eliminar(int id)
+        public static bool Eliminar(int id)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
