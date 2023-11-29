@@ -16,6 +16,8 @@ namespace AppPedidos
         
         private Form currentChildForm;
         private Usuario usuario;
+        private Dictionary<int, int> listaID_Cantidad = new Dictionary<int, int>();
+
         public VistaClientes(string correo, string constraseña)
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace AppPedidos
             }
             //se Asigna al atributo el formulario que se pasa como parametro
             currentChildForm = childForm;
+            AddOwnedForm(childForm);
 
             //Se estiliza y se pone en un lugar correspondiente.
             childForm.TopLevel = false;
@@ -104,6 +107,25 @@ namespace AppPedidos
             
             AbrirFormulariosHijo(new MonitoresStandarsForm(categoria));
 
+        }
+
+        public void DefinirCompras(int idproducto, int cantidad)
+        {
+            this.listaID_Cantidad.Add(idproducto, cantidad);
+            //MessageBox.Show(String.Join(", ", listaID_Cantidad));
+        }
+        public void QuitarProducto(int idproducto)
+        {
+            this.listaID_Cantidad.Remove(idproducto);
+            //MessageBox.Show(String.Join(", ", listaID_Cantidad));
+            AbrirFormulariosHijo(new VistaCarrito(listaID_Cantidad, usuario.IdUsuario));
+
+        }
+
+
+        private void carritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new VistaCarrito(listaID_Cantidad, usuario.IdUsuario));
         }
     }
 }

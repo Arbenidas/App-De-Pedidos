@@ -93,7 +93,7 @@
             this.nuevoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
+            this.nuevoToolStripMenuItem.Text = "Categorias";
             // 
             // usuarioToolStripMenuItem
             // 
@@ -145,6 +145,7 @@
             this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
             this.carritoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.carritoToolStripMenuItem.Text = "Carrito";
+            this.carritoToolStripMenuItem.Click += new System.EventHandler(this.carritoToolStripMenuItem_Click);
             // 
             // PanelDesktop
             // 

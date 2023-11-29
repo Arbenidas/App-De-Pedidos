@@ -13,6 +13,8 @@ namespace AppPedidos
 {
     public partial class MonitoresStandarsForm : Form
     {
+        //private List<Producto> listaComprar = new List<Producto>();
+        private Dictionary<int , int>  listaID_Cantidad = new Dictionary<int , int>();
         public MonitoresStandarsForm(string categoria)
         {
             InitializeComponent();
@@ -70,7 +72,7 @@ namespace AppPedidos
                     PanelDeProdcutos.Controls.Add(panel);
 
                     // Asigna el evento Click para mostrar el formulario de la imagen (puedes ajustar esto según tus necesidades)
-                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(rutaCompleta, producto.Nombre, producto.Precio);
+                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(rutaCompleta, producto.Nombre, producto.Precio, producto.IdProducto);
                 }
                 }
             }
@@ -82,10 +84,10 @@ namespace AppPedidos
             return ProductoLogica.Listar();
         }
 
-        private void MostrarFormularioImagen(string rutaImagen, string nombre, decimal precio)
+        private void MostrarFormularioImagen(string rutaImagen, string nombre, decimal precio, int IdProducto)
         {
             // Crea un nuevo formulario hijo para mostrar la imagen y el botón
-            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen, nombre, precio );
+            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen, nombre, precio , IdProducto);
             AddOwnedForm(formularioImagen);
             // Abre el formulario hijo
             formularioImagen.Show();
@@ -106,6 +108,25 @@ namespace AppPedidos
         private void PanelDeProdcutos_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        public void ponerDatos(int idproducto, int cantidad)
+        {
+            //List<Producto> listaProductos = ObtenerListaDeProductosDesdeBD();
+            listaID_Cantidad.Add(idproducto, cantidad);
+
+            VistaClientes padre = Owner as VistaClientes;
+            padre.DefinirCompras(idproducto, cantidad);
+
+
+            //MessageBox.Show(String.Join(", ", listaID_Cantidad));
+
+            
+        }
+        
+        private void mandarCarrito_Click(object sender, EventArgs e)
+        {
+            VistaClientes padre = Owner as VistaClientes;
+            
         }
     }
 }

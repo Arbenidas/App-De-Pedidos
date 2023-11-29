@@ -135,6 +135,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provincia.cs" />
+    <Compile Include="RegistroCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroCompra.Designer.cs">
+      <DependentUpon>RegistroCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroDeUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioLogica.cs" />
     <Compile Include="utilidades.cs" />
+    <Compile Include="VistaCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaCarrito.Designer.cs">
+      <DependentUpon>VistaCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,11 +201,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistroCompra.resx">
+      <DependentUpon>RegistroCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeUsuarioForm.resx">
       <DependentUpon>RegistroDeUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeUsuarioAdicionalForm.resx">
       <DependentUpon>RegistroDeUsuarioAdicionalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaCarrito.resx">
+      <DependentUpon>VistaCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaClientes.resx">
       <DependentUpon>VistaClientes.cs</DependentUpon>

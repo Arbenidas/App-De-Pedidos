@@ -8,13 +8,15 @@ namespace AppPedidos
     {
 
         decimal precioGlobal;
+        int idproducto;
         //Atributo de notificacion
         private NotifyIcon notifyIcon;
-        public ComponenteDeImagenesDeProductosForm(String rutaImg, string nombre, decimal precio)
+        public ComponenteDeImagenesDeProductosForm(String rutaImg, string nombre, decimal precio, int IdProducto)
         {
             InitializeComponent();
             // Configura el PictureBox con la imagen seleccionada
-            label3.Text = nombre;
+            this.idproducto = IdProducto;
+            labelNombre.Text = nombre;
             label2.Text=Convert.ToString(precio);
             precioGlobal = precio;
             pictureBoxImage.Image = Image.FromFile(rutaImg);
@@ -54,7 +56,8 @@ namespace AppPedidos
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-
+            MonitoresStandarsForm padre = Owner as MonitoresStandarsForm;
+            padre.ponerDatos(idproducto, Convert.ToInt32(cantidad.Value));
             this.Close();
         }
 
@@ -63,7 +66,7 @@ namespace AppPedidos
            
           decimal precio=precioGlobal;
          
-            precio = precio * numericUpDown1.Value;
+            precio = precio * cantidad.Value;
 
         label2.Text=Convert.ToString(precio);
         }

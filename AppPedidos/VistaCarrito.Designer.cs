@@ -1,7 +1,6 @@
-﻿
-namespace AppPedidos
+﻿namespace AppPedidos
 {
-    partial class MonitoresStandarsForm
+    partial class VistaCarrito
     {
         /// <summary>
         /// Required designer variable.
@@ -29,45 +28,61 @@ namespace AppPedidos
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelDeProdcutos = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelTop = new System.Windows.Forms.Panel();
+            this.botonDeComprar = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(233, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tus productos";
             // 
             // PanelDeProdcutos
             // 
             this.PanelDeProdcutos.AutoScroll = true;
             this.PanelDeProdcutos.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PanelDeProdcutos.Location = new System.Drawing.Point(0, 84);
+            this.PanelDeProdcutos.Location = new System.Drawing.Point(0, 42);
             this.PanelDeProdcutos.Name = "PanelDeProdcutos";
             this.PanelDeProdcutos.Size = new System.Drawing.Size(800, 366);
-            this.PanelDeProdcutos.TabIndex = 1;
-            this.PanelDeProdcutos.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDeProdcutos_Paint);
+            this.PanelDeProdcutos.TabIndex = 2;
             // 
-            // panelTop
+            // botonDeComprar
             // 
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(800, 40);
-            this.panelTop.TabIndex = 2;
+            this.botonDeComprar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.botonDeComprar.IconColor = System.Drawing.Color.Black;
+            this.botonDeComprar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.botonDeComprar.Location = new System.Drawing.Point(79, 8);
+            this.botonDeComprar.Name = "botonDeComprar";
+            this.botonDeComprar.Size = new System.Drawing.Size(121, 23);
+            this.botonDeComprar.TabIndex = 3;
+            this.botonDeComprar.Text = "Realizar Compra";
+            this.botonDeComprar.UseVisualStyleBackColor = true;
+            this.botonDeComprar.Click += new System.EventHandler(this.botonDeComprar_Click);
             // 
-            // MonitoresStandarsForm
+            // VistaCarrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelTop);
+            this.Controls.Add(this.botonDeComprar);
             this.Controls.Add(this.PanelDeProdcutos);
-            this.Name = "MonitoresStandarsForm";
-            this.Text = "MonitoresStandars";
-            this.Load += new System.EventHandler(this.MonitoresStandars_Load);
+            this.Controls.Add(this.label1);
+            this.Name = "VistaCarrito";
+            this.Text = "VistaCarrito";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel PanelDeProdcutos;
-        private System.Windows.Forms.Panel panelTop;
+        private FontAwesome.Sharp.IconButton botonDeComprar;
     }
 }

@@ -187,3 +187,5 @@ C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\App
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.csproj.CopyComplete
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.exe
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.pdb
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.VistaCarrito.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.RegistroCompra.resources
