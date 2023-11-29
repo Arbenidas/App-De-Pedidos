@@ -100,6 +100,61 @@ namespace AppPedidos
             }
             return respuesta;
         }
+
+        public static DataTable ObtenerClientes(string extra)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection oConexion = new SqlConnection(Conexion.CN);
+
+            string sql = "SELECT * FROM USUARIO " + extra;
+            SqlCommand cmd = new SqlCommand(sql, oConexion);
+
+            SqlDataReader dataReader = null;
+
+            try
+            {
+                oConexion.Open();
+                dataReader = cmd.ExecuteReader();
+                dt.Load(dataReader);
+            }
+            finally
+            {
+                cmd.Dispose();
+                oConexion.Close();
+            }
+
+            return dt;
+        }
+
+        public static bool Eliminar(int id)
+        {
+            bool respuesta = true;
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("delete from USUARIO where IdUsuario = @id", oConexion);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.CommandType = CommandType.Text;
+
+                    oConexion.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    respuesta = true;
+
+                }
+                catch (Exception ex)
+                {
+                    respuesta = false;
+                }
+
+            }
+
+            return respuesta;
+
+        }
+        //
     }
 }
 

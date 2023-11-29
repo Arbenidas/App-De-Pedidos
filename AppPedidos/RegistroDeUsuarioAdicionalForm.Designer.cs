@@ -39,10 +39,6 @@ namespace AppPedidos
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBoxAdministrador = new System.Windows.Forms.CheckBox();
-            this.checkBoxActivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +56,7 @@ namespace AppPedidos
             this.buttonRegistro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(178)))));
             this.buttonRegistro.ForeColor = System.Drawing.Color.White;
-            this.buttonRegistro.Location = new System.Drawing.Point(380, 317);
+            this.buttonRegistro.Location = new System.Drawing.Point(384, 247);
             this.buttonRegistro.Name = "buttonRegistro";
             this.buttonRegistro.Size = new System.Drawing.Size(251, 43);
             this.buttonRegistro.TabIndex = 10;
@@ -87,7 +83,7 @@ namespace AppPedidos
             // inputContrasena
             // 
             this.inputContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputContrasena.Location = new System.Drawing.Point(281, 219);
+            this.inputContrasena.Location = new System.Drawing.Point(553, 148);
             this.inputContrasena.Name = "inputContrasena";
             this.inputContrasena.Size = new System.Drawing.Size(163, 20);
             this.inputContrasena.TabIndex = 13;
@@ -95,7 +91,7 @@ namespace AppPedidos
             // inputApellidos
             // 
             this.inputApellidos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputApellidos.Location = new System.Drawing.Point(586, 74);
+            this.inputApellidos.Location = new System.Drawing.Point(553, 74);
             this.inputApellidos.Name = "inputApellidos";
             this.inputApellidos.Size = new System.Drawing.Size(163, 20);
             this.inputApellidos.TabIndex = 14;
@@ -131,7 +127,7 @@ namespace AppPedidos
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(278, 198);
+            this.label3.Location = new System.Drawing.Point(550, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 19;
@@ -149,59 +145,11 @@ namespace AppPedidos
             this.label4.TabIndex = 20;
             this.label4.Text = "Apellidos";
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(583, 127);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 18);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Administrador";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(583, 198);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 18);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Activo";
-            // 
-            // checkBoxAdministrador
-            // 
-            this.checkBoxAdministrador.AutoSize = true;
-            this.checkBoxAdministrador.Location = new System.Drawing.Point(596, 151);
-            this.checkBoxAdministrador.Name = "checkBoxAdministrador";
-            this.checkBoxAdministrador.Size = new System.Drawing.Size(35, 17);
-            this.checkBoxAdministrador.TabIndex = 23;
-            this.checkBoxAdministrador.Text = "Si";
-            this.checkBoxAdministrador.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxActivo
-            // 
-            this.checkBoxActivo.AutoSize = true;
-            this.checkBoxActivo.Location = new System.Drawing.Point(596, 222);
-            this.checkBoxActivo.Name = "checkBoxActivo";
-            this.checkBoxActivo.Size = new System.Drawing.Size(35, 17);
-            this.checkBoxActivo.TabIndex = 24;
-            this.checkBoxActivo.Text = "Si";
-            this.checkBoxActivo.UseVisualStyleBackColor = true;
-            // 
             // RegistroDeUsuarioAdicionalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 450);
-            this.Controls.Add(this.checkBoxActivo);
-            this.Controls.Add(this.checkBoxAdministrador);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -231,9 +179,5 @@ namespace AppPedidos
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBoxAdministrador;
-        private System.Windows.Forms.CheckBox checkBoxActivo;
     }
 }

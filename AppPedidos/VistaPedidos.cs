@@ -23,8 +23,9 @@ namespace AppPedidos
         private void VistaPedidos_Load(object sender, EventArgs e)
         {
             RefrescarGrid();
-            if (esAdmin)
+            if (!esAdmin)
             {
+
                 label2.Visible=false;
                 comboBuscarPor.Visible=false;
                 inputBusqueda.Visible=false;

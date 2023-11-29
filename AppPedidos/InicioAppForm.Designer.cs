@@ -136,7 +136,7 @@ namespace AppPedidos
             this.misProductos.IconColor = System.Drawing.Color.Black;
             this.misProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.misProductos.Name = "misProductos";
-            this.misProductos.Size = new System.Drawing.Size(180, 22);
+            this.misProductos.Size = new System.Drawing.Size(130, 22);
             this.misProductos.Text = "Productos";
             this.misProductos.Click += new System.EventHandler(this.misProductos_Click);
             // 
@@ -182,7 +182,7 @@ namespace AppPedidos
             this.menuCategorias.IconColor = System.Drawing.Color.Black;
             this.menuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuCategorias.Name = "menuCategorias";
-            this.menuCategorias.Size = new System.Drawing.Size(180, 22);
+            this.menuCategorias.Size = new System.Drawing.Size(130, 22);
             this.menuCategorias.Text = "Categorias";
             // 
             // menuMarcas
@@ -191,7 +191,7 @@ namespace AppPedidos
             this.menuMarcas.IconColor = System.Drawing.Color.Black;
             this.menuMarcas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuMarcas.Name = "menuMarcas";
-            this.menuMarcas.Size = new System.Drawing.Size(180, 22);
+            this.menuMarcas.Size = new System.Drawing.Size(130, 22);
             this.menuMarcas.Text = "Marcas";
             this.menuMarcas.Click += new System.EventHandler(this.menuMarcas_Click);
             // 
@@ -203,6 +203,7 @@ namespace AppPedidos
             this.iconMenuItem3.Name = "iconMenuItem3";
             this.iconMenuItem3.Size = new System.Drawing.Size(77, 20);
             this.iconMenuItem3.Text = "Clientes";
+            this.iconMenuItem3.Click += new System.EventHandler(this.iconMenuItem3_Click);
             // 
             // iconMenuItem9
             // 
@@ -212,6 +213,7 @@ namespace AppPedidos
             this.iconMenuItem9.Name = "iconMenuItem9";
             this.iconMenuItem9.Size = new System.Drawing.Size(69, 20);
             this.iconMenuItem9.Text = "Ventas";
+            this.iconMenuItem9.Click += new System.EventHandler(this.iconMenuItem9_Click);
             // 
             // InicioButton
             // 

@@ -322,5 +322,15 @@ namespace AppPedidos
         private void menuMarcas_Click(object sender, EventArgs e)
         {
         }
+
+        private void iconMenuItem9_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new VistaPedidos(usuario.EsAdministrador));
+        }
+
+        private void iconMenuItem3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new ManejoClientes());
+        }
     }
 }

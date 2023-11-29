@@ -102,6 +102,12 @@
     <Compile Include="InicioSesionForm.Designer.cs">
       <DependentUpon>InicioSesionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManejoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManejoClientes.Designer.cs">
+      <DependentUpon>ManejoClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaLogica.cs" />
     <Compile Include="Miembros.cs">
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesionForm.resx">
       <DependentUpon>InicioSesionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManejoClientes.resx">
+      <DependentUpon>ManejoClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Miembros.resx" />
     <EmbeddedResource Include="MisProductosVentas.resx">

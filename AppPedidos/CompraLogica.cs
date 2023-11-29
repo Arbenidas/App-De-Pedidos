@@ -131,7 +131,6 @@ namespace AppPedidos
         {
             DataTable dt = new DataTable();
             SqlConnection oConexion = new SqlConnection(Conexion.CN);
-            
 
             string sql = "SELECT * FROM COMPRA " + extra;
             SqlCommand cmd = new SqlCommand(sql, oConexion);
