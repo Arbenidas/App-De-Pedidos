@@ -169,6 +169,12 @@
     <Compile Include="VistaClientes.Designer.cs">
       <DependentUpon>VistaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaPedidos.Designer.cs">
+      <DependentUpon>VistaPedidos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ComponenteDeImagenesDeProductosForm.resx">
       <DependentUpon>ComponenteDeImagenesDeProductosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaClientes.resx">
       <DependentUpon>VistaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaPedidos.resx">
+      <DependentUpon>VistaPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

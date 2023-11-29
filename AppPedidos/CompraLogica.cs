@@ -126,5 +126,31 @@ namespace AppPedidos
 
             return respuesta;
         }
+
+        public static DataTable ObtenerCompras(string extra)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection oConexion = new SqlConnection(Conexion.CN);
+            
+
+            string sql = "SELECT * FROM COMPRA " + extra;
+            SqlCommand cmd = new SqlCommand(sql, oConexion);
+
+            SqlDataReader dataReader = null;
+
+            try
+            {
+                oConexion.Open();
+                dataReader = cmd.ExecuteReader();
+                dt.Load(dataReader);
+            }
+            finally
+            {
+                cmd.Dispose();
+                oConexion.Close();
+            }
+
+            return dt;
+        }
     }
 }

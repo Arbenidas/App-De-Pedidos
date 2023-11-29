@@ -127,5 +127,10 @@ namespace AppPedidos
         {
             AbrirFormulariosHijo(new VistaCarrito(listaID_Cantidad, usuario.IdUsuario));
         }
+
+        private void misComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new VistaPedidos(usuario.EsAdministrador));
+        }
     }
 }
