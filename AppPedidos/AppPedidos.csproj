@@ -261,6 +261,9 @@
     <EmbeddedResource Include="EditarPerfil.resx">
       <DependentUpon>EditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formulario.resx">
+      <DependentUpon>Formulario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeVentasForm.resx">
       <DependentUpon>HomeVentasForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +307,9 @@
     <EmbeddedResource Include="RegistroDeUsuarioAdicionalForm.resx">
       <DependentUpon>RegistroDeUsuarioAdicionalForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="ReportP.rdlc" />
     <EmbeddedResource Include="VistaCarrito.resx">
       <DependentUpon>VistaCarrito.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +323,9 @@
       <DependentUpon>vista_Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Compra.datasource" />
+    <None Include="Properties\DataSources\Producto.datasource" />
+    <None Include="Properties\DataSources\ProductoLogica.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

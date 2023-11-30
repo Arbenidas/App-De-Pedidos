@@ -35,13 +35,6 @@ namespace AppPedidos
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.PanelDesktop = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.timerProduc = new System.Windows.Forms.Timer(this.components);
-            this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.InicioButton = new FontAwesome.Sharp.IconMenuItem();
             this.seccionProductos = new FontAwesome.Sharp.IconMenuItem();
             this.misProductos = new FontAwesome.Sharp.IconMenuItem();
@@ -56,10 +49,18 @@ namespace AppPedidos
             this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.miembrosToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.PanelDesktop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.timerProduc = new System.Windows.Forms.Timer(this.components);
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
-            this.miembrosToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.reporteProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -113,57 +114,6 @@ namespace AppPedidos
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // PanelDesktop
-            // 
-            this.PanelDesktop.Controls.Add(this.label1);
-            this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelDesktop.Location = new System.Drawing.Point(0, 0);
-            this.PanelDesktop.Name = "PanelDesktop";
-            this.PanelDesktop.Size = new System.Drawing.Size(831, 450);
-            this.PanelDesktop.TabIndex = 9;
-            this.PanelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
-            this.PanelDesktop.Resize += new System.EventHandler(this.PanelDesktop_Resize);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(203, 40);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(425, 77);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenidos";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.UseMnemonic = false;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.sideBarTimer_Tick3);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 10;
-            this.timer3.Tick += new System.EventHandler(this.sideBarTimer_Tick4);
-            // 
-            // timer4
-            // 
-            this.timer4.Interval = 10;
-            this.timer4.Tick += new System.EventHandler(this.sideBarTimer_Tick5);
-            // 
-            // timerProduc
-            // 
-            this.timerProduc.Tick += new System.EventHandler(this.timerProduc_Tick);
-            // 
-            // timer5
-            // 
-            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
-            // 
             // InicioButton
             // 
             this.InicioButton.IconChar = FontAwesome.Sharp.IconChar.Cube;
@@ -179,7 +129,8 @@ namespace AppPedidos
             this.seccionProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.misProductos,
             this.menuCategorias,
-            this.menuMarcas});
+            this.menuMarcas,
+            this.reporteProductosToolStripMenuItem});
             this.seccionProductos.IconChar = FontAwesome.Sharp.IconChar.ObjectGroup;
             this.seccionProductos.IconColor = System.Drawing.Color.Black;
             this.seccionProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -311,6 +262,16 @@ namespace AppPedidos
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
+            // miembrosToolStripMenuItem
+            // 
+            this.miembrosToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.UserTag;
+            this.miembrosToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.miembrosToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
+            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.miembrosToolStripMenuItem.Text = "Miembros";
+            this.miembrosToolStripMenuItem.Click += new System.EventHandler(this.miembrosToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -320,6 +281,57 @@ namespace AppPedidos
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // PanelDesktop
+            // 
+            this.PanelDesktop.Controls.Add(this.label1);
+            this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelDesktop.Location = new System.Drawing.Point(0, 0);
+            this.PanelDesktop.Name = "PanelDesktop";
+            this.PanelDesktop.Size = new System.Drawing.Size(831, 450);
+            this.PanelDesktop.TabIndex = 9;
+            this.PanelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            this.PanelDesktop.Resize += new System.EventHandler(this.PanelDesktop_Resize);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(203, 40);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(425, 77);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bienvenidos";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.UseMnemonic = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.sideBarTimer_Tick3);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 10;
+            this.timer3.Tick += new System.EventHandler(this.sideBarTimer_Tick4);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 10;
+            this.timer4.Tick += new System.EventHandler(this.sideBarTimer_Tick5);
+            // 
+            // timerProduc
+            // 
+            this.timerProduc.Tick += new System.EventHandler(this.timerProduc_Tick);
+            // 
+            // timer5
+            // 
+            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
             // iconMenuItem1
             // 
@@ -340,15 +352,12 @@ namespace AppPedidos
             this.iconMenuItem4.Text = "iconMenuItem4";
             this.iconMenuItem4.Click += new System.EventHandler(this.iconMenuItem4_Click);
             // 
-            // miembrosToolStripMenuItem
+            // reporteProductosToolStripMenuItem
             // 
-            this.miembrosToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.UserTag;
-            this.miembrosToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.miembrosToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
-            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
-            this.miembrosToolStripMenuItem.Text = "Miembros";
-            this.miembrosToolStripMenuItem.Click += new System.EventHandler(this.miembrosToolStripMenuItem_Click);
+            this.reporteProductosToolStripMenuItem.Name = "reporteProductosToolStripMenuItem";
+            this.reporteProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteProductosToolStripMenuItem.Text = "Reporte productos";
+            this.reporteProductosToolStripMenuItem.Click += new System.EventHandler(this.reporteProductosToolStripMenuItem_Click);
             // 
             // formularioHome
             // 
@@ -403,5 +412,6 @@ namespace AppPedidos
         private FontAwesome.Sharp.IconMenuItem cerrarSesionToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem salirToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem miembrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteProductosToolStripMenuItem;
     }
 }

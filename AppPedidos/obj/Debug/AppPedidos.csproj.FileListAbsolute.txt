@@ -287,3 +287,17 @@ C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\pt\
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\Microsoft.AnalysisServices.Server.Core.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\Microsoft.AnalysisServices.Server.Tabular.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\Microsoft.AnalysisServices.Server.Tabular.Json.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.Formulario.resources

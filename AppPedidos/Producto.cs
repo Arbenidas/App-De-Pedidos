@@ -23,5 +23,12 @@ namespace AppPedidos
         public string FechaRegistro{ get; set; }
         //public string base64 { get; set; }
         //public string extension { get; set; }
+
+        public List<Producto> Listar()
+        {
+            List < Producto > lista  = new List < Producto > ();
+            lista = ProductoLogica.Listar();
+            return lista;
+        }
     }
 }

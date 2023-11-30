@@ -357,5 +357,16 @@ namespace AppPedidos
             Autores autores = new Autores();
             autores.Show();
         }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void reporteProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formulario reporte = new Formulario();
+            reporte.ShowDialog();
+        }
     }
 }
