@@ -63,6 +63,26 @@ namespace AppPedidos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2023_11_29_191734 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2023-11-29 191734", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2023_11_29_192028 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2023-11-29 192028", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap perfil2 {
             get {
                 object obj = ResourceManager.GetObject("perfil2", resourceCulture);
@@ -76,6 +96,16 @@ namespace AppPedidos.Properties {
         internal static System.Drawing.Bitmap rafael {
             get {
                 object obj = ResourceManager.GetObject("rafael", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rafael1 {
+            get {
+                object obj = ResourceManager.GetObject("rafael1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

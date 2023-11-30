@@ -146,10 +146,6 @@
     <Compile Include="MonitoresStandarsForm.Designer.cs">
       <DependentUpon>MonitoresStandarsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MostrarPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarPerfil.Designer.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoLogica.cs" />
     <Compile Include="ProductosCRUD.cs">
@@ -240,7 +236,6 @@
     <EmbeddedResource Include="MonitoresStandarsForm.resx">
       <DependentUpon>MonitoresStandarsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MostrarPerfil.resx" />
     <EmbeddedResource Include="ProductosCRUD.resx">
       <DependentUpon>ProductosCRUD.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +247,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistroCompra.resx">
       <DependentUpon>RegistroCompra.cs</DependentUpon>
@@ -299,6 +295,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rafael1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2023-11-29 191734.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2023-11-29 192028.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
