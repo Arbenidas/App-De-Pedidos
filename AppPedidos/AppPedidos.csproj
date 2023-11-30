@@ -128,10 +128,6 @@
       <DependentUpon>MarcaCRUD.cs</DependentUpon>
     </Compile>
     <Compile Include="MarcaLogica.cs" />
-    <Compile Include="Miembros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Miembros.Designer.cs" />
     <Compile Include="MisProductosVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,7 +225,6 @@
     <EmbeddedResource Include="MarcaCRUD.resx">
       <DependentUpon>MarcaCRUD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Miembros.resx" />
     <EmbeddedResource Include="MisProductosVentas.resx">
       <DependentUpon>MisProductosVentas.cs</DependentUpon>
     </EmbeddedResource>

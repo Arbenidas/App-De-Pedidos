@@ -53,7 +53,7 @@ namespace AppPedidos
 
 
                     MarcaLogica.Modificar(marca);
-                    MessageBox.Show(marca.ToString());
+                    MessageBox.Show("Marca actualizada con exito");
                     Refrescar();
                 }
 

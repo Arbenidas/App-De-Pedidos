@@ -72,7 +72,7 @@ namespace AppPedidos
                     PanelDeProdcutos.Controls.Add(panel);
 
                     // Asigna el evento Click para mostrar el formulario de la imagen (puedes ajustar esto según tus necesidades)
-                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(rutaCompleta, producto.Nombre, producto.Precio, producto.IdProducto);
+                    pictureBox.Click += (sender, e) => MostrarFormularioImagen(rutaCompleta, producto.Nombre, producto.Precio, producto.IdProducto, producto.Descripcion);
                 }
                 }
             }
@@ -84,10 +84,10 @@ namespace AppPedidos
             return ProductoLogica.Listar();
         }
 
-        private void MostrarFormularioImagen(string rutaImagen, string nombre, decimal precio, int IdProducto)
+        private void MostrarFormularioImagen(string rutaImagen, string nombre, decimal precio, int IdProducto, string descripcion)
         {
             // Crea un nuevo formulario hijo para mostrar la imagen y el botón
-            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen, nombre, precio , IdProducto);
+            ComponenteDeImagenesDeProductosForm formularioImagen = new ComponenteDeImagenesDeProductosForm(rutaImagen, nombre, precio , IdProducto, descripcion);
             AddOwnedForm(formularioImagen);
             // Abre el formulario hijo
             formularioImagen.Show();

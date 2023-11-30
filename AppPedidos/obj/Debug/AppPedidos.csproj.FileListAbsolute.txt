@@ -194,3 +194,4 @@ C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\App
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.EditarPerfil.resources
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.CategoriaCRUD.resources
 C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.vista_Inicio.resources
+C:\Users\usuar\OneDrive\Escritorio\Nuevo\App-De-Pedidos\AppPedidos\obj\Debug\AppPedidos.MarcaCRUD.resources

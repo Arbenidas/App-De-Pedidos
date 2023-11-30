@@ -11,7 +11,7 @@ namespace AppPedidos
         int idproducto;
         //Atributo de notificacion
         private NotifyIcon notifyIcon;
-        public ComponenteDeImagenesDeProductosForm(String rutaImg, string nombre, decimal precio, int IdProducto)
+        public ComponenteDeImagenesDeProductosForm(String rutaImg, string nombre, decimal precio, int IdProducto, string descripcion)
         {
             InitializeComponent();
             // Configura el PictureBox con la imagen seleccionada
@@ -21,6 +21,7 @@ namespace AppPedidos
             precioGlobal = precio;
             pictureBoxImage.Image = Image.FromFile(rutaImg);
             botonCarrito.Click += (sender, e) => MostrarNotificacion();
+            descripcionProducto.Text = descripcion;
 
             #region 
             //se crea una notificaicon

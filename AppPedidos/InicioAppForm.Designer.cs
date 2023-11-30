@@ -59,6 +59,7 @@ namespace AppPedidos
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
+            this.miembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -104,7 +105,8 @@ namespace AppPedidos
             this.iconMenuItem3,
             this.iconMenuItem9,
             this.usuarioToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.miembrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(831, 24);
@@ -338,6 +340,12 @@ namespace AppPedidos
             this.iconMenuItem4.Text = "iconMenuItem4";
             this.iconMenuItem4.Click += new System.EventHandler(this.iconMenuItem4_Click);
             // 
+            // miembrosToolStripMenuItem
+            // 
+            this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
+            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.miembrosToolStripMenuItem.Text = "Miembros";
+            // 
             // formularioHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,5 +398,6 @@ namespace AppPedidos
         private FontAwesome.Sharp.IconMenuItem editarPerfilToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem cerrarSesionToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miembrosToolStripMenuItem;
     }
 }

@@ -47,7 +47,6 @@
             this.botonLimpiar = new FontAwesome.Sharp.IconButton();
             this.botonActualizar = new FontAwesome.Sharp.IconButton();
             this.botonEliminar = new FontAwesome.Sharp.IconButton();
-            this.label8 = new System.Windows.Forms.Label();
             this.botonBuscar = new FontAwesome.Sharp.IconButton();
             this.inputBusqueda = new System.Windows.Forms.TextBox();
             this.comboBuscarPor = new System.Windows.Forms.ComboBox();
@@ -242,15 +241,6 @@
             this.botonEliminar.UseVisualStyleBackColor = true;
             this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(519, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Fecha";
-            // 
             // botonBuscar
             // 
             this.botonBuscar.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -302,7 +292,6 @@
             this.Controls.Add(this.comboBuscarPor);
             this.Controls.Add(this.inputBusqueda);
             this.Controls.Add(this.botonBuscar);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonActualizar);
             this.Controls.Add(this.botonLimpiar);
@@ -351,7 +340,6 @@
         private FontAwesome.Sharp.IconButton botonLimpiar;
         private FontAwesome.Sharp.IconButton botonActualizar;
         private FontAwesome.Sharp.IconButton botonEliminar;
-        private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconButton botonBuscar;
         private System.Windows.Forms.TextBox inputBusqueda;
         private System.Windows.Forms.ComboBox comboBuscarPor;

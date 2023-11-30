@@ -40,7 +40,7 @@ namespace AppPedidos
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.descripcionProducto = new System.Windows.Forms.RichTextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -141,7 +141,7 @@ namespace AppPedidos
             // panel2
             // 
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.descripcionProducto);
             this.panel2.Controls.Add(this.labelNombre);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(410, 0);
@@ -158,20 +158,20 @@ namespace AppPedidos
             this.label5.TabIndex = 7;
             this.label5.Text = "Proveedor";
             // 
-            // richTextBox1
+            // descripcionProducto
             // 
-            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.richTextBox1.Location = new System.Drawing.Point(55, 46);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(283, 134);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "Descripsion del texto";
+            this.descripcionProducto.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.descripcionProducto.Location = new System.Drawing.Point(55, 46);
+            this.descripcionProducto.Name = "descripcionProducto";
+            this.descripcionProducto.ReadOnly = true;
+            this.descripcionProducto.Size = new System.Drawing.Size(283, 134);
+            this.descripcionProducto.TabIndex = 1;
+            this.descripcionProducto.Text = "Descripsion del texto";
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(147, 23);
+            this.labelNombre.Location = new System.Drawing.Point(52, 20);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(107, 13);
             this.labelNombre.TabIndex = 0;
@@ -228,7 +228,7 @@ namespace AppPedidos
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBoxImage;
         private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox descripcionProducto;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
