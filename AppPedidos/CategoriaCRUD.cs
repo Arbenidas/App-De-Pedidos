@@ -18,6 +18,11 @@ namespace AppPedidos
             InitializeComponent();
         }
 
+        /// <summary>
+        /// boton para limpiar los inputs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
             inputID.Text = "";
@@ -27,16 +32,19 @@ namespace AppPedidos
 
         private void CategoriaCRUD_Load(object sender, EventArgs e)
         {
+            //refrescar la grilla con los datos
             Refrescar();
         }
 
         public void Refrescar()
         {
+            //carga la lista de categorias
             dataGridView1.DataSource = CategoriaLogica.Listar();
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
+            //Se obtienen los valores de los inputs y se mandan a registrar
             categoria.Activo = checkBoxEstado.Checked;
             categoria.Descripcion = inputNombre.Text.Trim();
             CategoriaLogica.Registrar(categoria);
@@ -46,13 +54,14 @@ namespace AppPedidos
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            // se verifica que no este vacio el id
             if (!inputID.Text.Equals(""))
             {
                 string id = dataGridView1.CurrentRow.Cells["IdCategoria"].Value.ToString();
 
                 if (!string.IsNullOrEmpty(id))
                 {
-
+                    //se manda a llamar el metodo para eliminar la categoria y se notifica
                     CategoriaLogica.Eliminar(Convert.ToInt32(id));
                     MessageBox.Show("registro eliminado");
                     Refrescar();
