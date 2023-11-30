@@ -35,6 +35,7 @@ namespace AppPedidos
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.InicioButton = new FontAwesome.Sharp.IconMenuItem();
             this.seccionProductos = new FontAwesome.Sharp.IconMenuItem();
             this.misProductos = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem8 = new FontAwesome.Sharp.IconMenuItem();
@@ -45,11 +46,11 @@ namespace AppPedidos
             this.menuMarcas = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem9 = new FontAwesome.Sharp.IconMenuItem();
-            this.InicioButton = new FontAwesome.Sharp.IconMenuItem();
             this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.miembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelDesktop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -59,7 +60,6 @@ namespace AppPedidos
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
-            this.miembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -105,13 +105,23 @@ namespace AppPedidos
             this.iconMenuItem3,
             this.iconMenuItem9,
             this.usuarioToolStripMenuItem,
-            this.salirToolStripMenuItem,
-            this.miembrosToolStripMenuItem});
+            this.miembrosToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(831, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // InicioButton
+            // 
+            this.InicioButton.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.InicioButton.IconColor = System.Drawing.Color.Black;
+            this.InicioButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.InicioButton.Name = "InicioButton";
+            this.InicioButton.Size = new System.Drawing.Size(64, 20);
+            this.InicioButton.Text = "Inicio";
+            this.InicioButton.Click += new System.EventHandler(this.InicioButton_Click);
             // 
             // seccionProductos
             // 
@@ -184,7 +194,7 @@ namespace AppPedidos
             this.menuCategorias.IconColor = System.Drawing.Color.Black;
             this.menuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuCategorias.Name = "menuCategorias";
-            this.menuCategorias.Size = new System.Drawing.Size(180, 22);
+            this.menuCategorias.Size = new System.Drawing.Size(130, 22);
             this.menuCategorias.Text = "Categorias";
             this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
             // 
@@ -218,16 +228,6 @@ namespace AppPedidos
             this.iconMenuItem9.Text = "Ventas";
             this.iconMenuItem9.Click += new System.EventHandler(this.iconMenuItem9_Click);
             // 
-            // InicioButton
-            // 
-            this.InicioButton.IconChar = FontAwesome.Sharp.IconChar.Cube;
-            this.InicioButton.IconColor = System.Drawing.Color.Black;
-            this.InicioButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.InicioButton.Name = "InicioButton";
-            this.InicioButton.Size = new System.Drawing.Size(64, 20);
-            this.InicioButton.Text = "Inicio";
-            this.InicioButton.Click += new System.EventHandler(this.InicioButton_Click);
-            // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -246,7 +246,7 @@ namespace AppPedidos
             this.editarPerfilToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.editarPerfilToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.editarPerfilToolStripMenuItem.Text = "Editar perfil";
             this.editarPerfilToolStripMenuItem.Click += new System.EventHandler(this.editarPerfilToolStripMenuItem_Click);
             // 
@@ -256,7 +256,7 @@ namespace AppPedidos
             this.cerrarSesionToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.cerrarSesionToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
@@ -269,6 +269,13 @@ namespace AppPedidos
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // miembrosToolStripMenuItem
+            // 
+            this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
+            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.miembrosToolStripMenuItem.Text = "Miembros";
+            this.miembrosToolStripMenuItem.Click += new System.EventHandler(this.miembrosToolStripMenuItem_Click);
             // 
             // PanelDesktop
             // 
@@ -339,12 +346,6 @@ namespace AppPedidos
             this.iconMenuItem4.Size = new System.Drawing.Size(32, 19);
             this.iconMenuItem4.Text = "iconMenuItem4";
             this.iconMenuItem4.Click += new System.EventHandler(this.iconMenuItem4_Click);
-            // 
-            // miembrosToolStripMenuItem
-            // 
-            this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
-            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.miembrosToolStripMenuItem.Text = "Miembros";
             // 
             // formularioHome
             // 

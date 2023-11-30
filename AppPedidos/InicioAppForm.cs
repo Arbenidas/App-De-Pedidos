@@ -351,5 +351,11 @@ namespace AppPedidos
         {
             AbrirFormulariosHijo(new CategoriaCRUD());
         }
+
+        private void miembrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Autores autores = new Autores();
+            autores.Show();
+        }
     }
 }
