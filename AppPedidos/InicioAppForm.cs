@@ -329,6 +329,7 @@ namespace AppPedidos
 
         private void menuMarcas_Click(object sender, EventArgs e)
         {
+            AbrirFormulariosHijo(new MarcaCRUD());
         }
 
         private void iconMenuItem9_Click(object sender, EventArgs e)
@@ -344,6 +345,11 @@ namespace AppPedidos
         private void InicioButton_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijo(new vista_Inicio());
+        }
+
+        private void menuCategorias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new CategoriaCRUD());
         }
     }
 }

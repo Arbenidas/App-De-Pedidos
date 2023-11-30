@@ -67,7 +67,7 @@ namespace AppPedidos
         }
 
 
-        public bool Registrar(Marca oMarca)
+        public static bool Registrar(Marca oMarca)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -94,7 +94,7 @@ namespace AppPedidos
             return respuesta;
         }
 
-        public bool Modificar(Marca oMarca)
+        public static bool Modificar(Marca oMarca)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
@@ -127,7 +127,7 @@ namespace AppPedidos
 
         }
 
-        public bool Eliminar(int id)
+        public static bool Eliminar(int id)
         {
             bool respuesta = true;
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))

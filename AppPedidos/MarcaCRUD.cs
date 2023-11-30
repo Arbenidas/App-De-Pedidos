@@ -13,6 +13,7 @@ namespace AppPedidos
     public partial class MarcaCRUD : Form
     {
         private Marca marca = new Marca();
+
         public MarcaCRUD()
         {
             InitializeComponent();
@@ -28,50 +29,14 @@ namespace AppPedidos
             dataGridView1.DataSource = MarcaLogica.Listar();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputFecha_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxEstado_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            List<Marca> marcas = MarcaLogica.Listar();
-
-            Dictionary<string, int> idmarcas = new Dictionary<string, int>();
-
-            for (int i = 0; i < marcas.Count; i++)
-            {
-                idmarcas.Add(marcas[i].Descripcion, marcas[i].IdMarca);
-            }
-
             marca.Activo = checkBoxEstado.Checked;
             marca.Descripcion = inputNombre.Text.Trim();
 
             MarcaLogica.Registrar(marca);
             MessageBox.Show("Marca agregada");
             Refrescar();
-           
-
         }
 
         private void buttonActualizar_Click(object sender, EventArgs e)
@@ -82,21 +47,13 @@ namespace AppPedidos
 
                 if (!string.IsNullOrEmpty(id))
                 {
-
-                    List<Marca> marcas = MarcaLogica.Listar();
-
-                    Dictionary<string, int> idmarcas = new Dictionary<string, int>();
-                    for (int i = 0; i < marcas.Count; i++)
-                    {
-                        idmarcas.Add(marcas[i].Descripcion, marcas[i].IdMarca);
-                    }
-
-                    
+                    marca.IdMarca = Convert.ToInt32(inputID.Text);
                     marca.Descripcion = inputNombre.Text.Trim();
                     marca.Activo = checkBoxEstado.Checked;
- 
+
+
                     MarcaLogica.Modificar(marca);
-                    MessageBox.Show("registro actualizado");
+                    MessageBox.Show(marca.ToString());
                     Refrescar();
                 }
 
@@ -105,13 +62,13 @@ namespace AppPedidos
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0 )
+            if (dataGridView1.SelectedRows.Count > 0)
             {
                 var row = dataGridView1.CurrentRow;
                 inputID.Text = row.Cells[0].Value.ToString();
                 inputNombre.Text = row.Cells["Descripcion"].Value.ToString();
                 checkBoxEstado.Checked = Convert.ToBoolean(row.Cells["Activo"].Value);
-               
+
             }
         }
 
@@ -140,5 +97,4 @@ namespace AppPedidos
             }
         }
     }
-    }
-
+}

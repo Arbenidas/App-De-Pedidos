@@ -71,6 +71,12 @@
     <Compile Include="Carrito.cs" />
     <Compile Include="CarritoLogica.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriaCRUD.Designer.cs">
+      <DependentUpon>CategoriaCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoriaLogica.cs" />
     <Compile Include="ComponenteDeImagenesDeProductosForm.cs">
       <SubType>Form</SubType>
@@ -115,6 +121,12 @@
       <DependentUpon>ManejoClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Marca.cs" />
+    <Compile Include="MarcaCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarcaCRUD.Designer.cs">
+      <DependentUpon>MarcaCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="MarcaLogica.cs" />
     <Compile Include="Miembros.cs">
       <SubType>Form</SubType>
@@ -187,6 +199,15 @@
     <Compile Include="VistaPedidos.Designer.cs">
       <DependentUpon>VistaPedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista_Inicio.Designer.cs">
+      <DependentUpon>vista_Inicio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CategoriaCRUD.resx">
+      <DependentUpon>CategoriaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComponenteDeImagenesDeProductosForm.resx">
       <DependentUpon>ComponenteDeImagenesDeProductosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManejoClientes.resx">
       <DependentUpon>ManejoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarcaCRUD.resx">
+      <DependentUpon>MarcaCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Miembros.resx" />
     <EmbeddedResource Include="MisProductosVentas.resx">
@@ -242,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaPedidos.resx">
       <DependentUpon>VistaPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista_Inicio.resx">
+      <DependentUpon>vista_Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

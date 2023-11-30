@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace AppPedidos
 {
-    public partial class Miembros : Form
+    public partial class Miembros: Form
     {
-        public Form inicio;
         public Miembros()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            inicio.Enabled = true;
         }
     }
 }
