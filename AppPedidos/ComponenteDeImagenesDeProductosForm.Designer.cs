@@ -39,7 +39,6 @@ namespace AppPedidos
             this.cantidad = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.descripcionProducto = new System.Windows.Forms.RichTextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
@@ -140,7 +139,6 @@ namespace AppPedidos
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.descripcionProducto);
             this.panel2.Controls.Add(this.labelNombre);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -148,15 +146,6 @@ namespace AppPedidos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(390, 327);
             this.panel2.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Proveedor";
             // 
             // descripcionProducto
             // 
@@ -231,7 +220,6 @@ namespace AppPedidos
         private System.Windows.Forms.RichTextBox descripcionProducto;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

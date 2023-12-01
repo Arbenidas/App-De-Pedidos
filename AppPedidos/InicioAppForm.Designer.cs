@@ -38,12 +38,9 @@ namespace AppPedidos
             this.InicioButton = new FontAwesome.Sharp.IconMenuItem();
             this.seccionProductos = new FontAwesome.Sharp.IconMenuItem();
             this.misProductos = new FontAwesome.Sharp.IconMenuItem();
-            this.iconMenuItem8 = new FontAwesome.Sharp.IconMenuItem();
-            this.iconMenuItem12 = new FontAwesome.Sharp.IconMenuItem();
-            this.iconMenuItem13 = new FontAwesome.Sharp.IconMenuItem();
-            this.iconMenuItem14 = new FontAwesome.Sharp.IconMenuItem();
             this.menuCategorias = new FontAwesome.Sharp.IconMenuItem();
             this.menuMarcas = new FontAwesome.Sharp.IconMenuItem();
+            this.reporteProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem9 = new FontAwesome.Sharp.IconMenuItem();
             this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
@@ -60,7 +57,6 @@ namespace AppPedidos
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
-            this.reporteProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -141,54 +137,13 @@ namespace AppPedidos
             // 
             // misProductos
             // 
-            this.misProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iconMenuItem8,
-            this.iconMenuItem12,
-            this.iconMenuItem13,
-            this.iconMenuItem14});
             this.misProductos.IconChar = FontAwesome.Sharp.IconChar.None;
             this.misProductos.IconColor = System.Drawing.Color.Black;
             this.misProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.misProductos.Name = "misProductos";
-            this.misProductos.Size = new System.Drawing.Size(130, 22);
+            this.misProductos.Size = new System.Drawing.Size(180, 22);
             this.misProductos.Text = "Productos";
             this.misProductos.Click += new System.EventHandler(this.misProductos_Click);
-            // 
-            // iconMenuItem8
-            // 
-            this.iconMenuItem8.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconMenuItem8.IconColor = System.Drawing.Color.Black;
-            this.iconMenuItem8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem8.Name = "iconMenuItem8";
-            this.iconMenuItem8.Size = new System.Drawing.Size(136, 22);
-            this.iconMenuItem8.Text = "Monitores";
-            // 
-            // iconMenuItem12
-            // 
-            this.iconMenuItem12.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconMenuItem12.IconColor = System.Drawing.Color.Black;
-            this.iconMenuItem12.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem12.Name = "iconMenuItem12";
-            this.iconMenuItem12.Size = new System.Drawing.Size(136, 22);
-            this.iconMenuItem12.Text = "Laptop";
-            // 
-            // iconMenuItem13
-            // 
-            this.iconMenuItem13.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconMenuItem13.IconColor = System.Drawing.Color.Black;
-            this.iconMenuItem13.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem13.Name = "iconMenuItem13";
-            this.iconMenuItem13.Size = new System.Drawing.Size(136, 22);
-            this.iconMenuItem13.Text = "Audiculares";
-            // 
-            // iconMenuItem14
-            // 
-            this.iconMenuItem14.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconMenuItem14.IconColor = System.Drawing.Color.Black;
-            this.iconMenuItem14.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem14.Name = "iconMenuItem14";
-            this.iconMenuItem14.Size = new System.Drawing.Size(136, 22);
-            this.iconMenuItem14.Text = "Ratones";
             // 
             // menuCategorias
             // 
@@ -196,7 +151,7 @@ namespace AppPedidos
             this.menuCategorias.IconColor = System.Drawing.Color.Black;
             this.menuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuCategorias.Name = "menuCategorias";
-            this.menuCategorias.Size = new System.Drawing.Size(130, 22);
+            this.menuCategorias.Size = new System.Drawing.Size(180, 22);
             this.menuCategorias.Text = "Categorias";
             this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
             // 
@@ -206,9 +161,16 @@ namespace AppPedidos
             this.menuMarcas.IconColor = System.Drawing.Color.Black;
             this.menuMarcas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuMarcas.Name = "menuMarcas";
-            this.menuMarcas.Size = new System.Drawing.Size(130, 22);
+            this.menuMarcas.Size = new System.Drawing.Size(180, 22);
             this.menuMarcas.Text = "Marcas";
             this.menuMarcas.Click += new System.EventHandler(this.menuMarcas_Click);
+            // 
+            // reporteProductosToolStripMenuItem
+            // 
+            this.reporteProductosToolStripMenuItem.Name = "reporteProductosToolStripMenuItem";
+            this.reporteProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteProductosToolStripMenuItem.Text = "Reporte productos";
+            this.reporteProductosToolStripMenuItem.Click += new System.EventHandler(this.reporteProductosToolStripMenuItem_Click);
             // 
             // iconMenuItem3
             // 
@@ -352,13 +314,6 @@ namespace AppPedidos
             this.iconMenuItem4.Text = "iconMenuItem4";
             this.iconMenuItem4.Click += new System.EventHandler(this.iconMenuItem4_Click);
             // 
-            // reporteProductosToolStripMenuItem
-            // 
-            this.reporteProductosToolStripMenuItem.Name = "reporteProductosToolStripMenuItem";
-            this.reporteProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reporteProductosToolStripMenuItem.Text = "Reporte productos";
-            this.reporteProductosToolStripMenuItem.Click += new System.EventHandler(this.reporteProductosToolStripMenuItem_Click);
-            // 
             // formularioHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,14 +353,10 @@ namespace AppPedidos
         private FontAwesome.Sharp.IconMenuItem iconMenuItem3;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem4;
         private FontAwesome.Sharp.IconMenuItem misProductos;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem8;
         private FontAwesome.Sharp.IconMenuItem menuCategorias;
         private FontAwesome.Sharp.IconMenuItem menuMarcas;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem9;
         private FontAwesome.Sharp.IconMenuItem InicioButton;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem12;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem13;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem14;
         private FontAwesome.Sharp.IconMenuItem seccionProductos;
         private FontAwesome.Sharp.IconMenuItem usuarioToolStripMenuItem;
         private FontAwesome.Sharp.IconMenuItem editarPerfilToolStripMenuItem;

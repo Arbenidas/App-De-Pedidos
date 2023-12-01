@@ -36,8 +36,8 @@ namespace AppPedidos
             compra.Telefono = inputTelefono.Text;
             compra.IdUsuario = IDusuario;
             compra.IdDistrito = "1";
-            compra.TotalProducto = "0";
 
+            int totalDeproductos = 0;
             int ultimaCompra = CompraLogica.UltimaCompra();
             List<Producto> listaProductos = ProductoLogica.Listar();
             List<Producto> listaCarrito = new List<Producto>();
@@ -52,11 +52,14 @@ namespace AppPedidos
                     detalleCompra.IdProducto = producto.IdProducto;
                     detalleCompra.oProducto = producto;
                     detalleCompra.Cantidad = listaDeCompra[producto.IdProducto];
+                    totalDeproductos += detalleCompra.Cantidad;
                     detalleCompra.Total = producto.Precio * listaDeCompra[producto.IdProducto];
                     compra.oDetalleCompra.Add(detalleCompra);
 
                 }
             }
+
+            compra.TotalProducto = totalDeproductos.ToString();
 
             /*
             foreach (var item in compra.oDetalleCompra)
@@ -73,6 +76,8 @@ namespace AppPedidos
             if (registro)
             {
                 MessageBox.Show("Se realizo su compra con exito");
+                VistaCarrito padre = Owner as VistaCarrito;
+                padre.VaciarCarrito();
                 this.Close();
             }
             else

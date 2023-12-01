@@ -260,6 +260,7 @@
             this.inputBusqueda.Name = "inputBusqueda";
             this.inputBusqueda.Size = new System.Drawing.Size(100, 20);
             this.inputBusqueda.TabIndex = 41;
+            this.inputBusqueda.TextChanged += new System.EventHandler(this.inputBusqueda_TextChanged);
             // 
             // comboBuscarPor
             // 
@@ -273,6 +274,7 @@
             this.comboBuscarPor.Name = "comboBuscarPor";
             this.comboBuscarPor.Size = new System.Drawing.Size(121, 21);
             this.comboBuscarPor.TabIndex = 42;
+            this.comboBuscarPor.SelectedIndexChanged += new System.EventHandler(this.comboBuscarPor_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -282,6 +284,7 @@
             this.label9.Size = new System.Drawing.Size(58, 13);
             this.label9.TabIndex = 43;
             this.label9.Text = "Buscar por";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // ManejoClientes
             // 

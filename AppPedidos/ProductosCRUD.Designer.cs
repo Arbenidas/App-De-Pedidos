@@ -32,7 +32,6 @@
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonLimpiar = new System.Windows.Forms.Button();
-            this.buttonBuscar = new System.Windows.Forms.Button();
             this.inputNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +53,10 @@
             this.comboMarcas = new System.Windows.Forms.ComboBox();
             this.comboCategorias = new System.Windows.Forms.ComboBox();
             this.checkBoxEstado = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBuscarPor = new System.Windows.Forms.ComboBox();
+            this.inputBusqueda = new System.Windows.Forms.TextBox();
+            this.botonBuscar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +72,7 @@
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(264, 338);
+            this.buttonActualizar.Location = new System.Drawing.Point(576, 334);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
             this.buttonActualizar.TabIndex = 1;
@@ -79,7 +82,7 @@
             // 
             // buttonEliminar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(345, 338);
+            this.buttonEliminar.Location = new System.Drawing.Point(657, 334);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
             this.buttonEliminar.TabIndex = 2;
@@ -89,22 +92,13 @@
             // 
             // buttonLimpiar
             // 
-            this.buttonLimpiar.Location = new System.Drawing.Point(141, 338);
+            this.buttonLimpiar.Location = new System.Drawing.Point(576, 375);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(75, 23);
             this.buttonLimpiar.TabIndex = 3;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
-            // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.Location = new System.Drawing.Point(345, 390);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuscar.TabIndex = 4;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
             // 
             // inputNombre
             // 
@@ -286,11 +280,59 @@
             this.checkBoxEstado.TabIndex = 29;
             this.checkBoxEstado.UseVisualStyleBackColor = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(92, 340);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Buscar por";
+            // 
+            // comboBuscarPor
+            // 
+            this.comboBuscarPor.FormattingEnabled = true;
+            this.comboBuscarPor.Items.AddRange(new object[] {
+            "Nombre",
+            "IdMarca",
+            "IdCategoria",
+            "Precio",
+            "Stock",
+            "Activo"});
+            this.comboBuscarPor.Location = new System.Drawing.Point(159, 336);
+            this.comboBuscarPor.Name = "comboBuscarPor";
+            this.comboBuscarPor.Size = new System.Drawing.Size(121, 21);
+            this.comboBuscarPor.TabIndex = 46;
+            // 
+            // inputBusqueda
+            // 
+            this.inputBusqueda.Location = new System.Drawing.Point(296, 337);
+            this.inputBusqueda.Name = "inputBusqueda";
+            this.inputBusqueda.Size = new System.Drawing.Size(100, 20);
+            this.inputBusqueda.TabIndex = 45;
+            // 
+            // botonBuscar
+            // 
+            this.botonBuscar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.botonBuscar.IconColor = System.Drawing.Color.Black;
+            this.botonBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.botonBuscar.Location = new System.Drawing.Point(402, 334);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.botonBuscar.TabIndex = 44;
+            this.botonBuscar.Text = "Buscar";
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
+            // 
             // ProductosCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBuscarPor);
+            this.Controls.Add(this.inputBusqueda);
+            this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.checkBoxEstado);
             this.Controls.Add(this.comboCategorias);
             this.Controls.Add(this.comboMarcas);
@@ -312,7 +354,6 @@
             this.Controls.Add(this.inputDescripcion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputNombre);
-            this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonActualizar);
@@ -332,7 +373,6 @@
         private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonLimpiar;
-        private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.TextBox inputNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -354,5 +394,9 @@
         private System.Windows.Forms.ComboBox comboMarcas;
         private System.Windows.Forms.ComboBox comboCategorias;
         private System.Windows.Forms.CheckBox checkBoxEstado;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBuscarPor;
+        private System.Windows.Forms.TextBox inputBusqueda;
+        private FontAwesome.Sharp.IconButton botonBuscar;
     }
 }

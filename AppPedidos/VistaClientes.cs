@@ -144,5 +144,10 @@ namespace AppPedidos
         {
             AbrirFormulariosHijo(new vista_Inicio());
         }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

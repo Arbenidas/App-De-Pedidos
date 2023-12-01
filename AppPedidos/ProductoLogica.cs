@@ -78,7 +78,64 @@ namespace AppPedidos
                 }
             }
         }
+        public static DataTable ObtenerProductos(string extra)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection oConexion = new SqlConnection(Conexion.CN);
 
+            string sql = "SELECT * FROM PRODUCTO " + extra;
+            SqlCommand cmd = new SqlCommand(sql, oConexion);
+
+            SqlDataReader dataReader = null;
+
+            try
+            {
+                oConexion.Open();
+                dataReader = cmd.ExecuteReader();
+                dt.Load(dataReader);
+            }
+            finally
+            {
+                cmd.Dispose();
+                oConexion.Close();
+            }
+
+            return dt;
+        }
+
+        public static Producto ProductoID(int id)
+        {
+            Producto producto = null;
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                String id_ultima = "SELECT distinct TOP 1 * FROM PRODUCTO WHERE IdProducto = " + id;
+                SqlCommand ejecutar = new SqlCommand(id_ultima, oConexion);
+                oConexion.Open();
+                SqlDataReader leer = ejecutar.ExecuteReader();
+                if (leer.Read() == true)
+                {
+                    producto = new Producto();
+                    producto.IdProducto= Convert.ToInt32(leer["IdProducto"].ToString());
+                    producto.Nombre = leer["Nombre"].ToString();
+                    producto.Descripcion = leer["Descripcion"].ToString();
+
+                    producto.IdMarca= Convert.ToInt32(leer["IdMarca"].ToString());
+                    producto.IdCategoria= Convert.ToInt32(leer["IdCategoria"].ToString());
+                    producto.Precio= Convert.ToDecimal(leer["Precio"].ToString());
+                    producto.Stock = Convert.ToInt32(leer["Stock"].ToString());
+                    
+                    producto.RutaImagen = leer["RutaImagen"].ToString();
+                    producto.Activo = Convert.ToBoolean(leer["Activo"].ToString());
+                    producto.FechaRegistro = leer["FechaRegistro"].ToString();
+
+                    
+                    //MessageBox.Show(respuesta.ToString());
+                    oConexion.Close();
+                }
+            }
+
+            return producto;
+        }
 
 
         public static int Registrar(Producto oProducto)

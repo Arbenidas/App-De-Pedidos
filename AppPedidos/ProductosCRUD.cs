@@ -29,7 +29,7 @@ namespace AppPedidos
         public void RefrescarGrid()
         {
             //MessageBox.Show("refresco");
-            dataGridView1.DataSource = ProductoLogica.Listar();
+            dataGridView1.DataSource = ProductoLogica.ObtenerProductos("");
         }
         private void ProductosCRUD_Load(object sender, EventArgs e)
         {
@@ -186,6 +186,13 @@ namespace AppPedidos
             inputImagen.Text = "";
             checkBoxEstado.Checked = false;
             inputFecha.Text = "";
+        }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            string condicion = "WHERE " + comboBuscarPor.Text + " like '%" + inputBusqueda.Text + "%'";
+
+            dataGridView1.DataSource = ProductoLogica.ObtenerProductos(condicion);
         }
     }
 }

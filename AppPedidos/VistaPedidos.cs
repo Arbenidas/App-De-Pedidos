@@ -20,6 +20,7 @@ namespace AppPedidos
         public VistaPedidos(bool esAdmin, int Idusuario)
         {
             InitializeComponent();
+            
             this.esAdmin = esAdmin;
             this.Idusuario = Idusuario;
         }
@@ -86,6 +87,22 @@ namespace AppPedidos
 
                 }
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (!textBoxID.Text.Equals(""))
+            {
+                string id = dataGridView1.CurrentRow.Cells["IdCompra"].Value.ToString();
+
+                if (!string.IsNullOrEmpty(id))
+                {
+                    VerCompraDetalle verCompraDetalle = new VerCompraDetalle(Convert.ToInt32(id));
+                    verCompraDetalle.Show();
+
+                }
+            }
+            
         }
     }
 }

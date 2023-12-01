@@ -120,7 +120,14 @@ namespace AppPedidos
         private void botonDeComprar_Click(object sender, EventArgs e)
         {
             RegistroCompra registroCompra = new RegistroCompra(listaCompra, IDusuario);
+            AddOwnedForm(registroCompra);
             registroCompra.Show();
+        }
+
+        public void VaciarCarrito()
+        {
+            listaCompra.Clear();
+            this.Close();
         }
     }
 }

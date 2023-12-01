@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Security.Policy;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 namespace AppPedidos
 {
@@ -125,6 +126,71 @@ namespace AppPedidos
             }
 
             return respuesta;
+        }
+
+        public static List<DetalleCompra> ObtenerDetallesCompra(int id)
+        {
+            List <DetalleCompra> listaDetalles = new List<DetalleCompra>();
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                String id_ultima = "SELECT * FROM DETALLE_COMPRA WHERE IdCompra = " + id;
+                SqlCommand ejecutar = new SqlCommand(id_ultima, oConexion);
+                oConexion.Open();
+                SqlDataReader leer = ejecutar.ExecuteReader();
+                
+                
+                while (leer.Read())
+                {
+                    listaDetalles.Add(new DetalleCompra()
+                    {
+                        IdDetalleCompra = Convert.ToInt32(leer["IdDetalleCompra"].ToString()),
+                        IdCompra = Convert.ToInt32(leer["IdCompra"].ToString()),
+                        IdProducto = Convert.ToInt32(leer["IdProducto"].ToString()),
+                        Cantidad = Convert.ToInt32(leer["Cantidad"].ToString()),
+                        Total = Convert.ToDecimal(leer["Total"].ToString()),
+                        oProducto = ProductoLogica.ProductoID(Convert.ToInt32(leer["IdProducto"].ToString())),
+                            
+                    });
+                }
+
+                leer.Close();
+                oConexion.Close();
+                
+            }
+
+            return listaDetalles;
+        }
+
+        public static Compra CompraID(int id)
+        {
+            Compra compra = null;
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                String id_ultima = "SELECT distinct TOP 1 * FROM COMPRA WHERE IdCompra = "+id;
+                SqlCommand ejecutar = new SqlCommand(id_ultima, oConexion);
+                oConexion.Open();
+                SqlDataReader leer = ejecutar.ExecuteReader();
+                if (leer.Read() == true)
+                {
+                    compra = new Compra();
+                    compra.IdCompra = Convert.ToInt32(leer["IdCompra"].ToString());
+                    compra.IdUsuario = Convert.ToInt32(leer["IdUsuario"].ToString());
+                    
+                    compra.TotalProducto = leer["TotalProducto"].ToString();
+                    compra.Total = Convert.ToDecimal(leer["Total"].ToString());
+                    compra.Contacto = leer["Contacto"].ToString();
+                    compra.Telefono = leer["Telefono"].ToString();
+                    compra.Direccion = leer["Direccion"].ToString();
+                    compra.IdDistrito = leer["IdDistrito"].ToString();
+                    compra.FechaTexto = leer["FechaCompra"].ToString();
+
+                    compra.oDetalleCompra = ObtenerDetallesCompra(id);
+                    //MessageBox.Show(respuesta.ToString());
+                    oConexion.Close();
+                }
+            }
+
+            return compra;
         }
 
         public static DataTable ObtenerCompras(string extra)

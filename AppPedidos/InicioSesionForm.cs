@@ -19,7 +19,7 @@ namespace AppPedidos
 
         private void inicioSesion_Load(object sender, EventArgs e)
         {
-            Textbox1.Text = "Usuario";
+            Textbox1.Text = "Correo";
             Textbox1.ForeColor = Color.LightGray;
 
             textBox2.PasswordChar = '\0';
@@ -50,14 +50,14 @@ namespace AppPedidos
         {
             if (Textbox1.Text == "" )
             {
-                Textbox1.Text = "Usuario";
+                Textbox1.Text = "Correo";
                 Textbox1.ForeColor = Color.LightGray;
             }
         }
 
         private void Textbox1_Enter(object sender, EventArgs e)
         {
-            if (Textbox1.Text == "Usuario")
+            if (Textbox1.Text == "Correo")
             {
                 Textbox1.Text = "";
                 Textbox1.ForeColor = Color.Black;
