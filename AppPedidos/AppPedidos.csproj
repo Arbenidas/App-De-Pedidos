@@ -148,12 +148,6 @@
     <Compile Include="Formulario.Designer.cs">
       <DependentUpon>Formulario.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeVentasForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HomeVentasForm.Designer.cs">
-      <DependentUpon>HomeVentasForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="InicioAppForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,12 +202,6 @@
     </Compile>
     <Compile Include="RegistroCompra.Designer.cs">
       <DependentUpon>RegistroCompra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroDeUsuarioForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistroDeUsuarioForm.Designer.cs">
-      <DependentUpon>RegistroDeUsuarioForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroDeUsuarioAdicionalForm.cs">
       <SubType>Form</SubType>
@@ -271,9 +259,6 @@
     <EmbeddedResource Include="Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeVentasForm.resx">
-      <DependentUpon>HomeVentasForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InicioAppForm.resx">
       <DependentUpon>InicioAppForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,9 +292,6 @@
     </Compile>
     <EmbeddedResource Include="RegistroCompra.resx">
       <DependentUpon>RegistroCompra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegistroDeUsuarioForm.resx">
-      <DependentUpon>RegistroDeUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroDeUsuarioAdicionalForm.resx">
       <DependentUpon>RegistroDeUsuarioAdicionalForm.cs</DependentUpon>

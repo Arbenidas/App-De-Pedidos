@@ -36,7 +36,7 @@ namespace AppPedidos
             // PanelDeProdcutos
             // 
             this.PanelDeProdcutos.AutoScroll = true;
-            this.PanelDeProdcutos.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PanelDeProdcutos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.PanelDeProdcutos.Location = new System.Drawing.Point(0, 84);
             this.PanelDeProdcutos.Name = "PanelDeProdcutos";
             this.PanelDeProdcutos.Size = new System.Drawing.Size(800, 366);
@@ -55,6 +55,7 @@ namespace AppPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(153)))), ((int)(((byte)(172)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.PanelDeProdcutos);

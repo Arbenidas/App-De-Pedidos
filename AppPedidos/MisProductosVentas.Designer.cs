@@ -35,6 +35,7 @@ namespace AppPedidos
             // 
             // PanelDesktop
             // 
+            this.PanelDesktop.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelDesktop.Location = new System.Drawing.Point(0, 94);
             this.PanelDesktop.Name = "PanelDesktop";
@@ -44,6 +45,7 @@ namespace AppPedidos
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
