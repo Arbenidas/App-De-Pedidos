@@ -47,6 +47,8 @@ namespace AppPedidos
             //Se obtienen los valores de los inputs y se mandan a registrar
             categoria.Activo = checkBoxEstado.Checked;
             categoria.Descripcion = inputNombre.Text.Trim();
+            
+            // Se introducen los elementos del form a un objeto y luego a la base de datos
             CategoriaLogica.Registrar(categoria);
             MessageBox.Show("Categoria agregada");
             Refrescar();
@@ -73,25 +75,33 @@ namespace AppPedidos
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
+            // Verificar si el campo de entrada de ID no está vacío
             if (!inputID.Text.Equals(""))
             {
+                // Obtener el valor de la celda "IdCategoria" de la fila seleccionada en el DataGridView
                 string id = dataGridView1.CurrentRow.Cells["IdCategoria"].Value.ToString();
 
+                // Verificar si el valor de la celda no está vacío
                 if (!string.IsNullOrEmpty(id))
                 {
+                    // Crear un objeto 'Categoria' y asignarle los valores de la interfaz de usuario
                     categoria.IdCategoria = Convert.ToInt32(inputID.Text);
                     categoria.Descripcion = inputNombre.Text.Trim();
                     categoria.Activo = checkBoxEstado.Checked;
 
-
+                    // Llamar al método 'Modificar' en la lógica de negocio para actualizar la categoría
                     CategoriaLogica.Modificar(categoria);
+
+                    // Mostrar un mensaje de éxito
                     MessageBox.Show("Categoria Actualizada");
+
+                    // Actualizar la interfaz de usuario (recargar los datos en el DataGridView)
                     Refrescar();
                 }
-
             }
         }
 
+        //Al seleccionar un elemento de la tabla se actualizan los campos del formulario con dicha seleccion.
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
