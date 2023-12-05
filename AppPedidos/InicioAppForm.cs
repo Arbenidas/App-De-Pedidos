@@ -316,7 +316,15 @@ namespace AppPedidos
 
         private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            EditarPerfil editarPerfil = new EditarPerfil(usuario.Correo, usuario.Contrasena, usuario.EsAdministrador);
+            AddOwnedForm(editarPerfil);
+            editarPerfil.Show();
+        }
 
+        public void RefrescarUsuario(string correo, string contraseña)
+        {
+            this.usuario = UsuarioLogica.Obtener(correo, contraseña);
+            usuarioToolStripMenuItem.Text = usuario.Nombres;
         }
 
         private void menuMarcas_Click(object sender, EventArgs e)
@@ -324,9 +332,47 @@ namespace AppPedidos
             AbrirFormulariosHijo(new MarcaCRUD());
         }
 
+<<<<<<< HEAD
         private void menuCategorias_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijo(new CategoriaCRUD());
+=======
+        private void iconMenuItem9_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new VistaPedidos(usuario.EsAdministrador, usuario.IdUsuario));
+        }
+
+        private void iconMenuItem3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new ManejoClientes());
+        }
+
+        private void InicioButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new vista_Inicio());
+        }
+
+        private void menuCategorias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new CategoriaCRUD());
+        }
+
+        private void miembrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Autores autores = new Autores();
+            autores.Show();
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void reporteProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Formulario reporte = new Formulario();
+            reporte.ShowDialog();
+>>>>>>> Cambios_finales
         }
     }
 }

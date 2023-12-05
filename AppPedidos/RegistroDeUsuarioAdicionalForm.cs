@@ -34,8 +34,8 @@ namespace AppPedidos
             usuario.Apellidos = inputApellidos.Text.Trim();
             usuario.Contrasena = inputContrasena.Text.Trim();
             usuario.Correo = inputCorreo.Text.Trim();
-            usuario.EsAdministrador = checkBoxAdministrador.Checked;
-            usuario.Activo = checkBoxActivo.Checked;
+            usuario.EsAdministrador = false;
+            usuario.Activo = true;
             int registro = UsuarioLogica.Registrar(usuario);
             if(registro != 0)
             {

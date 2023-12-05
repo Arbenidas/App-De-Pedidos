@@ -16,10 +16,12 @@ namespace AppPedidos
         
         private Form currentChildForm;
         private Usuario usuario;
-        public VistaClientes(string correo, string constraseña)
+        private Dictionary<int, int> listaID_Cantidad = new Dictionary<int, int>();
+
+        public VistaClientes(string correo, string contraseña)
         {
             InitializeComponent();
-            this.usuario = UsuarioLogica.Obtener(correo, constraseña);
+            this.usuario = UsuarioLogica.Obtener(correo, contraseña);
             usuarioToolStripMenuItem.Text = usuario.Nombres;
 
         }
@@ -35,6 +37,7 @@ namespace AppPedidos
             }
             //se Asigna al atributo el formulario que se pasa como parametro
             currentChildForm = childForm;
+            AddOwnedForm(childForm);
 
             //Se estiliza y se pone en un lugar correspondiente.
             childForm.TopLevel = false;
@@ -69,9 +72,16 @@ namespace AppPedidos
 
         private void editarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //
-            this.Close();
+            EditarPerfil editarPerfil = new EditarPerfil(usuario.Correo, usuario.Contrasena, usuario.EsAdministrador);
+            AddOwnedForm(editarPerfil);
+            editarPerfil.Show();
 
+
+        }
+        public void RefrescarUsuario(string correo, string contraseña)
+        {
+            this.usuario = UsuarioLogica.Obtener(correo, contraseña);
+            usuarioToolStripMenuItem.Text = usuario.Nombres;
         }
 
         private void PanelDesktop_Paint(object sender, PaintEventArgs e)
@@ -103,6 +113,40 @@ namespace AppPedidos
             string categoria = sender.ToString();
             
             AbrirFormulariosHijo(new MonitoresStandarsForm(categoria));
+
+        }
+
+        public void DefinirCompras(int idproducto, int cantidad)
+        {
+            this.listaID_Cantidad.Add(idproducto, cantidad);
+            //MessageBox.Show(String.Join(", ", listaID_Cantidad));
+        }
+        public void QuitarProducto(int idproducto)
+        {
+            this.listaID_Cantidad.Remove(idproducto);
+            //MessageBox.Show(String.Join(", ", listaID_Cantidad));
+            AbrirFormulariosHijo(new VistaCarrito(listaID_Cantidad, usuario.IdUsuario));
+
+        }
+
+
+        private void carritoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new VistaCarrito(listaID_Cantidad, usuario.IdUsuario));
+        }
+
+        private void misComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new VistaPedidos(usuario.EsAdministrador, usuario.IdUsuario));
+        }
+
+        private void menuInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulariosHijo(new vista_Inicio());
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

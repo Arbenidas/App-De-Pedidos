@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace AppPedidos
 {
@@ -100,6 +101,99 @@ namespace AppPedidos
             }
             return respuesta;
         }
+
+        public static DataTable ObtenerClientes(string extra)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection oConexion = new SqlConnection(Conexion.CN);
+
+            string sql = "SELECT * FROM USUARIO " + extra;
+            SqlCommand cmd = new SqlCommand(sql, oConexion);
+
+            SqlDataReader dataReader = null;
+
+            try
+            {
+                oConexion.Open();
+                dataReader = cmd.ExecuteReader();
+                dt.Load(dataReader);
+            }
+            finally
+            {
+                cmd.Dispose();
+                oConexion.Close();
+            }
+
+            return dt;
+        }
+
+        public static void ActualizarUsuario(Usuario usuario)
+        {
+            SqlConnection conn = new SqlConnection(Conexion.CN);
+
+
+            string sql = "UPDATE USUARIO SET Nombres=@Nombres, Apellidos=@Apellidos, Correo=@Correo, Contrasena=@Contrasena, EsAdministrador=@EsAdministrador, Activo=@Activo WHERE IdUsuario=@IdUsuario";
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            cmd.Parameters.AddWithValue("@Nombres", usuario.Nombres);
+            cmd.Parameters.AddWithValue("@Apellidos", usuario.Apellidos);
+            cmd.Parameters.AddWithValue("@Correo", usuario.Correo);
+            cmd.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
+            cmd.Parameters.AddWithValue("@EsAdministrador", usuario.EsAdministrador);
+            cmd.Parameters.AddWithValue("@Activo", usuario.Activo);
+            
+            cmd.Parameters.AddWithValue("@IdUsuario", usuario.IdUsuario);
+
+            try
+            {
+                long respuesta;
+                conn.Open();
+
+                respuesta = cmd.ExecuteNonQuery();
+                if (respuesta > 0)
+                {
+                    MessageBox.Show("Usuario actualizado correctamente");
+                }
+            }
+            finally
+            {
+
+                cmd.Dispose();
+                conn.Close();
+            }
+
+
+        }
+        public static bool Eliminar(int id)
+        {
+            bool respuesta = true;
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("delete from USUARIO where IdUsuario = @id", oConexion);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.CommandType = CommandType.Text;
+
+                    oConexion.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    respuesta = true;
+
+                }
+                catch (Exception ex)
+                {
+                    respuesta = false;
+                }
+
+            }
+
+            return respuesta;
+
+        }
+        //
     }
 }
 

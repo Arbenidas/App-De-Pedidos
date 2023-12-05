@@ -29,7 +29,7 @@ namespace AppPedidos
         public void RefrescarGrid()
         {
             //MessageBox.Show("refresco");
-            dataGridView1.DataSource = ProductoLogica.Listar();
+            dataGridView1.DataSource = ProductoLogica.ObtenerProductos("");
         }
         private void ProductosCRUD_Load(object sender, EventArgs e)
         {
@@ -170,6 +170,49 @@ namespace AppPedidos
                 }
 
             }
+        }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            
+            inputID.Text = "";
+            inputNombre.Text = "";
+            inputDescripcion.Text = "";
+            //MessageBox.Show (row.Cells["IdCategoria"].Value.ToString());
+            comboCategorias.SelectedIndex = 1;
+            comboMarcas.SelectedIndex = 1;
+            inputPrecio.Text = "";
+            inputStock.Text = "";
+            inputImagen.Text = "";
+            checkBoxEstado.Checked = false;
+            inputFecha.Text = "";
+        }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            string condicion = "WHERE " + comboBuscarPor.Text + " like '%" + inputBusqueda.Text + "%'";
+
+            dataGridView1.DataSource = ProductoLogica.ObtenerProductos(condicion);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputImagen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputStock_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

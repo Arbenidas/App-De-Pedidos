@@ -36,8 +36,8 @@
             this.usuarioToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.editarPerfilToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.cerrarSesionToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.carritoToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            this.salirToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             this.PanelDesktop = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,8 +48,8 @@
             this.menuInicio,
             this.comprasToolStripMenuItem,
             this.usuarioToolStripMenuItem,
-            this.salirToolStripMenuItem,
-            this.carritoToolStripMenuItem});
+            this.carritoToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -64,6 +64,7 @@
             this.menuInicio.Name = "menuInicio";
             this.menuInicio.Size = new System.Drawing.Size(64, 20);
             this.menuInicio.Text = "Inicio";
+            this.menuInicio.Click += new System.EventHandler(this.menuInicio_Click);
             // 
             // comprasToolStripMenuItem
             // 
@@ -83,8 +84,9 @@
             this.misComprasToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.misComprasToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.misComprasToolStripMenuItem.Name = "misComprasToolStripMenuItem";
-            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.misComprasToolStripMenuItem.Text = "Mis compras";
+            this.misComprasToolStripMenuItem.Click += new System.EventHandler(this.misComprasToolStripMenuItem_Click);
             // 
             // nuevoToolStripMenuItem
             // 
@@ -92,8 +94,9 @@
             this.nuevoToolStripMenuItem.IconColor = System.Drawing.Color.Black;
             this.nuevoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.nuevoToolStripMenuItem.Text = "Categorias";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
@@ -127,6 +130,16 @@
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
+            // carritoToolStripMenuItem
+            // 
+            this.carritoToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
+            this.carritoToolStripMenuItem.IconColor = System.Drawing.Color.Black;
+            this.carritoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
+            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.carritoToolStripMenuItem.Text = "Carrito";
+            this.carritoToolStripMenuItem.Click += new System.EventHandler(this.carritoToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -137,17 +150,9 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // carritoToolStripMenuItem
-            // 
-            this.carritoToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
-            this.carritoToolStripMenuItem.IconColor = System.Drawing.Color.Black;
-            this.carritoToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
-            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.carritoToolStripMenuItem.Text = "Carrito";
-            // 
             // PanelDesktop
             // 
+            this.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))));
             this.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDesktop.Location = new System.Drawing.Point(0, 24);
             this.PanelDesktop.Name = "PanelDesktop";
