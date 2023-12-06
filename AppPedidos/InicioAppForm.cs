@@ -56,61 +56,6 @@ namespace AppPedidos
             
         }
 
-        #region
-        //Al dar click en cada uno de los botones de la barra superior empezara un contador que abrira una barra desplegable
-        private void btnMenubar_Click(object sender, EventArgs e)
-        {
-            sidebarTimer.Start();
-        }
-        private void iconButton44_Click(object sender, EventArgs e)
-        {
-            timer4.Start();
-        }
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-        private void iconButton16_Click(object sender, EventArgs e)
-        {
-            timer2.Start();
-        }
-        private void iconButton24_Click(object sender, EventArgs e)
-        {
-            timer3.Start();
-        }
-        #endregion
-
-
-        //Estos son los timers que regulan el tamaño de cada una de las barras que se van a desplegar tomando como referencia los valores minimos y maximos de cada una de las barras desplegables
-        #region
-        private void sideBarTimer_Tick2(object sender, EventArgs e)
-        {
-            
-        }
-        private void sideBarTimer_Tick(object sender, EventArgs e)
-        {
-
-            
-        }
-        private void sideBarTimer_Tick3(object sender, EventArgs e)
-        {
-            
-        }
-        private void sideBarTimer_Tick4(object sender, EventArgs e)
-        {
-            
-        }
-        private void sideBarTimer_Tick5(object sender, EventArgs e)
-        {
-            
-        }
-        #endregion
-
-
-
-
-
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -130,16 +75,7 @@ namespace AppPedidos
             {
                 currentChildForm.Close();
             }
-
-            
-
-
         }
-
-
-
-
-
         #region
         //Se abren los formularios correspondientes a cada uno de los botones de la barra superios desplegable
         private void iconButton8_Click(object sender, EventArgs e)
@@ -266,7 +202,6 @@ namespace AppPedidos
 
         private void iconButton3_MouseHover(object sender, EventArgs e)
         {
-            //MessageBox.Show("0002dsadas0000");
             timer5.Start();
         }
 
@@ -300,7 +235,7 @@ namespace AppPedidos
         {
             AbrirFormulariosHijo(new ProductosCRUD());
         }
-
+        //Items del strip menu del formulario
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InicioSesionForm formInicio = new InicioSesionForm();
@@ -327,11 +262,12 @@ namespace AppPedidos
             usuarioToolStripMenuItem.Text = usuario.Nombres;
         }
 
+        //abre el form de marcas
         private void menuMarcas_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijo(new MarcaCRUD());
         }
-
+        //Abre la ventana de vista pedidos
         private void iconMenuItem9_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijo(new VistaPedidos(usuario.EsAdministrador, usuario.IdUsuario));

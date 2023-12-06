@@ -204,6 +204,7 @@
             this.Controls.Add(this.buttonRegistro);
             this.Name = "EditarPerfil";
             this.Text = "EditarPerfil";
+            this.Load += new System.EventHandler(this.EditarPerfil_Load);
             this.groupBoxGeneralidades.ResumeLayout(false);
             this.groupBoxGeneralidades.PerformLayout();
             this.groupBoxAcceso.ResumeLayout(false);

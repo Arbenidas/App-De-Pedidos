@@ -44,27 +44,27 @@
             this.comboBuscarPor = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.inputNombres = new System.Windows.Forms.TextBox();
-            this.inputCorreo = new System.Windows.Forms.TextBox();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.inputContrasena = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.inputContrasena = new System.Windows.Forms.TextBox();
+            this.inputCorreo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.inputNombres = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -252,24 +252,82 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 44;
             // 
-            // panel2
+            // groupBox5
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(91, 450);
-            this.panel2.TabIndex = 44;
+            this.groupBox5.Controls.Add(this.botonAgregar);
+            this.groupBox5.Controls.Add(this.botonEliminar);
+            this.groupBox5.Location = new System.Drawing.Point(117, 310);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(134, 123);
+            this.groupBox5.TabIndex = 51;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Edicion";
             // 
-            // label1
+            // groupBox4
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Nombres";
+            this.groupBox4.Controls.Add(this.comboBuscarPor);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.inputBusqueda);
+            this.groupBox4.Controls.Add(this.botonBuscar);
+            this.groupBox4.Location = new System.Drawing.Point(569, 44);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 100);
+            this.groupBox4.TabIndex = 50;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Busqueda";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.checkBoxAdministrador);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.checkBoxActivo);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(114, 204);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(213, 100);
+            this.groupBox3.TabIndex = 49;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Acciones";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.inputContrasena);
+            this.groupBox2.Controls.Add(this.inputCorreo);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(354, 43);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 101);
+            this.groupBox2.TabIndex = 48;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Credenciales";
+            // 
+            // inputContrasena
+            // 
+            this.inputContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputContrasena.Location = new System.Drawing.Point(78, 58);
+            this.inputContrasena.Name = "inputContrasena";
+            this.inputContrasena.Size = new System.Drawing.Size(106, 20);
+            this.inputContrasena.TabIndex = 47;
+            // 
+            // inputCorreo
+            // 
+            this.inputCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputCorreo.Location = new System.Drawing.Point(78, 24);
+            this.inputCorreo.Name = "inputCorreo";
+            this.inputCorreo.Size = new System.Drawing.Size(106, 20);
+            this.inputCorreo.TabIndex = 44;
+            this.inputCorreo.TextChanged += new System.EventHandler(this.inputCorreo_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Contraseña";
             // 
             // label3
             // 
@@ -281,41 +339,6 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "Correo";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 13);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "ID";
-            // 
-            // inputNombres
-            // 
-            this.inputNombres.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputNombres.Location = new System.Drawing.Point(88, 90);
-            this.inputNombres.Name = "inputNombres";
-            this.inputNombres.Size = new System.Drawing.Size(106, 20);
-            this.inputNombres.TabIndex = 43;
-            // 
-            // inputCorreo
-            // 
-            this.inputCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputCorreo.Location = new System.Drawing.Point(78, 24);
-            this.inputCorreo.Name = "inputCorreo";
-            this.inputCorreo.Size = new System.Drawing.Size(106, 20);
-            this.inputCorreo.TabIndex = 44;
-            this.inputCorreo.TextChanged += new System.EventHandler(this.inputCorreo_TextChanged);
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxID.Location = new System.Drawing.Point(88, 36);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(49, 20);
-            this.textBoxID.TabIndex = 46;
             // 
             // groupBox1
             // 
@@ -332,73 +355,50 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General";
             // 
-            // inputContrasena
+            // textBoxID
             // 
-            this.inputContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputContrasena.Location = new System.Drawing.Point(78, 58);
-            this.inputContrasena.Name = "inputContrasena";
-            this.inputContrasena.Size = new System.Drawing.Size(106, 20);
-            this.inputContrasena.TabIndex = 47;
+            this.textBoxID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxID.Location = new System.Drawing.Point(88, 36);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(49, 20);
+            this.textBoxID.TabIndex = 46;
             // 
-            // label4
+            // inputNombres
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "Contraseña";
+            this.inputNombres.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputNombres.Location = new System.Drawing.Point(88, 90);
+            this.inputNombres.Name = "inputNombres";
+            this.inputNombres.Size = new System.Drawing.Size(106, 20);
+            this.inputNombres.TabIndex = 43;
             // 
-            // groupBox2
+            // label7
             // 
-            this.groupBox2.Controls.Add(this.inputContrasena);
-            this.groupBox2.Controls.Add(this.inputCorreo);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(354, 43);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 101);
-            this.groupBox2.TabIndex = 48;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Credenciales";
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(18, 13);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "ID";
             // 
-            // groupBox3
+            // label1
             // 
-            this.groupBox3.Controls.Add(this.checkBoxAdministrador);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.checkBoxActivo);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(114, 204);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(213, 100);
-            this.groupBox3.TabIndex = 49;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Acciones";
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Nombres";
             // 
-            // groupBox4
+            // panel2
             // 
-            this.groupBox4.Controls.Add(this.comboBuscarPor);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.inputBusqueda);
-            this.groupBox4.Controls.Add(this.botonBuscar);
-            this.groupBox4.Location = new System.Drawing.Point(569, 44);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 100);
-            this.groupBox4.TabIndex = 50;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Busqueda";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.botonAgregar);
-            this.groupBox5.Controls.Add(this.botonEliminar);
-            this.groupBox5.Location = new System.Drawing.Point(117, 310);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(134, 123);
-            this.groupBox5.TabIndex = 51;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Edicion";
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(148)))), ((int)(((byte)(166)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(91, 450);
+            this.panel2.TabIndex = 44;
             // 
             // ManejoClientes
             // 
@@ -408,17 +408,18 @@
             this.Controls.Add(this.panel1);
             this.Name = "ManejoClientes";
             this.Text = "ManejoClientes";
+            this.Load += new System.EventHandler(this.ManejoClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

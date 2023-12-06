@@ -46,5 +46,10 @@ namespace AppPedidos
             }
 
         }
+
+        private void RegistroDeUsuarioAdicionalForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

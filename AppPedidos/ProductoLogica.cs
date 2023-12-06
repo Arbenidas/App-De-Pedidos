@@ -54,12 +54,9 @@ namespace AppPedidos
                             IdProducto = Convert.ToInt32(dr["IdProducto"].ToString()),
                             Nombre = dr["Nombre"].ToString(),
                             Descripcion = dr["Descripcion"].ToString(),
-                            //oMarca = new Marca() { IdMarca = Convert.ToInt32(dr["IdMarca"].ToString()), Descripcion = dr["DescripcionMarca"].ToString() },
-                            //oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(dr["IdCategoria"].ToString()), Descripcion = dr["DescripcionCategoria"].ToString() },
                             IdMarca = Convert.ToInt32(dr["IdMarca"].ToString()),
                             IdCategoria = Convert.ToInt32(dr["IdCategoria"].ToString()),
                             Precio = Convert.ToDecimal(dr["Precio"].ToString()),
-                            //el Todecimal tenia otro parametro extra-> , new CultureInfo("es-PE")
                             Stock = Convert.ToInt32(dr["Stock"].ToString()),
                             RutaImagen = dr["RutaImagen"].ToString(),
                             Activo = Convert.ToBoolean(dr["Activo"].ToString()),

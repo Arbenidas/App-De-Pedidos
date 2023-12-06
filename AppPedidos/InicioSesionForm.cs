@@ -42,6 +42,7 @@ namespace AppPedidos
         {
             
         }
+
         /*Creacion de placeholders para la parte de los inputs de iniciar sesion
          leave: Hace que al quitar el focus del input se pone la palabra usuario siempre y cuando este vacio el campo
         enter: Hace que el texto que coloquemos salga normalmente y no en formato de gris
@@ -70,7 +71,7 @@ namespace AppPedidos
             {
                 textBox2.PasswordChar = '*';
                 textBox2.Text = "";
-                textBox2.ForeColor = Color.Gray;
+                textBox2.ForeColor = Color.White;
             }
             
         }
@@ -81,7 +82,7 @@ namespace AppPedidos
             {
                 textBox2.PasswordChar = '\0';
                 textBox2.Text = "Contraseña";
-                textBox2.ForeColor = Color.LightGray;
+                textBox2.ForeColor = Color.White;
             }
         }
 

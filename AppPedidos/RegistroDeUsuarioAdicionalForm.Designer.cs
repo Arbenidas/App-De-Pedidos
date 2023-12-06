@@ -186,6 +186,7 @@ namespace AppPedidos
             this.Controls.Add(this.panel1);
             this.Name = "RegistroDeUsuarioAdicionalForm";
             this.Text = "Registro2";
+            this.Load += new System.EventHandler(this.RegistroDeUsuarioAdicionalForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

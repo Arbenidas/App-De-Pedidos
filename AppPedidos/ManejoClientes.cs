@@ -53,7 +53,6 @@ namespace AppPedidos
                 inputContrasena.Text = row.Cells["Contrasena"].Value.ToString();
                 checkBoxAdministrador.Checked = Convert.ToBoolean(row.Cells["EsAdministrador"].Value);
                 checkBoxActivo.Checked = Convert.ToBoolean(row.Cells["Activo"].Value);
-                //MessageBox.Show (row.Cells["IdCategoria"].Value.ToString());
                
 
             }
@@ -160,6 +159,11 @@ namespace AppPedidos
         }
 
         private void checkBoxActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManejoClientes_Load(object sender, EventArgs e)
         {
 
         }

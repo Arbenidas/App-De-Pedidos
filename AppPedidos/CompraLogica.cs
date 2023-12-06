@@ -35,7 +35,11 @@ namespace AppPedidos
             }
         }
 
-        // Método estático para registrar una nueva compra en la base de datos
+        /// <summary>
+        /// Método estático para registrar una nueva compra en la base de datos
+        /// </summary>
+        /// <param name="oCompra"></param>
+        /// <returns></returns>
         public static bool Registrar(Compra oCompra)
         {
             // Variable para almacenar la respuesta (éxito o fallo)
@@ -128,38 +132,66 @@ namespace AppPedidos
 
             return resultado;
         }
-
+        /// <summary>
+        /// Selecciona la ultima compra de la tabla COMPRA.
+        /// </summary>
+        /// <returns></returns>
         public static int UltimaCompra()
         {
             int respuesta = 0;
+
+            // Uso de 'using' para asegurar la liberación de recursos
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
-                String id_ultima = "SELECT distinct TOP 1 (IdCompra) FROM COMPRA ORDER BY IdCompra DESC";
+                // Consulta SQL para obtener el identificador de la última compra
+                String id_ultima = "SELECT TOP 1 IdCompra FROM COMPRA ORDER BY IdCompra DESC";
+
+                // Uso de SqlCommand para ejecutar la consulta
                 SqlCommand ejecutar = new SqlCommand(id_ultima, oConexion);
+
+                // Apertura de la conexión a la base de datos
                 oConexion.Open();
+
+                // Uso de SqlDataReader para leer el resultado de la consulta
                 SqlDataReader leer = ejecutar.ExecuteReader();
-                if (leer.Read() == true)
+
+                // Verificación si hay resultados en la consulta
+                if (leer.Read())
                 {
+                    // Obtención del valor del identificador de la última compra
                     respuesta = Convert.ToInt32(leer["IdCompra"].ToString());
+
+                    // Incremento del identificador para utilizarlo en una nueva compra
                     respuesta++;
-                    oConexion.Close();
                 }
+
             }
 
+            // Devolución del identificador de la última compra
             return respuesta;
         }
 
+
         public static List<DetalleCompra> ObtenerDetallesCompra(int id)
         {
-            List <DetalleCompra> listaDetalles = new List<DetalleCompra>();
+            List<DetalleCompra> listaDetalles = new List<DetalleCompra>();
+
+            // Uso de 'using' para asegurar la liberación de recursos
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
+                // Consulta SQL para obtener detalles de compra específicos
                 String id_ultima = "SELECT * FROM DETALLE_COMPRA WHERE IdCompra = " + id;
+
+                // Uso de SqlCommand para ejecutar la consulta
                 SqlCommand ejecutar = new SqlCommand(id_ultima, oConexion);
+
+                // Apertura de la conexión a la base de datos
                 oConexion.Open();
+
+                // Uso de SqlDataReader para leer el resultado de la consulta
                 SqlDataReader leer = ejecutar.ExecuteReader();
-                
-                
+
+                // Iteración a través de los resultados y construcción de la lista de detalles de compra
                 while (leer.Read())
                 {
                     listaDetalles.Add(new DetalleCompra()
@@ -169,34 +201,50 @@ namespace AppPedidos
                         IdProducto = Convert.ToInt32(leer["IdProducto"].ToString()),
                         Cantidad = Convert.ToInt32(leer["Cantidad"].ToString()),
                         Total = Convert.ToDecimal(leer["Total"].ToString()),
+
+                        // Invocación de ProductoLogica.ProductoID para obtener información adicional del producto
                         oProducto = ProductoLogica.ProductoID(Convert.ToInt32(leer["IdProducto"].ToString())),
-                            
                     });
                 }
 
+                // Cierre del SqlDataReader y de la conexión a la base de datos
                 leer.Close();
                 oConexion.Close();
-                
             }
 
+            // Devolución de la lista de detalles de compra
             return listaDetalles;
         }
+
 
         public static Compra CompraID(int id)
         {
             Compra compra = null;
+
+            // Uso de 'using' para asegurar la liberación de recursos
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
-                String id_ultima = "SELECT distinct TOP 1 * FROM COMPRA WHERE IdCompra = "+id;
+                // Consulta SQL para obtener información de una compra específica
+                String id_ultima = "SELECT TOP 1 * FROM COMPRA WHERE IdCompra = " + id;
+
+                // Uso de SqlCommand para ejecutar la consulta
                 SqlCommand ejecutar = new SqlCommand(id_ultima, oConexion);
+
+                // Apertura de la conexión a la base de datos
                 oConexion.Open();
+
+                // Uso de SqlDataReader para leer el resultado de la consulta
                 SqlDataReader leer = ejecutar.ExecuteReader();
-                if (leer.Read() == true)
+
+                // Verificación si hay resultados en la consulta
+                if (leer.Read())
                 {
+                    // Inicialización de la instancia de Compra
                     compra = new Compra();
+
+                    // Asignación de valores desde el resultado de la consulta a la instancia de Compra
                     compra.IdCompra = Convert.ToInt32(leer["IdCompra"].ToString());
                     compra.IdUsuario = Convert.ToInt32(leer["IdUsuario"].ToString());
-                    
                     compra.TotalProducto = leer["TotalProducto"].ToString();
                     compra.Total = Convert.ToDecimal(leer["Total"].ToString());
                     compra.Contacto = leer["Contacto"].ToString();
@@ -205,72 +253,100 @@ namespace AppPedidos
                     compra.IdDistrito = leer["IdDistrito"].ToString();
                     compra.FechaTexto = leer["FechaCompra"].ToString();
 
+                    // Obtención de los detalles de compra asociados utilizando el método ObtenerDetallesCompra
                     compra.oDetalleCompra = ObtenerDetallesCompra(id);
+
+                    // Cierre de la conexión a la base de datos
                     oConexion.Close();
                 }
             }
 
+            // Devolución de la instancia de Compra (puede ser null si no se encontraron resultados)
             return compra;
         }
 
+        /// <summary>
+        /// Optione todos los detalles de las compras de la tabla
+        /// </summary>
+        /// <param name="extra"></param>
+        /// <returns></returns>
         public static DataTable ObtenerCompras(string extra)
         {
             DataTable dt = new DataTable();
-            SqlConnection oConexion = new SqlConnection(Conexion.CN);
 
-            string sql = "SELECT * FROM COMPRA " + extra;
-            SqlCommand cmd = new SqlCommand(sql, oConexion);
-
-            SqlDataReader dataReader = null;
-
-            try
+            // Uso de 'using' para asegurar la liberación de recursos
+            using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
-                oConexion.Open();
-                dataReader = cmd.ExecuteReader();
-                dt.Load(dataReader);
-            }
-            finally
-            {
-                cmd.Dispose();
-                oConexion.Close();
+                // Construcción de la consulta SQL utilizando el parámetro 'extra'
+                string sql = "SELECT * FROM COMPRA " + extra;
+
+                // Uso de SqlCommand para ejecutar la consulta
+                SqlCommand cmd = new SqlCommand(sql, oConexion);
+                SqlDataReader dataReader = null;
+
+                try
+                {
+                    // Apertura de la conexión a la base de datos
+                    oConexion.Open();
+
+                    // Uso de SqlDataReader para leer el resultado de la consulta
+                    dataReader = cmd.ExecuteReader();
+
+                    // Carga de datos en el DataTable
+                    dt.Load(dataReader);
+                }
+                finally
+                {
+                    // Liberación de recursos y cierre de la conexión a la base de datos
+                    cmd.Dispose();
+                    oConexion.Close();
+                }
             }
 
+            // Devolución del DataTable que contiene los resultados de la consulta
             return dt;
         }
 
+
         public static void CambiarEstadoCompra(int idCompra, bool estado)
         {
-            SqlConnection conn = new SqlConnection(Conexion.CN);
-
-
-            string sql = "UPDATE Compra SET Estado=@Estado WHERE IdCompra=@IdCompra";
-
-            SqlCommand cmd = new SqlCommand(sql, conn);
-
-            
-            cmd.Parameters.AddWithValue("@Estado", !estado);
-
-            cmd.Parameters.AddWithValue("@IdCompra", idCompra);
-
-            try
+            // Uso de 'using' para asegurar la liberación de recursos
+            using (SqlConnection conn = new SqlConnection(Conexion.CN))
             {
-                long respuesta;
-                conn.Open();
+                // Consulta SQL para actualizar el estado de una compra
+                string sql = "UPDATE Compra SET Estado=@Estado WHERE IdCompra=@IdCompra";
 
-                respuesta = cmd.ExecuteNonQuery();
-                if (respuesta > 0)
+                // Uso de SqlCommand para ejecutar la consulta
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                // Asignación de valores a los parámetros utilizando AddWithValue
+                cmd.Parameters.AddWithValue("@Estado", !estado); // Inversión del estado actual
+                cmd.Parameters.AddWithValue("@IdCompra", idCompra);
+
+                try
                 {
-                    System.Windows.MessageBox.Show("El estado de la compra se actualizo");
+                    long respuesta;
+
+                    // Apertura de la conexión a la base de datos
+                    conn.Open();
+
+                    // Ejecución de la consulta y obtención del número de filas afectadas
+                    respuesta = cmd.ExecuteNonQuery();
+
+                    // Verificación si la actualización fue exitosa
+                    if (respuesta > 0)
+                    {
+                        System.Windows.MessageBox.Show("El estado de la compra se actualizó");
+                    }
+                }
+                finally
+                {
+                    // Liberación de recursos y cierre de la conexión a la base de datos
+                    cmd.Dispose();
+                    conn.Close();
                 }
             }
-            finally
-            {
-
-                cmd.Dispose();
-                conn.Close();
-            }
-
-
         }
+
     }
 }

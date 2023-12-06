@@ -75,12 +75,10 @@ namespace AppPedidos
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
             // 
             // timer1
             // 
             this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.sideBarTimer_Tick2);
             // 
             // panel1
             // 
@@ -294,17 +292,15 @@ namespace AppPedidos
             // timer2
             // 
             this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.sideBarTimer_Tick3);
             // 
             // timer3
             // 
             this.timer3.Interval = 10;
-            this.timer3.Tick += new System.EventHandler(this.sideBarTimer_Tick4);
             // 
             // timer4
             // 
             this.timer4.Interval = 10;
-            this.timer4.Tick += new System.EventHandler(this.sideBarTimer_Tick5);
+
             // 
             // timerProduc
             // 

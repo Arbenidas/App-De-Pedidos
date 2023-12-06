@@ -22,7 +22,7 @@ namespace AppPedidos
 
         private void Formulario_Load(object sender, EventArgs e)
         {
-
+            //refresca los datos en el reportviewer luego de cargar los
             this.reportViewer1.RefreshReport();
             cargarDatos();
         }

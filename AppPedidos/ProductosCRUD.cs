@@ -28,7 +28,6 @@ namespace AppPedidos
 
         public void RefrescarGrid()
         {
-            //MessageBox.Show("refresco");
             dataGridView1.DataSource = ProductoLogica.ObtenerProductos("");
         }
         private void ProductosCRUD_Load(object sender, EventArgs e)
@@ -96,7 +95,6 @@ namespace AppPedidos
                 inputID.Text = row.Cells[0].Value.ToString();
                 inputNombre.Text = row.Cells["Nombre"].Value.ToString();
                 inputDescripcion.Text = row.Cells["Descripcion"].Value.ToString();
-                //MessageBox.Show (row.Cells["IdCategoria"].Value.ToString());
                 comboCategorias.SelectedIndex = Convert.ToInt32(row.Cells["IdCategoria"].Value.ToString())-1;
                 comboMarcas.SelectedIndex = Convert.ToInt32(row.Cells["IdMarca"].Value.ToString())-1;
                 inputPrecio.Text = row.Cells["Precio"].Value.ToString();
@@ -178,7 +176,6 @@ namespace AppPedidos
             inputID.Text = "";
             inputNombre.Text = "";
             inputDescripcion.Text = "";
-            //MessageBox.Show (row.Cells["IdCategoria"].Value.ToString());
             comboCategorias.SelectedIndex = 1;
             comboMarcas.SelectedIndex = 1;
             inputPrecio.Text = "";
