@@ -112,7 +112,7 @@ namespace AppPedidos
         {
             string categoria = sender.ToString();
             
-            AbrirFormulariosHijo(new MonitoresStandarsForm(categoria));
+            AbrirFormulariosHijo(new CargarProductosForm(categoria));
 
         }
 

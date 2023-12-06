@@ -16,5 +16,10 @@ namespace AppPedidos
         {
             InitializeComponent();
         }
+
+        private void Autores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

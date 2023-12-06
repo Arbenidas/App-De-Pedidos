@@ -35,17 +35,21 @@ namespace AppPedidos
             }
         }
 
+        // Método estático para registrar una nueva compra en la base de datos
         public static bool Registrar(Compra oCompra)
         {
-
+            // Variable para almacenar la respuesta (éxito o fallo)
             bool respuesta = false;
+
+            // Uso de una conexión a la base de datos utilizando la cadena de conexión de la clase Conexion
             using (SqlConnection oConexion = new SqlConnection(Conexion.CN))
             {
                 try
                 {
-                    StringBuilder query = new StringBuilder();
-
+                    // Creación de un comando SQL para llamar al procedimiento almacenado sp_registrarCompra
                     SqlCommand cmd = new SqlCommand("sp_registrarCompra", oConexion);
+
+                    // Especificación de parámetros para el procedimiento almacenado
                     cmd.Parameters.AddWithValue("IdUsuario", oCompra.IdUsuario);
                     cmd.Parameters.AddWithValue("TotalProducto", oCompra.TotalProducto);
                     cmd.Parameters.AddWithValue("Total", oCompra.Total);
@@ -53,60 +57,78 @@ namespace AppPedidos
                     cmd.Parameters.AddWithValue("Telefono", oCompra.Telefono);
                     cmd.Parameters.AddWithValue("Direccion", oCompra.Direccion);
                     cmd.Parameters.AddWithValue("IdDistrito", oCompra.IdDistrito);
+
+                    // Especificación de un parámetro de salida para el resultado del procedimiento almacenado
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                    // Especificación del tipo de comando como un procedimiento almacenado
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    // Apertura de la conexión a la base de datos
                     oConexion.Open();
+
+                    // Ejecución del procedimiento almacenado
                     cmd.ExecuteNonQuery();
 
+                    // Obtención del resultado del procedimiento almacenado (valor del parámetro de salida)
                     respuesta = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
-                    
-                    oConexion.Close();
 
+                    // Cierre de la conexión a la base de datos
+                    oConexion.Close();
                 }
+                // Captura de excepciones, si ocurre alguna durante la ejecución
                 catch (Exception ex)
-                {     
+                {
+                    // En caso de excepción, la respuesta se establece en false
                     respuesta = false;
                 }
             }
 
-            
-
+            // Devolución de la respuesta al llamar al método
             return respuesta;
         }
+        /// <summary>
+        /// Registra un detalle en la base de datos *DETALLE_COMPRA*
+        /// </summary>
+        /// <param name="detallesDeCompra"></param>
+        /// <returns></returns>
         public static int RegistrarDetalle(List<DetalleCompra> detallesDeCompra)
         {
-            int resultado =0;
-            //System.Windows.MessageBox.Show("Entro al metodo");
+            int resultado = 0;
             SqlConnection conexion = new SqlConnection(Conexion.CN);
+
             foreach (DetalleCompra dc in detallesDeCompra)
             {
-                //System.Windows.MessageBox.Show("Se insertara producto"+dc.IdProducto.ToString());
-
                 try
                 {
+                    // Potencial problema de seguridad: Construcción de consulta mediante concatenación de cadenas
                     string totalSinComa = dc.Total.ToString().Replace(',', '.');
-                    
-                    string insetarDetalle = "INSERT INTO DETALLE_COMPRA (IdCompra,IdProducto,Cantidad,Total) values (" + dc.IdCompra + "," + dc.IdProducto + "," + dc.Cantidad + "," + totalSinComa + ");";
 
-                    SqlCommand comando = new SqlCommand(insetarDetalle, conexion);
+                    // Potencial problema de seguridad e inyección SQL: Construcción de consulta sin parámetros
+                    string insertarDetalle = "INSERT INTO DETALLE_COMPRA (IdCompra, IdProducto, Cantidad, Total) VALUES ("
+                        + dc.IdCompra + "," + dc.IdProducto + "," + dc.Cantidad + "," + totalSinComa + ");";
+
+                    SqlCommand comando = new SqlCommand(insertarDetalle, conexion);
+
+                    // Problema de eficiencia: Apertura y cierre de la conexión en cada iteración del bucle
                     conexion.Open();
-                    //System.Windows.MessageBox.Show(insetarDetalle.ToString());
                     comando.ExecuteNonQuery();
                     conexion.Close();
 
+                    // Resultado se sobrescribe en cada iteración, solo refleja la última operación
                     resultado = 1;
                 }
                 catch (Exception ex)
                 {
+                    // Si hay una excepción, se establece el resultado en -1 y se muestra un mensaje de error
                     resultado = -1;
                     System.Windows.MessageBox.Show(ex.ToString());
                 }
-
             }
 
             return resultado;
         }
+
         public static int UltimaCompra()
         {
             int respuesta = 0;
@@ -120,7 +142,6 @@ namespace AppPedidos
                 {
                     respuesta = Convert.ToInt32(leer["IdCompra"].ToString());
                     respuesta++;
-                    //MessageBox.Show(respuesta.ToString());
                     oConexion.Close();
                 }
             }
@@ -185,7 +206,6 @@ namespace AppPedidos
                     compra.FechaTexto = leer["FechaCompra"].ToString();
 
                     compra.oDetalleCompra = ObtenerDetallesCompra(id);
-                    //MessageBox.Show(respuesta.ToString());
                     oConexion.Close();
                 }
             }

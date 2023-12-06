@@ -198,6 +198,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Autores";
             this.Text = "Autores";
+            this.Load += new System.EventHandler(this.Autores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

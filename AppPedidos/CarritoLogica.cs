@@ -240,7 +240,11 @@ namespace AppPedidos
         }
 
 
-        // Método para obtener detalles de compras de un usuario
+        /// <summary>
+        /// Método para obtener detalles de compras de un usuario
+        /// </summary>
+        /// <param name="IdUsuario"></param>
+        /// <returns></returns>
         public List<Compra> ObtenerCompra(int IdUsuario)
         {
             // Lista para almacenar los detalles de la compra

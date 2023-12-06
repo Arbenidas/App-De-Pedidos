@@ -73,7 +73,7 @@ namespace AppPedidos
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            MonitoresStandarsForm padre = Owner as MonitoresStandarsForm;
+            CargarProductosForm padre = Owner as CargarProductosForm;
             padre.ponerDatos(idproducto, Convert.ToInt32(cantidad.Value));
             this.Close();
         }
@@ -116,7 +116,7 @@ namespace AppPedidos
 
         private void botonCarrito_Click(object sender, EventArgs e)
         {
-            MonitoresStandarsForm padre = Owner as MonitoresStandarsForm;
+            CargarProductosForm padre = Owner as CargarProductosForm;
             padre.ponerDatos(idproducto, Convert.ToInt32(cantidad.Value));
             this.Close();
         }
